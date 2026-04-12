@@ -1,0 +1,90 @@
+/* Reviews — continuous horizontal marquee + subtle entrance */
+
+.aim-reviews-marquee-outer {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0.5rem;
+  overflow-x: clip;
+  box-sizing: border-box;
+}
+
+.aim-reviews-marquee-wrap {
+  overflow: hidden;
+  padding: 0.75rem 0 1.5rem;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 6%,
+    #000 94%,
+    transparent
+  );
+}
+
+.aim-reviews-marquee-wrap:hover .aim-reviews-marquee-track {
+  animation-play-state: paused;
+}
+
+.aim-reviews-marquee-track {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  width: max-content;
+  animation: aim-reviews-marquee 50s linear infinite;
+}
+
+@keyframes aim-reviews-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aim-reviews-marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.aim-review-marquee-card {
+  flex: 0 0 min(85vw, 26rem);
+  margin: 0;
+  padding: 1.35rem 1.5rem;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+@media (min-width: 640px) {
+  .aim-review-marquee-card {
+    flex-basis: 24rem;
+  }
+}
+
+.aim-review-marquee-quote {
+  font-family: var(--font-heading);
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  line-height: 1.45;
+  margin: 0 0 1rem;
+  color: var(--color-text);
+}
+
+.aim-review-marquee-cite {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.aim-review-marquee-name {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.aim-review-marquee-role {
+  font-weight: 400;
+}

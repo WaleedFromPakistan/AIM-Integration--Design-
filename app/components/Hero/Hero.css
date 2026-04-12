@@ -1,0 +1,56 @@
+/* Hero */
+
+.aim-hero {
+  position: relative;
+  min-height: min(88vh, 820px);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.aim-hero-media {
+  position: absolute;
+  inset: 0;
+}
+
+.aim-hero-media video,
+.aim-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aim-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--hero-overlay);
+}
+
+.aim-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: clamp(3rem, 10vw, 5.5rem);
+  padding-top: 6rem;
+}
+
+.aim-hero-title {
+  font-size: clamp(2.35rem, 5.5vw, 4rem);
+  line-height: 1.08;
+  color: #fff;
+  margin-bottom: 1rem;
+  max-width: 20ch;
+}
+
+.aim-hero-subtitle {
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 40rem;
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+}
+
+.aim-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}

@@ -1,0 +1,305 @@
+{
+  "pageId": "home",
+  "route": "/",
+  "seo": {
+    "title": "Aim Integrated Design — Commercial Kitchen, BIM & Architecture",
+    "description": "Professional commercial kitchen design, BIM modeling, floor planning, and architectural design. Explore our work and services.",
+    "keywords": [
+      "commercial kitchen design",
+      "BIM modeling",
+      "floor planning",
+      "architectural design",
+      "food service design",
+      "integrated design"
+    ],
+    "canonicalPath": "/",
+    "robots": "index,follow",
+    "openGraph": {
+      "type": "website",
+      "imageMediaKey": "hero-poster"
+    },
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Aim Integrated Design",
+      "description": "Commercial kitchen design, BIM modeling, floor planning, and architectural design services.",
+      "areaServed": "Worldwide",
+      "serviceType": [
+        "Commercial kitchen design",
+        "BIM modeling",
+        "Floor planning",
+        "Architectural design"
+      ]
+    }
+  },
+  "navbar": {
+    "logoMediaKey": "logo-primary",
+    "brandName": "Aim Integrated Design",
+    "brandWordmark": {
+      "bold": "AIM",
+      "regular": " Design"
+    },
+    "links": [
+      { "id": "home", "label": "Home", "href": "#top" },
+      { "id": "about", "label": "About", "href": "#about" },
+      { "id": "projects", "label": "Projects", "href": "#projects" },
+      { "id": "contact", "label": "Contact", "href": "#contact" }
+    ],
+    "servicesMenu": {
+      "label": "Services",
+      "intro": "Integrated delivery across planning, modeling, and build-ready documentation.",
+      "items": [
+        {
+          "id": "commercial-kitchen",
+          "title": "Commercial Kitchen Design",
+          "summary": "Workflow-driven layouts, equipment coordination, and code-aware kitchen systems.",
+          "href": "#services"
+        },
+        {
+          "id": "bim",
+          "title": "BIM Modeling",
+          "summary": "Authoritative 3D models, clash detection, and structured data for construction teams.",
+          "href": "#services"
+        },
+        {
+          "id": "floor-planning",
+          "title": "Floor Planning",
+          "summary": "Spatial programming, circulation, and efficient zoning for operational clarity.",
+          "href": "#services"
+        },
+        {
+          "id": "architecture",
+          "title": "Architectural Design",
+          "summary": "Concept through documentation with a refined, buildable architectural language.",
+          "href": "#services"
+        }
+      ]
+    },
+    "cta": {
+      "label": "Start a project",
+      "href": "#contact"
+    }
+  },
+  "hero": {
+    "videoMediaKey": "hero-video",
+    "posterMediaKey": "hero-poster",
+    "eyebrow": "Integrated design studio",
+    "title": "Precision design for kitchens, buildings, and complex spaces.",
+    "subtitle": "We align commercial kitchen strategy, BIM coordination, floor planning, and architectural intent into one disciplined delivery.",
+    "primaryCta": { "label": "View services", "href": "#services" },
+    "secondaryCta": { "label": "Recent work", "href": "#projects" }
+  },
+  "about": {
+    "id": "about",
+    "eyebrow": "About us",
+    "title": "A studio built for coordination—not surprises.",
+    "body": [
+      "Aim Integrated Design partners with operators, architects, and builders who need clarity from the first sketch to construction documents.",
+      "Our process favors tight communication, model-based coordination, and documentation that trades can execute with confidence."
+    ],
+    "stats": [
+      { "value": "15+", "label": "Years combined experience" },
+      { "value": "120+", "label": "Delivered projects" },
+      { "value": "4", "label": "Core disciplines in-house" }
+    ],
+    "imageMediaKey": "about-studio"
+  },
+  "services": {
+    "id": "services",
+    "eyebrow": "Capabilities",
+    "title": "Services engineered for operators and project teams.",
+    "subtitle": "Hover a card to explore how each discipline supports your timeline and budget.",
+    "items": [
+      {
+        "id": "commercial-kitchen",
+        "title": "Commercial Kitchen Design",
+        "description": "Production-first layouts, equipment matrices, MEP coordination, and health department readiness.",
+        "imageMediaKey": "service-commercial-kitchen"
+      },
+      {
+        "id": "bim",
+        "title": "BIM Modeling",
+        "description": "Parametric models, LOD strategy, clash mitigation, and structured exports for field teams.",
+        "imageMediaKey": "service-bim"
+      },
+      {
+        "id": "floor-planning",
+        "title": "Floor Planning",
+        "description": "Test-fit studies, adjacency diagrams, and capacity planning tuned to real service models.",
+        "imageMediaKey": "service-floor-plan"
+      },
+      {
+        "id": "architecture",
+        "title": "Architectural Design",
+        "description": "Concept design, interior architecture, detailing, and documentation with a cohesive visual language.",
+        "imageMediaKey": "service-architecture"
+      }
+    ]
+  },
+  "projects": {
+    "id": "projects",
+    "eyebrow": "Selected work",
+    "title": "Recent projects",
+    "subtitle": "A snapshot of hospitality, commercial, and residential collaborations.",
+    "items": [
+      {
+        "id": "p1",
+        "title": "Flagship hotel kitchen",
+        "category": "Hospitality",
+        "year": "2025",
+        "imageMediaKey": "project-1"
+      },
+      {
+        "id": "p2",
+        "title": "Coastal restaurant prototype",
+        "category": "Restaurant",
+        "year": "2024",
+        "imageMediaKey": "project-2"
+      },
+      {
+        "id": "p3",
+        "title": "Private residence — courtyard wing",
+        "category": "Residential",
+        "year": "2024",
+        "imageMediaKey": "project-3"
+      },
+      {
+        "id": "p4",
+        "title": "Corporate amenity level",
+        "category": "Workplace",
+        "year": "2023",
+        "imageMediaKey": "project-4"
+      },
+      {
+        "id": "p5",
+        "title": "Boutique hotel F&B core",
+        "category": "Hospitality",
+        "year": "2023",
+        "imageMediaKey": "project-5"
+      },
+      {
+        "id": "p6",
+        "title": "Urban mixed-use podium",
+        "category": "Commercial",
+        "year": "2022",
+        "imageMediaKey": "project-6"
+      }
+    ]
+  },
+  "reviews": {
+    "id": "reviews",
+    "eyebrow": "Client voices",
+    "title": "Trusted by teams who ship.",
+    "items": [
+      {
+        "id": "r1",
+        "quote": "Their kitchen package was coordinated before we hit the job site—rare and invaluable.",
+        "name": "Jordan Ellis",
+        "role": "Director of Development",
+        "company": "Northline Hospitality"
+      },
+      {
+        "id": "r2",
+        "quote": "BIM deliverables were clean, consistent, and actually matched what we built.",
+        "name": "Priya Natarajan",
+        "role": "Project Architect",
+        "company": "Atelier Meridian"
+      },
+      {
+        "id": "r3",
+        "quote": "Floor planning iterations were fast without losing operational realism.",
+        "name": "Marcus Chen",
+        "role": "COO",
+        "company": "Brightfire Kitchen Group"
+      },
+      {
+        "id": "r4",
+        "quote": "Documentation was coordinated across disciplines—we did not chase revisions in the field.",
+        "name": "Elena Voss",
+        "role": "Construction Manager",
+        "company": "Summit GC"
+      },
+      {
+        "id": "r5",
+        "quote": "They think like operators first. Our kitchen throughput improved before we ordered equipment.",
+        "name": "Sam Okonkwo",
+        "role": "VP Operations",
+        "company": "Harborline Dining"
+      }
+    ]
+  },
+  "contact": {
+    "id": "contact",
+    "eyebrow": "Contact",
+    "title": "Tell us about your next build.",
+    "subtitle": "Share a few details—we will respond with next steps and timeline guidance.",
+    "successMessage": "Thank you. We will reply shortly.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Full name",
+        "type": "text",
+        "required": true,
+        "placeholder": "Alex Morgan"
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "type": "email",
+        "required": true,
+        "placeholder": "you@company.com"
+      },
+      {
+        "name": "company",
+        "label": "Company",
+        "type": "text",
+        "required": false,
+        "placeholder": "Studio / operator / GC"
+      },
+      {
+        "name": "service",
+        "label": "Primary interest",
+        "type": "select",
+        "required": true,
+        "options": [
+          { "value": "", "label": "Select a service" },
+          { "value": "kitchen", "label": "Commercial kitchen design" },
+          { "value": "bim", "label": "BIM modeling" },
+          { "value": "floor", "label": "Floor planning" },
+          { "value": "architecture", "label": "Architectural design" }
+        ]
+      },
+      {
+        "name": "message",
+        "label": "Project summary",
+        "type": "textarea",
+        "required": true,
+        "placeholder": "Scope, location, schedule, and any links we should review."
+      }
+    ],
+    "submitLabel": "Send message"
+  },
+  "footer": {
+    "tagline": "Integrated design for demanding environments.",
+    "columns": [
+      {
+        "title": "Studio",
+        "links": [
+          { "label": "About", "href": "#about" },
+          { "label": "Projects", "href": "#projects" },
+          { "label": "Contact", "href": "#contact" }
+        ]
+      },
+      {
+        "title": "Services",
+        "links": [
+          { "label": "Commercial kitchen design", "href": "#services" },
+          { "label": "BIM modeling", "href": "#services" },
+          { "label": "Floor planning", "href": "#services" },
+          { "label": "Architectural design", "href": "#services" }
+        ]
+      }
+    ],
+    "copyright": "© {year} Aim Integrated Design. All rights reserved."
+  }
+}

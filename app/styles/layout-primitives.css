@@ -1,0 +1,89 @@
+/* Shared layout + buttons (used across multiple sections) */
+
+.aim-container {
+  width: 100%;
+  max-width: var(--aim-container-max, 96rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .aim-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.aim-section {
+  padding-top: clamp(3.5rem, 8vw, 6rem);
+  padding-bottom: clamp(3.5rem, 8vw, 6rem);
+}
+
+.aim-section-alt {
+  background: color-mix(in srgb, var(--color-navy) 5%, var(--color-bg));
+}
+
+.aim-eyebrow {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--color-gold);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .aim-eyebrow {
+    font-size: 0.875rem;
+  }
+}
+
+.aim-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.35rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform var(--transition-base), box-shadow var(--transition-base),
+    background-color var(--transition-base), border-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.aim-btn:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+.aim-btn-primary {
+  background: var(--color-gold);
+  color: var(--color-navy);
+  box-shadow: 0 10px 30px var(--color-gold-dim);
+}
+
+.aim-btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.aim-btn-ghost {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+
+[data-theme="light"] .aim-btn-ghost {
+  border-color: var(--color-border);
+  color: var(--color-navy);
+}
+
+.aim-btn-ghost:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}

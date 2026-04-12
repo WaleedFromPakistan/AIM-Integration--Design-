@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "description": "Central media registry. Replace URLs with CMS/database paths when migrating.",
+  "assets": {
+    "logo-primary": {
+      "type": "image",
+      "url": "/logo/logo.jpeg",
+      "alt": "Aim Integrated Design logo"
+    },
+    "hero-video": {
+      "type": "video",
+      "url": "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-city-traffic-at-night-11-large.mp4",
+      "mime": "video/mp4"
+    },
+    "hero-poster": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80",
+      "alt": "Modern city skyline at dusk"
+    },
+    "service-commercial-kitchen": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=900&q=80",
+      "alt": "Commercial kitchen design"
+    },
+    "service-bim": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&q=80",
+      "alt": "BIM modeling and digital design"
+    },
+    "service-floor-plan": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&q=80",
+      "alt": "Floor planning and space layout"
+    },
+    "service-architecture": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80",
+      "alt": "Architectural design"
+    },
+    "about-studio": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
+      "alt": "Design studio environment"
+    },
+    "project-1": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80",
+      "alt": "Hospitality kitchen project"
+    },
+    "project-2": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80",
+      "alt": "Restaurant interior concept"
+    },
+    "project-3": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80",
+      "alt": "Residential architecture"
+    },
+    "project-4": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=1200&q=80",
+      "alt": "Commercial floor plan build-out"
+    },
+    "project-5": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80",
+      "alt": "Boutique hospitality interior"
+    },
+    "project-6": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80",
+      "alt": "Urban mixed-use architecture"
+    }
+  }
+}

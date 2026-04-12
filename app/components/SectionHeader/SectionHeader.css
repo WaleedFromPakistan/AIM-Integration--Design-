@@ -1,0 +1,6 @@
+/* SectionHeader */
+
+.aim-section-header {
+  max-width: 48rem;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}

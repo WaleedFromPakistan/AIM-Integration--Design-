@@ -1,0 +1,222 @@
+/* Services — gapless boxy panels + hover grow + min 8px inset around strip */
+
+.aim-services-bleed {
+  width: 100vw;
+  max-width: 100%;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  position: relative;
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+.aim-services-bleed-inner {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.aim-services-grid-desktop {
+  display: none;
+  width: 100%;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+}
+
+@media (min-width: 1024px) {
+  .aim-services-grid-desktop {
+    display: flex;
+  }
+}
+
+.aim-services-grid-cell {
+  flex: 1 1 0;
+  min-width: 0;
+  position: relative;
+  transition: flex var(--transition-base);
+}
+
+@media (min-width: 1024px) {
+  .aim-services-grid-cell.is-expanded {
+    flex: 2.15 1 0;
+    z-index: 2;
+  }
+}
+
+/* Single panel */
+.aim-service-panel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  min-height: 17rem;
+  max-height: min(72vh, 38rem);
+  background: var(--color-surface);
+  cursor: default;
+  outline: none;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+@media (min-width: 1024px) {
+  .aim-service-panel {
+    min-height: 20rem;
+    max-height: min(75vh, 40rem);
+  }
+
+  .aim-services-grid-cell.is-expanded .aim-service-panel {
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-4px);
+  }
+}
+
+.aim-service-panel:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: -2px;
+}
+
+.aim-service-panel-img {
+  transition: transform 0.7s ease;
+}
+
+.aim-service-panel:hover .aim-service-panel-img,
+.aim-service-panel.is-expanded .aim-service-panel-img {
+  transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aim-service-panel-img {
+    transition: none;
+  }
+  .aim-services-grid-cell {
+    transition: none;
+  }
+  .aim-service-panel {
+    transition: none;
+  }
+  .aim-service-panel:hover .aim-service-panel-img,
+  .aim-service-panel.is-expanded .aim-service-panel-img {
+    transform: none;
+  }
+  .aim-services-grid-cell.is-expanded .aim-service-panel {
+    transform: none;
+  }
+}
+
+.aim-service-panel-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 32%,
+    rgba(5, 8, 14, 0.5) 65%,
+    rgba(5, 8, 14, 0.9) 100%
+  );
+}
+
+.aim-service-panel-copy {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+  padding: 1.25rem 1.1rem 1.35rem 1.25rem;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .aim-service-panel-copy {
+    padding: 1.5rem 1.35rem 1.6rem 1.5rem;
+  }
+}
+
+.aim-service-panel-index {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .aim-service-panel-index {
+    font-size: 0.8125rem;
+  }
+}
+
+.aim-service-panel-title {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2.4vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  max-width: 95%;
+  text-wrap: balance;
+}
+
+/* Description always visible (all breakpoints) */
+.aim-service-panel-desc {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0.65rem 0 0;
+  max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .aim-service-panel-desc {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+/* Swiper — mobile / tablet only */
+.aim-services-swiper-host {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .aim-services-swiper-host {
+    display: none;
+  }
+}
+
+.aim-services-swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.aim-services-swiper .swiper-slide {
+  height: auto;
+  box-sizing: border-box;
+}
+
+.aim-services-swiper .swiper-pagination {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.aim-services-swiper-host .swiper-pagination-bullet {
+  background: var(--color-text-muted);
+  opacity: 0.45;
+}
+
+.aim-services-swiper-host .swiper-pagination-bullet-active {
+  background: var(--color-gold);
+  opacity: 1;
+}
