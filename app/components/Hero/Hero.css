@@ -1,11 +1,19 @@
-/* Hero */
+/* Hero — full viewport height; copy + CTAs vertically centered */
 
 .aim-hero {
   position: relative;
-  min-height: min(88vh, 820px);
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100vh;
+  max-height: 100dvh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .aim-hero-media {
@@ -14,7 +22,13 @@
 }
 
 .aim-hero-media video,
-.aim-hero-media img {
+.aim-hero-media > .aim-hero-overlay {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aim-hero-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -26,27 +40,101 @@
   background: var(--hero-overlay);
 }
 
+/* Carousel scrim — same overlay in light and dark */
+.aim-hero-carousel-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: background var(--transition-base);
+  background: linear-gradient(
+    120deg,
+    rgba(18, 22, 34, 0.62) 0%,
+    rgba(30, 36, 52, 0.48) 45%,
+    rgba(18, 22, 34, 0.58) 100%
+  );
+}
+
 .aim-hero-content {
   position: relative;
   z-index: 2;
-  padding-bottom: clamp(3rem, 10vw, 5.5rem);
-  padding-top: 6rem;
+  width: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: max(5.25rem, calc(env(safe-area-inset-top, 0px) + 4.25rem));
+  padding-bottom: calc(clamp(2.25rem, 6vh, 4.75rem) + env(safe-area-inset-bottom, 0px));
+  box-sizing: border-box;
+}
+
+.aim-hero-copy {
+  animation: aim-hero-copy-enter 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes aim-hero-copy-enter {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aim-hero-copy {
+    animation: none;
+  }
+}
+
+.aim-hero-eyebrow {
+  color: rgba(255, 255, 255, 0.88) !important;
+  margin-bottom: 0.75rem;
+  font-size: clamp(0.875rem, 1.95vw, 1.0625rem) !important;
+  letter-spacing: 0.2em !important;
 }
 
 .aim-hero-title {
-  font-size: clamp(2.35rem, 5.5vw, 4rem);
+  font-size: clamp(2.2rem, 5.6vw, 4.125rem);
   line-height: 1.08;
   color: #fff;
-  margin-bottom: 1rem;
-  max-width: 20ch;
+  margin-bottom: 1.1rem;
+  max-width: min(24ch, 100%);
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="light"] .aim-hero-title {
+  text-shadow: 0 2px 32px rgba(0, 0, 0, 0.5);
 }
 
 .aim-hero-subtitle {
-  color: rgba(255, 255, 255, 0.82);
-  max-width: 40rem;
-  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: min(42rem, 100%);
+  font-size: clamp(1.1rem, 2.25vw, 1.4rem);
   line-height: 1.65;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.85rem;
+  text-shadow: 0 1px 20px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="light"] .aim-hero-subtitle {
+  text-shadow: 0 1px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* Secondary CTA — white outline + white label (light & dark) */
+.aim-hero .aim-hero-cta-secondary.aim-btn-ghost {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.aim-hero .aim-hero-cta-secondary.aim-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: #fff;
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 .aim-hero-ctas {

@@ -37,21 +37,22 @@
   );
 }
 
+/* Dark mode: #2E3852 family (slate brand bar as page theme) */
 [data-theme="dark"] {
-  --color-bg: #0b101c;
-  --color-bg-elevated: #121a2b;
-  --color-surface: #151d2f;
+  --color-bg: #2e3852;
+  --color-bg-elevated: #353e54;
+  --color-surface: #3d4660;
   --color-text: #f2f0eb;
-  --color-text-muted: rgba(242, 240, 235, 0.72);
-  --color-border: rgba(242, 240, 235, 0.1);
-  --color-navy: #1e2d4a;
+  --color-text-muted: rgba(242, 240, 235, 0.74);
+  --color-border: rgba(242, 240, 235, 0.12);
+  --color-navy: #2e3852;
   --color-gold: #d4ae88;
-  --color-gold-dim: rgba(212, 174, 136, 0.28);
+  --color-gold-dim: rgba(212, 174, 136, 0.3);
   --hero-overlay: linear-gradient(
     120deg,
-    rgba(5, 8, 14, 0.88) 0%,
-    rgba(5, 8, 14, 0.5) 45%,
-    rgba(5, 8, 14, 0.85) 100%
+    rgba(20, 26, 42, 0.9) 0%,
+    rgba(46, 56, 82, 0.55) 48%,
+    rgba(20, 26, 42, 0.88) 100%
   );
 }
 
@@ -85,25 +86,6 @@ body.aim-body {
 .aim-heading {
   font-family: var(--font-heading);
   letter-spacing: 0.02em;
-}
-
-/* Navbar brand: BIM-style wordmark (sans, bold + regular) */
-.aim-brand-wordmark {
-  font-family: var(--font-body);
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  color: var(--color-text);
-}
-
-.aim-brand-bold {
-  font-weight: 700;
-  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
-}
-
-.aim-brand-regular {
-  font-weight: 450;
-  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
-  color: var(--color-text-muted);
 }
 
 .aim-gold-line {

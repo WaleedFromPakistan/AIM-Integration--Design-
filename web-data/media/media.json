@@ -4,8 +4,8 @@
   "assets": {
     "logo-primary": {
       "type": "image",
-      "url": "/logo/logo.jpeg",
-      "alt": "Aim Integrated Design logo"
+      "url": "/logo/logo.webp",
+      "alt": "AIM Integrated Designs logo"
     },
     "hero-video": {
       "type": "video",

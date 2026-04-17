@@ -1,10 +1,10 @@
 {
-  "titleTemplate": "%s | Aim Integrated Design",
-  "defaultTitle": "Aim Integrated Design — Commercial Kitchen, BIM & Architecture",
-  "defaultDescription": "Aim Integrated Design delivers commercial kitchen design, BIM modeling, floor planning, and architectural design with precision and a coordinated delivery mindset.",
+  "titleTemplate": "%s | AIM Integrated Designs",
+  "defaultTitle": "AIM Integrated Designs — Commercial Kitchen, BIM & Architecture",
+  "defaultDescription": "AIM Integrated Designs delivers commercial kitchen design, BIM modeling, floor planning, and architectural design with precision and a coordinated delivery mindset.",
   "twitterSite": "@aimintegrateddesign",
   "themeColorLight": "#f4efe6",
-  "themeColorDark": "#121a2b",
+  "themeColorDark": "#2E3852",
   "locale": "en_US",
   "type": "website"
 }

@@ -23,7 +23,7 @@
 }
 
 .aim-section-alt {
-  background: color-mix(in srgb, var(--color-navy) 5%, var(--color-bg));
+  background: color-mix(in srgb, var(--color-bg-elevated) 50%, var(--color-bg));
 }
 
 .aim-eyebrow {

@@ -20,8 +20,20 @@
   --color-foreground: var(--color-text);
 }
 
+html {
+  scroll-padding-top: 5.5rem;
+}
+
 body.aim-body {
   margin: 0;
   overflow-x: clip;
   max-width: 100%;
+}
+
+/* Home layout shell — fixed nav + flex column for footer */
+.aim-page-home {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
 }

@@ -10,20 +10,16 @@ export default function Footer({ data, site }) {
     <footer className="aim-footer">
       <div className="aim-container aim-footer-grid">
         <div>
-          <p className="aim-heading text-lg font-semibold">
-            {site?.companyName ?? "Aim Integrated Design"}
+          <p className="aim-heading aim-footer-company text-lg font-semibold">
+            {site?.companyName ?? "AIM Integrated Designs"}
           </p>
           {data.tagline ? (
-            <p className="mt-2 text-sm text-[color:var(--color-text-muted)] max-w-xs">
-              {data.tagline}
-            </p>
+            <p className="aim-footer-tagline">{data.tagline}</p>
           ) : null}
         </div>
         {data.columns?.map((col) => (
           <div key={col.title}>
-            <p className="text-xs uppercase tracking-widest text-[color:var(--color-gold)] mb-3">
-              {col.title}
-            </p>
+            <p className="aim-footer-col-title">{col.title}</p>
             {col.links?.map((link) => (
               <Link key={link.label} href={link.href}>
                 {link.label}
@@ -32,7 +28,7 @@ export default function Footer({ data, site }) {
           </div>
         ))}
       </div>
-      <div className="aim-container mt-10 pt-6 border-t border-[color:var(--color-border)] flex flex-col sm:flex-row gap-3 justify-between text-sm text-[color:var(--color-text-muted)]">
+      <div className="aim-container aim-footer-bar">
         <span>{copyright}</span>
         <div className="flex gap-4">
           {site?.social?.linkedin ? (

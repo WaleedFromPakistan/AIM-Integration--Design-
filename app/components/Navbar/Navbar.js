@@ -4,11 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export default function Navbar({ data }) {
+const HOME_NAV_SCROLL_PX = 72;
+
+export default function Navbar({ data, variant }) {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [homeScrolled, setHomeScrolled] = useState(false);
+  const [activeNavId, setActiveNavId] = useState("home");
   const closeTimer = useRef(null);
   const dialogRef = useRef(null);
+
+  const isHome = variant === "home";
+  const transparentTop = isHome && !homeScrolled;
 
   const openServices = useCallback(() => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -27,24 +34,109 @@ export default function Navbar({ data }) {
     return () => d.removeEventListener("close", onClose);
   }, []);
 
+  const closeMobileMenu = useCallback(() => {
+    const d = dialogRef.current;
+    if (!d?.open) {
+      setMenuOpen(false);
+      return;
+    }
+    const panel = d.querySelector(".aim-nav-dialog-panel");
+    const desktop = window.matchMedia("(min-width: 1280px)").matches;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
+      .matches;
+    if (desktop || reduceMotion || !panel) {
+      panel?.classList.remove("is-closing");
+      d.close();
+      setMenuOpen(false);
+      return;
+    }
+    panel.classList.add("is-closing");
+    const finish = () => {
+      panel.classList.remove("is-closing");
+      if (d.open) d.close();
+      setMenuOpen(false);
+    };
+    panel.addEventListener("animationend", finish, { once: true });
+    window.setTimeout(() => {
+      if (panel.classList.contains("is-closing") && d.open) finish();
+    }, 450);
+  }, []);
+
+  useEffect(() => {
+    const d = dialogRef.current;
+    if (!d) return;
+    const onCancel = (e) => {
+      e.preventDefault();
+      closeMobileMenu();
+    };
+    d.addEventListener("cancel", onCancel);
+    return () => d.removeEventListener("cancel", onCancel);
+  }, [closeMobileMenu]);
+
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 1280px)");
     const onMq = (e) => {
-      if (e.matches) dialogRef.current?.close();
+      if (!e.matches) return;
+      const d = dialogRef.current;
+      d?.querySelector(".aim-nav-dialog-panel")?.classList.remove("is-closing");
+      d?.close();
+      setMenuOpen(false);
     };
     mq.addEventListener("change", onMq);
     return () => mq.removeEventListener("change", onMq);
   }, []);
 
-  const openMobileMenu = () => {
+  const openMobileMenu = useCallback(() => {
+    const d = dialogRef.current;
+    const panel = d?.querySelector(".aim-nav-dialog-panel");
+    panel?.classList.remove("is-closing");
     setMenuOpen(true);
-    dialogRef.current?.showModal();
-  };
+    d?.showModal();
+  }, []);
 
-  const closeMobileMenu = () => {
-    dialogRef.current?.close();
-    setMenuOpen(false);
-  };
+  useEffect(() => {
+    if (!isHome) return;
+    const onScroll = () => {
+      setHomeScrolled(window.scrollY >= HOME_NAV_SCROLL_PX);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [isHome]);
+
+  useEffect(() => {
+    if (!isHome) return;
+    const hero = document.querySelector(".aim-hero");
+    const targets = [];
+    if (hero) {
+      hero.dataset.navSection = "home";
+      targets.push(hero);
+    }
+    for (const id of ["about", "services", "projects", "contact"]) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.dataset.navSection = id;
+        targets.push(el);
+      }
+    }
+    if (!targets.length) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const hit = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        const next = hit[0]?.target?.getAttribute("data-nav-section");
+        if (next) setActiveNavId(next);
+      },
+      {
+        root: null,
+        rootMargin: "-42% 0px -42% 0px",
+        threshold: [0, 0.05, 0.15, 0.35, 0.55, 0.75, 1],
+      },
+    );
+    targets.forEach((t) => observer.observe(t));
+    return () => observer.disconnect();
+  }, [isHome]);
 
   if (!data) return null;
 
@@ -58,32 +150,52 @@ export default function Navbar({ data }) {
     cta,
   } = data;
 
-  const bold = brandWordmark?.bold ?? "AIM";
-  const regular = brandWordmark?.regular ?? " Design";
+  const aimPart = brandWordmark?.bold ?? "AIM";
+  const condensedPart =
+    brandWordmark?.condensed ??
+    brandWordmark?.regular?.trim().toUpperCase() ??
+    "INTEGRATED DESIGNS";
+
+  const navClass = [
+    "aim-nav",
+    isHome ? "aim-nav--home" : "",
+    transparentTop ? "aim-nav--transparent" : "",
+    isHome && homeScrolled ? "aim-nav--home-solid" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
-    <header className="aim-nav">
+    <header className={navClass}>
       <div className="aim-container aim-nav-inner">
-        <Link href="/" className="aim-nav-brand">
+        <Link
+          href="/"
+          className="aim-nav-brand"
+          aria-label={brandName || "AIM Integrated Designs home"}
+        >
           {logoUrl ? (
             <Image
               src={logoUrl}
               alt={logoAlt || brandName}
-              width={48}
-              height={48}
-              className="aim-nav-logo object-cover"
+              width={112}
+              height={112}
+              className="aim-nav-logo object-contain"
               priority
             />
           ) : null}
           <span className="aim-brand-wordmark">
-            <span className="aim-brand-bold">{bold}</span>
-            <span className="aim-brand-regular">{regular}</span>
+            <span className="aim-brand-aim">{aimPart}</span>
+            <span className="aim-brand-condensed">{condensedPart}</span>
           </span>
         </Link>
 
         <nav className="aim-nav-links" aria-label="Primary">
           {links?.map((l) => (
-            <Link key={l.id} href={l.href} className="aim-nav-link">
+            <Link
+              key={l.id}
+              href={l.href}
+              className={`aim-nav-link${activeNavId === l.id ? " is-active" : ""}`}
+            >
               {l.label}
             </Link>
           ))}
@@ -95,7 +207,9 @@ export default function Navbar({ data }) {
           >
             <button
               type="button"
-              className="aim-nav-link aim-nav-link-button"
+              className={`aim-nav-link aim-nav-link-button${
+                servicesOpen || activeNavId === "services" ? " is-active" : ""
+              }`}
               aria-expanded={servicesOpen}
               aria-haspopup="true"
             >

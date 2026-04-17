@@ -2,7 +2,7 @@
   "pageId": "home",
   "route": "/",
   "seo": {
-    "title": "Aim Integrated Design — Commercial Kitchen, BIM & Architecture",
+    "title": "AIM Integrated Designs — Commercial Kitchen, BIM & Architecture",
     "description": "Professional commercial kitchen design, BIM modeling, floor planning, and architectural design. Explore our work and services.",
     "keywords": [
       "commercial kitchen design",
@@ -21,7 +21,7 @@
     "jsonLd": {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
-      "name": "Aim Integrated Design",
+      "name": "AIM Integrated Designs",
       "description": "Commercial kitchen design, BIM modeling, floor planning, and architectural design services.",
       "areaServed": "Worldwide",
       "serviceType": [
@@ -34,10 +34,10 @@
   },
   "navbar": {
     "logoMediaKey": "logo-primary",
-    "brandName": "Aim Integrated Design",
+    "brandName": "AIM Integrated Designs",
     "brandWordmark": {
       "bold": "AIM",
-      "regular": " Design"
+      "condensed": "INTEGRATED DESIGNS"
     },
     "links": [
       { "id": "home", "label": "Home", "href": "#top" },
@@ -87,7 +87,61 @@
     "title": "Precision design for kitchens, buildings, and complex spaces.",
     "subtitle": "We align commercial kitchen strategy, BIM coordination, floor planning, and architectural intent into one disciplined delivery.",
     "primaryCta": { "label": "View services", "href": "#services" },
-    "secondaryCta": { "label": "Recent work", "href": "#projects" }
+    "secondaryCta": { "label": "Recent work", "href": "#projects" },
+    "heroCarousel": {
+      "autoplayMs": 6500,
+      "transitionMs": 900,
+      "slides": [
+        {
+          "id": "hero-slide-1",
+          "imageSrc": "/images/carosel-images/image-1.png",
+          "imageAlt": "Commercial kitchen and food service layout",
+          "eyebrow": "Hospitality & F&B",
+          "title": "Kitchen systems built for real service pressure.",
+          "description": "Line design, exhaust and make-up air, and equipment schedules aligned so operators open on time—with drawings GCs can build."
+        },
+        {
+          "id": "hero-slide-2",
+          "imageSrc": "/images/carosel-images/image-2.png",
+          "imageAlt": "Design documentation and technical coordination",
+          "eyebrow": "BIM & documentation",
+          "title": "Model-led coordination that survives the job site.",
+          "description": "Structured LOD, clash-ready views, and issue logs that keep architects, MEP, and trades on one accountable thread."
+        },
+        {
+          "id": "hero-slide-3",
+          "imageSrc": "/images/carosel-images/image-3.jpeg",
+          "imageAlt": "Residential architecture and natural light",
+          "eyebrow": "Residential & lifestyle",
+          "title": "Architecture tuned to light, flow, and long-term value.",
+          "description": "From massing studies to interior thresholds, we document intent so builders preserve the quiet details that sell the experience."
+        },
+        {
+          "id": "hero-slide-4",
+          "imageSrc": "/images/carosel-images/image-4.jpeg",
+          "imageAlt": "Commercial facade and urban context",
+          "eyebrow": "Commercial & workplace",
+          "title": "Facades and cores that read sharp at speed.",
+          "description": "Test fits, amenity strategy, and envelope logic packaged for permitting and procurement—without losing design discipline."
+        },
+        {
+          "id": "hero-slide-5",
+          "imageSrc": "/images/carosel-images/image-5.jpeg",
+          "imageAlt": "Interior spatial planning and materials",
+          "eyebrow": "Interiors & planning",
+          "title": "Spaces that balance operation, comfort, and brand.",
+          "description": "Circulation, adjacencies, and finish intent captured in schedules and details so site teams execute without guesswork."
+        },
+        {
+          "id": "hero-slide-6",
+          "imageSrc": "/images/carosel-images/image-6.jpeg",
+          "imageAlt": "Built environment and project visualization",
+          "eyebrow": "Delivery & visualization",
+          "title": "From concept imagery to buildable clarity.",
+          "description": "Visual narratives for stakeholders, paired with documentation discipline so design intent survives value engineering and construction."
+        }
+      ]
+    }
   },
   "about": {
     "id": "about",
@@ -300,6 +354,6 @@
         ]
       }
     ],
-    "copyright": "© {year} Aim Integrated Design. All rights reserved."
+    "copyright": "© {year} AIM Integrated Designs. All rights reserved."
   }
 }

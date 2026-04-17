@@ -53,14 +53,14 @@ export default function Home() {
     : null;
 
   return (
-    <>
+    <div className="aim-page-home min-h-0 flex-1">
       {jsonLd ? (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLd }}
         />
       ) : null}
-      <Navbar data={viewModel.navbar} />
+      <Navbar data={viewModel.navbar} variant="home" />
       <main id="top" className="flex-1 pb-24 md:pb-28">
         <Hero data={viewModel.hero} />
         <AboutSection data={viewModel.about} />
@@ -71,6 +71,6 @@ export default function Home() {
       </main>
       <Footer data={viewModel.footer} site={viewModel.site} />
       <FloatingThemeToggle />
-    </>
+    </div>
   );
 }
