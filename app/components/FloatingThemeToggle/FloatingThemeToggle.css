@@ -7,12 +7,14 @@
   z-index: 90;
   display: flex;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.4rem;
+  justify-content: center;
+  padding: 0;
   border-radius: var(--radius-sm);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-soft);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  min-width: 0;
+  min-height: 0;
 }
 
 .aim-theme-float-btn {
@@ -55,4 +57,91 @@
   width: 1.25rem;
   height: 1.25rem;
   flex-shrink: 0;
+}
+
+.aim-theme-float-main {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.82);
+  border-radius: 999px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.24);
+}
+
+[data-theme="light"] .aim-theme-float-main {
+  color: #d4ae88;
+}
+
+[data-theme="dark"] .aim-theme-float-main {
+  color: #fff;
+}
+
+.aim-theme-float-main.is-open {
+  transform: scale(0.98);
+}
+
+.aim-theme-float-main:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+[data-theme="light"] .aim-theme-float-main:hover {
+  color: #d4ae88;
+}
+
+.aim-theme-float-menu {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 0.55rem);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.35rem;
+  padding: 0.4rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(16, 21, 34, 0.78);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28);
+  opacity: 0;
+  transform: translateY(6px) scale(0.96);
+  transform-origin: bottom right;
+  pointer-events: none;
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.aim-theme-float-menu.is-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.aim-theme-float-menu .aim-theme-float-btn {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .aim-theme-float-menu {
+    left: 50%;
+    right: auto;
+    transform-origin: bottom center;
+    transform: translate(-50%, 6px) scale(0.96);
+  }
+
+  .aim-theme-float-menu.is-open {
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aim-theme-float-menu {
+    transition: none;
+  }
+
+  .aim-theme-float-main {
+    transition: none;
+  }
 }

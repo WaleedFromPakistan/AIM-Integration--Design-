@@ -164,6 +164,7 @@ export default function Navbar({ data, variant }) {
   ]
     .filter(Boolean)
     .join(" ");
+  const navLogoSrc = transparentTop ? "/logo/bg-transparent.png" : logoUrl;
 
   return (
     <header className={navClass}>
@@ -173,9 +174,9 @@ export default function Navbar({ data, variant }) {
           className="aim-nav-brand"
           aria-label={brandName || "AIM Integrated Designs home"}
         >
-          {logoUrl ? (
+          {navLogoSrc ? (
             <Image
-              src={logoUrl}
+              src={navLogoSrc}
               alt={logoAlt || brandName}
               width={112}
               height={112}

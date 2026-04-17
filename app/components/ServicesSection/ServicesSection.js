@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
@@ -46,6 +46,7 @@ function ServicePanel({
 
 export default function ServicesSection({ data }) {
   const [expandedId, setExpandedId] = useState(null);
+  const servicesSwiperRef = useRef(null);
 
   if (!data?.items?.length) return null;
 
@@ -89,29 +90,68 @@ export default function ServicesSection({ data }) {
           </div>
 
           <div className="aim-services-swiper-host">
-            <Swiper
-              modules={[Pagination]}
-              slidesPerView={1}
-              spaceBetween={0}
-              speed={450}
-              pagination={{ clickable: true }}
-              breakpoints={{
-                520: { slidesPerView: 2, spaceBetween: 0 },
-                768: { slidesPerView: 2, spaceBetween: 0 },
-              }}
-              className="aim-services-swiper"
-            >
-              {items.map((item, index) => (
-                <SwiperSlide key={item.id} className="!h-auto">
-                  <ServicePanel
-                    item={item}
-                    index={index}
-                    isExpanded={false}
-                    tabbable={false}
+            <div className="aim-services-swiper-wrap">
+              <button
+                type="button"
+                className="aim-services-nav-btn aim-services-nav-prev"
+                aria-label="Previous service"
+                onClick={() => servicesSwiperRef.current?.slidePrev()}
+              >
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 18l-6-6 6-6"
                   />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                </svg>
+              </button>
+              <button
+                type="button"
+                className="aim-services-nav-btn aim-services-nav-next"
+                aria-label="Next service"
+                onClick={() => servicesSwiperRef.current?.slideNext()}
+              >
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 18l6-6-6-6"
+                  />
+                </svg>
+              </button>
+              <Swiper
+                modules={[Pagination]}
+                slidesPerView={1}
+                spaceBetween={16}
+                speed={450}
+                pagination={{ clickable: true }}
+                onSwiper={(swiper) => {
+                  servicesSwiperRef.current = swiper;
+                }}
+                breakpoints={{
+                  520: { slidesPerView: 2, spaceBetween: 16 },
+                  768: { slidesPerView: 2, spaceBetween: 16 },
+                }}
+                className="aim-services-swiper"
+              >
+                {items.map((item, index) => (
+                  <SwiperSlide key={item.id} className="!h-auto">
+                    <ServicePanel
+                      item={item}
+                      index={index}
+                      isExpanded={false}
+                      tabbable={false}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
           </div>
         </div>
       </div>

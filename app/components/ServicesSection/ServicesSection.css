@@ -1,4 +1,4 @@
-/* Services — gapless boxy panels + hover grow + min 8px inset around strip */
+/* Services — desktop: hover flex-grow row; mobile: swiper + edge nav */
 
 .aim-services-bleed {
   width: 100vw;
@@ -7,7 +7,7 @@
   margin-right: calc(50% - 50vw);
   position: relative;
   box-sizing: border-box;
-  padding: 8px;
+  padding: clamp(0.75rem, 2.5vw, 1.75rem);
 }
 
 .aim-services-bleed-inner {
@@ -71,7 +71,15 @@
 
   .aim-services-grid-cell.is-expanded .aim-service-panel {
     box-shadow: var(--shadow-soft);
-    transform: translateY(-4px);
+  }
+
+  /* Desktop row: fixed card height — hover flex-grow must not grow height (no aspect-ratio) */
+  .aim-services-grid-desktop .aim-service-panel {
+    aspect-ratio: unset;
+    min-height: unset;
+    max-height: unset;
+    height: clamp(20rem, 52vh, 26rem);
+    box-sizing: border-box;
   }
 }
 
@@ -84,11 +92,6 @@
   transition: transform 0.7s ease;
 }
 
-.aim-service-panel:hover .aim-service-panel-img,
-.aim-service-panel.is-expanded .aim-service-panel-img {
-  transform: scale(1.05);
-}
-
 @media (prefers-reduced-motion: reduce) {
   .aim-service-panel-img {
     transition: none;
@@ -98,13 +101,6 @@
   }
   .aim-service-panel {
     transition: none;
-  }
-  .aim-service-panel:hover .aim-service-panel-img,
-  .aim-service-panel.is-expanded .aim-service-panel-img {
-    transform: none;
-  }
-  .aim-services-grid-cell.is-expanded .aim-service-panel {
-    transform: none;
   }
 }
 
@@ -188,6 +184,9 @@
 .aim-services-swiper-host {
   display: block;
   width: 100%;
+  padding: clamp(0.5rem, 2vw, 1.25rem) clamp(0.75rem, 3vw, 2rem)
+    clamp(0.25rem, 1.5vw, 1rem);
+  box-sizing: border-box;
 }
 
 @media (min-width: 1024px) {
@@ -196,9 +195,79 @@
   }
 }
 
+.aim-services-swiper-wrap {
+  position: relative;
+}
+
+.aim-services-nav-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.85rem;
+  height: 2.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(8, 12, 22, 0.42);
+  color: #fff;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    transform var(--transition-base);
+}
+
+@media (max-width: 1023px) {
+  .aim-services-nav-btn {
+    display: inline-flex;
+    position: absolute;
+    top: 50%;
+    z-index: 25;
+    transform: translateY(-50%);
+  }
+
+  .aim-services-nav-prev {
+    left: clamp(0.35rem, 2vw, 0.65rem);
+  }
+
+  .aim-services-nav-next {
+    right: clamp(0.35rem, 2vw, 0.65rem);
+  }
+}
+
+.aim-services-nav-btn:hover {
+  background: rgba(8, 12, 22, 0.62);
+  border-color: rgba(255, 255, 255, 0.72);
+}
+
+.aim-services-nav-btn:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+.aim-services-nav-btn:active {
+  transform: translateY(-50%) scale(0.94);
+}
+
+@media (min-width: 1024px) {
+  .aim-services-nav-btn {
+    display: none;
+  }
+}
+
 .aim-services-swiper {
   width: 100%;
   overflow: hidden;
+}
+
+/* Swiper only: fixed card height — width / slidesPerView must not change height */
+.aim-services-swiper .aim-service-panel {
+  aspect-ratio: unset;
+  min-height: unset;
+  max-height: unset;
+  height: clamp(19.5rem, 54vw, 25.5rem);
+  box-sizing: border-box;
 }
 
 .aim-services-swiper .swiper-slide {

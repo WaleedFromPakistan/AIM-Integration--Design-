@@ -1,23 +1,81 @@
+"use client";
+
 import Image from "next/image";
-import SectionHeader from "../SectionHeader";
+import { useEffect, useMemo, useRef, useState } from "react";
+import StatCounter from "./StatCounter";
 
 export default function AboutSection({ data }) {
+  const [inView, setInView] = useState(false);
+  const [startCounters, setStartCounters] = useState(false);
+  const sectionRef = useRef(null);
+  const {
+    id,
+    eyebrow,
+    title,
+    body,
+    stats,
+    imageUrl,
+    imageAlt,
+  } = data ?? {};
+  const titleParts = useMemo(() => {
+    if (!title) return { lead: "", accent: "" };
+    const chunks = title.split("—");
+    if (chunks.length < 2) return { lead: title, accent: "" };
+    return {
+      lead: chunks[0].trim(),
+      accent: chunks.slice(1).join("—").trim(),
+    };
+  }, [title]);
+
+  useEffect(() => {
+    if (!data) return;
+    const node = sectionRef.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (!entry?.isIntersecting) return;
+        setInView(true);
+        setStartCounters(true);
+        observer.disconnect();
+      },
+      {
+        root: null,
+        threshold: 0.24,
+        rootMargin: "0px 0px -10% 0px",
+      },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [data]);
+
   if (!data) return null;
 
-  const { id, eyebrow, title, body, stats, imageUrl, imageAlt } = data;
-
-  const header = { eyebrow, title };
-
   return (
-    <section className="aim-section" id={id}>
+    <section
+      ref={sectionRef}
+      className={`aim-section aim-about-section ${inView ? "is-inview" : ""}`}
+      id={id}
+    >
       <div className="aim-container aim-about-grid">
-        <div>
-          <SectionHeader data={{ ...header, subtitle: null }} />
+        <div className="aim-about-content">
+          {eyebrow ? <p className="aim-eyebrow aim-about-eyebrow">{eyebrow}</p> : null}
+          {title ? (
+            <h2 className="aim-heading aim-about-title">
+              {titleParts.lead}
+              {titleParts.accent ? (
+                <>
+                  {" "}
+                  <span className="aim-about-title-accent">—{titleParts.accent}</span>
+                </>
+              ) : null}
+            </h2>
+          ) : null}
+          <div className="aim-about-line" aria-hidden>
+            <span />
+          </div>
           {body?.map((paragraph, index) => (
-            <p
-              key={`about-body-${index}`}
-              className="mt-4 text-lg leading-relaxed text-[color:var(--color-text-muted)]"
-            >
+            <p key={`about-body-${index}`} className="aim-about-body">
               {paragraph}
             </p>
           ))}
@@ -25,10 +83,10 @@ export default function AboutSection({ data }) {
             <div className="aim-stats">
               {stats.map((s) => (
                 <div key={s.label} className="aim-stat">
-                  <strong>{s.value}</strong>
-                  <span className="text-xs text-[color:var(--color-text-muted)]">
-                    {s.label}
-                  </span>
+                  <strong>
+                    <StatCounter value={s.value} start={startCounters} />
+                  </strong>
+                  <span>{s.label}</span>
                 </div>
               ))}
             </div>
@@ -41,7 +99,7 @@ export default function AboutSection({ data }) {
               alt={imageAlt || ""}
               width={900}
               height={700}
-              className="w-full h-auto object-cover"
+              className="aim-about-image-el"
               sizes="(max-width: 960px) 100vw, 45vw"
             />
           </div>

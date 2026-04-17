@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTheme } from "../ThemeProvider";
 import "./FloatingThemeToggle.css";
 
@@ -31,43 +32,84 @@ function IconSystem() {
 
 export default function FloatingThemeToggle() {
   const { themePreference, setThemePreference } = useTheme();
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef(null);
+
+  const iconByTheme = useMemo(
+    () => ({
+      light: <IconSun />,
+      dark: <IconMoon />,
+      system: <IconSystem />,
+    }),
+    [],
+  );
+
+  const labelByTheme = useMemo(
+    () => ({
+      light: "Light theme",
+      dark: "Dark theme",
+      system: "System theme",
+    }),
+    [],
+  );
+
+  const otherOptions = useMemo(
+    () => ["light", "dark", "system"].filter((k) => k !== themePreference),
+    [themePreference],
+  );
+
+  useEffect(() => {
+    const onPointerDown = (e) => {
+      if (!rootRef.current?.contains(e.target)) setOpen(false);
+    };
+    const onEscape = (e) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onEscape);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onEscape);
+    };
+  }, []);
 
   return (
     <div
+      ref={rootRef}
       className="aim-theme-float"
-      role="group"
-      aria-label="Theme: light, dark, or system"
+      role="region"
+      aria-label="Theme switcher"
     >
       <button
         type="button"
-        className={`aim-theme-float-btn ${themePreference === "light" ? "is-active" : ""}`}
-        onClick={() => setThemePreference("light")}
-        aria-pressed={themePreference === "light"}
-        aria-label="Light theme"
-        title="Light"
+        className={`aim-theme-float-btn aim-theme-float-main ${open ? "is-open" : ""}`}
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-haspopup="menu"
+        aria-label={`${labelByTheme[themePreference]}. Change theme`}
+        title={labelByTheme[themePreference]}
       >
-        <IconSun />
+        {iconByTheme[themePreference]}
       </button>
-      <button
-        type="button"
-        className={`aim-theme-float-btn ${themePreference === "dark" ? "is-active" : ""}`}
-        onClick={() => setThemePreference("dark")}
-        aria-pressed={themePreference === "dark"}
-        aria-label="Dark theme"
-        title="Dark"
-      >
-        <IconMoon />
-      </button>
-      <button
-        type="button"
-        className={`aim-theme-float-btn ${themePreference === "system" ? "is-active" : ""}`}
-        onClick={() => setThemePreference("system")}
-        aria-pressed={themePreference === "system"}
-        aria-label="Use system theme"
-        title="System"
-      >
-        <IconSystem />
-      </button>
+
+      <div className={`aim-theme-float-menu ${open ? "is-open" : ""}`} role="menu">
+        {otherOptions.map((opt) => (
+          <button
+            key={opt}
+            type="button"
+            className="aim-theme-float-btn"
+            onClick={() => {
+              setThemePreference(opt);
+              setOpen(false);
+            }}
+            role="menuitem"
+            aria-label={labelByTheme[opt]}
+            title={labelByTheme[opt]}
+          >
+            {iconByTheme[opt]}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

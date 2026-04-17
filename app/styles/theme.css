@@ -20,8 +20,8 @@
 }
 
 [data-theme="light"] {
-  --color-bg: #f4efe6;
-  --color-bg-elevated: #fffcf7;
+  --color-bg: #ffffff;
+  --color-bg-elevated: #f8f9fc;
   --color-surface: #ffffff;
   --color-text: #121a2b;
   --color-text-muted: rgba(18, 26, 43, 0.68);
