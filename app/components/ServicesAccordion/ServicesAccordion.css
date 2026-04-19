@@ -1,0 +1,304 @@
+/* ServicesAccordion — two-column layout with sticky showcase image */
+
+.aim-accordion-section {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.aim-accordion-section.is-inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Two-column layout === */
+.aim-accordion-layout {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+@media (min-width: 1024px) {
+  .aim-accordion-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: clamp(2rem, 3.5vw, 3.5rem);
+  }
+}
+
+/* === Showcase image — left column (desktop) === */
+.aim-accordion-showcase {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .aim-accordion-showcase {
+    display: block;
+    flex: 0 0 42%;
+    max-width: 42%;
+    position: sticky;
+    top: 6rem;
+    align-self: flex-start;
+  }
+}
+
+.aim-accordion-showcase-inner {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+  aspect-ratio: 4 / 3.2;
+  background: var(--color-bg-elevated);
+}
+
+.aim-accordion-showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  animation: aim-acc-img-enter 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes aim-acc-img-enter {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.aim-accordion-showcase-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    transparent 50%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+}
+
+[data-theme="dark"] .aim-accordion-showcase-overlay {
+  background: linear-gradient(
+    180deg,
+    transparent 40%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+/* === Accordion list — right column === */
+.aim-accordion-list {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.aim-accordion-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.aim-accordion-item:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+/* === Trigger button === */
+.aim-accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: clamp(1rem, 2.5vw, 1.5rem) 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  text-align: left;
+  gap: 1rem;
+  transition: color var(--transition-base);
+}
+
+.aim-accordion-trigger:hover {
+  color: var(--color-gold);
+}
+
+.aim-accordion-trigger:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.aim-accordion-trigger-left {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  min-width: 0;
+  flex: 1;
+}
+
+.aim-accordion-icon {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  color: var(--color-gold);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.aim-accordion-item.is-open .aim-accordion-icon {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-navy);
+}
+
+.aim-accordion-trigger-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.aim-accordion-trigger-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.aim-accordion-trigger-summary {
+  font-size: clamp(0.82rem, 1.6vw, 0.95rem);
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .aim-accordion-trigger-summary {
+    display: block;
+  }
+}
+
+/* === Chevron === */
+.aim-accordion-chevron {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.aim-accordion-item.is-open .aim-accordion-chevron {
+  transform: rotate(180deg);
+  color: var(--color-gold);
+}
+
+/* === Panel (collapsible content) === */
+.aim-accordion-panel {
+  overflow: hidden;
+  transition: height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.aim-accordion-panel-inner {
+  padding: 0 0 clamp(1.25rem, 3vw, 2rem) 0;
+}
+
+@media (min-width: 640px) {
+  .aim-accordion-panel-inner {
+    padding-left: 4.25rem;
+  }
+}
+
+/* === Mobile image inside panel === */
+.aim-accordion-panel-image-mobile {
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+@media (min-width: 1024px) {
+  .aim-accordion-panel-image-mobile {
+    display: none;
+  }
+}
+
+.aim-accordion-panel-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+/* === Content === */
+.aim-accordion-detail {
+  font-size: clamp(0.92rem, 1.5vw, 1.05rem);
+  line-height: 1.72;
+  color: var(--color-text-muted);
+  margin: 0 0 0.85rem;
+  max-width: 56rem;
+}
+
+.aim-accordion-detail:last-of-type {
+  margin-bottom: 1.15rem;
+}
+
+.aim-accordion-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.aim-accordion-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: color-mix(in srgb, var(--color-gold) 12%, transparent);
+  color: var(--color-gold);
+  border: 1px solid color-mix(in srgb, var(--color-gold) 22%, transparent);
+}
+
+/* === Reduced motion === */
+@media (prefers-reduced-motion: reduce) {
+  .aim-accordion-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .aim-accordion-panel {
+    transition: none;
+  }
+  .aim-accordion-chevron {
+    transition: none;
+  }
+  .aim-accordion-icon {
+    transition: none;
+  }
+  .aim-accordion-showcase-img {
+    animation: none;
+  }
+}

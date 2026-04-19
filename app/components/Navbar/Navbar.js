@@ -3,10 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useTheme } from "../ThemeProvider";
 
 const HOME_NAV_SCROLL_PX = 72;
 
 export default function Navbar({ data, variant }) {
+  const { resolvedTheme } = useTheme();
   const [servicesOpen, setServicesOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [homeScrolled, setHomeScrolled] = useState(false);
@@ -164,7 +166,10 @@ export default function Navbar({ data, variant }) {
   ]
     .filter(Boolean)
     .join(" ");
-  const navLogoSrc = transparentTop ? "/logo/bg-transparent.png" : logoUrl;
+  const navLogoSrc =
+    transparentTop || resolvedTheme === "dark"
+      ? "/logo/bg-transparent.png"
+      : logoUrl;
 
   return (
     <header className={navClass}>

@@ -11,6 +11,10 @@
 @import "./components/ProjectsSection/ProjectsSection.css";
 @import "./components/ReviewsSection/ReviewsSection.css";
 @import "./components/ContactSection/ContactSection.css";
+@import "./components/ServicesAccordion/ServicesAccordion.css";
+@import "./components/FeaturedProjects/FeaturedProjects.css";
+@import "./components/ProcessSection/ProcessSection.css";
+@import "./components/CTABanner/CTABanner.css";
 @import "./components/Footer/Footer.css";
 @import "./components/ThemeProvider/ThemeProvider.css";
 @import "./components/FloatingThemeToggle/FloatingThemeToggle.css";
@@ -28,6 +32,26 @@ body.aim-body {
   margin: 0;
   overflow-x: clip;
   max-width: 100%;
+}
+
+/* Skip-to-content link — visible only on focus for keyboard users */
+.aim-skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-gold);
+  color: var(--color-navy);
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.aim-skip-link:focus {
+  top: 1rem;
 }
 
 /* Home layout shell — fixed nav + flex column for footer */

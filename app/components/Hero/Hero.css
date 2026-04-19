@@ -1,4 +1,4 @@
-/* Hero — full viewport height; copy + CTAs vertically centered */
+/* Hero — full viewport height; multi-layer overlay; staggered entrance */
 
 .aim-hero {
   position: relative;
@@ -16,9 +16,13 @@
   box-sizing: border-box;
 }
 
+/* === Background media layer === */
 .aim-hero-media {
   position: absolute;
   inset: 0;
+  z-index: 0;
+  will-change: transform, opacity;
+  transition: none;
 }
 
 .aim-hero-media video,
@@ -34,27 +38,78 @@
   object-fit: cover;
 }
 
+/* === Multi-layer overlay === */
 .aim-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: var(--hero-overlay);
-}
-
-/* Carousel scrim — same overlay in light and dark */
-.aim-hero-carousel-scrim {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  transition: background var(--transition-base);
-  background: linear-gradient(
-    120deg,
-    rgba(18, 22, 34, 0.62) 0%,
-    rgba(30, 36, 52, 0.48) 45%,
-    rgba(18, 22, 34, 0.58) 100%
-  );
 }
 
+/* Dark theme overlay — deeper, cinematic */
+[data-theme="dark"] .aim-hero-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(11, 16, 28, 0.75) 0%,
+      rgba(11, 16, 28, 0.35) 35%,
+      rgba(11, 16, 28, 0.25) 55%,
+      rgba(11, 16, 28, 0.7) 85%,
+      rgba(11, 16, 28, 0.92) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(11, 16, 28, 0.6) 0%,
+      transparent 50%,
+      rgba(11, 16, 28, 0.3) 100%
+    );
+}
+
+/* Light theme overlay — warm contrast */
+[data-theme="light"] .aim-hero-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18, 26, 43, 0.68) 0%,
+      rgba(18, 26, 43, 0.3) 35%,
+      rgba(18, 26, 43, 0.22) 55%,
+      rgba(18, 26, 43, 0.6) 85%,
+      rgba(18, 26, 43, 0.85) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(18, 26, 43, 0.55) 0%,
+      transparent 50%,
+      rgba(18, 26, 43, 0.25) 100%
+    );
+}
+
+/* Subtle film-grain texture overlay */
+.aim-hero-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+[data-theme="dark"] .aim-hero-grain {
+  opacity: 0.05;
+}
+
+/* Remove old carousel-only scrim — overlay handles both cases now */
+.aim-hero-carousel-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: none;
+}
+
+/* === Content layer === */
 .aim-hero-content {
   position: relative;
   z-index: 2;
@@ -69,25 +124,14 @@
   box-sizing: border-box;
 }
 
+/* === Staggered entrance animations === */
 .aim-hero-copy {
-  animation: aim-hero-copy-enter 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  opacity: 0;
+  transform: translateY(24px);
 }
 
-@keyframes aim-hero-copy-enter {
-  from {
-    opacity: 0;
-    transform: translateX(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .aim-hero-copy {
-    animation: none;
-  }
+.aim-hero.is-loaded .aim-hero-copy {
+  animation: aim-hero-copy-enter 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
 }
 
 .aim-hero-eyebrow {
@@ -95,6 +139,11 @@
   margin-bottom: 0.75rem;
   font-size: clamp(0.875rem, 1.95vw, 1.0625rem) !important;
   letter-spacing: 0.2em !important;
+  opacity: 0;
+}
+
+.aim-hero.is-loaded .aim-hero-eyebrow {
+  animation: aim-hero-fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
 }
 
 .aim-hero-title {
@@ -104,6 +153,11 @@
   margin-bottom: 1.1rem;
   max-width: min(24ch, 100%);
   text-shadow: 0 2px 28px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+}
+
+.aim-hero.is-loaded .aim-hero-title {
+  animation: aim-hero-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
 }
 
 [data-theme="light"] .aim-hero-title {
@@ -117,28 +171,142 @@
   line-height: 1.65;
   margin-bottom: 1.85rem;
   text-shadow: 0 1px 20px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+}
+
+.aim-hero.is-loaded .aim-hero-subtitle {
+  animation: aim-hero-fade-up 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
 }
 
 [data-theme="light"] .aim-hero-subtitle {
   text-shadow: 0 1px 24px rgba(0, 0, 0, 0.45);
 }
 
-/* Secondary CTA — white outline + white label (light & dark) */
+.aim-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  opacity: 0;
+}
+
+.aim-hero.is-loaded .aim-hero-ctas {
+  animation: aim-hero-fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.65s both;
+}
+
+/* === CTA styles === */
 .aim-hero .aim-hero-cta-secondary.aim-btn-ghost {
   background: transparent;
-  border: 2px solid #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
   color: #fff;
 }
 
 .aim-hero .aim-hero-cta-secondary.aim-btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.12);
   border-color: #fff;
   color: #fff;
   transform: translateY(-2px);
 }
 
-.aim-hero-ctas {
+/* === Scroll indicator === */
+.aim-hero-scroll-hint {
+  position: absolute;
+  bottom: clamp(1.5rem, 3vh, 2.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+}
+
+.aim-hero.is-loaded .aim-hero-scroll-hint {
+  animation: aim-hero-fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) 1s both;
+}
+
+.aim-hero-scroll-line {
+  display: block;
+  width: 1px;
+  height: 48px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1px;
+}
+
+.aim-hero-scroll-line::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--color-gold), transparent);
+  animation: aim-hero-scroll-pulse 2s ease-in-out infinite;
+}
+
+/* === Keyframes === */
+@keyframes aim-hero-copy-enter {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aim-hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aim-hero-scroll-pulse {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 200%;
+  }
+}
+
+/* === Reduced motion === */
+@media (prefers-reduced-motion: reduce) {
+  .aim-hero-copy,
+  .aim-hero-eyebrow,
+  .aim-hero-title,
+  .aim-hero-subtitle,
+  .aim-hero-ctas,
+  .aim-hero-scroll-hint {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .aim-hero-scroll-line::after {
+    animation: none;
+  }
+  .aim-hero-media {
+    will-change: auto;
+  }
+}
+
+/* === Responsive fine-tuning === */
+@media (max-width: 480px) {
+  .aim-hero-title {
+    font-size: clamp(1.85rem, 8.5vw, 2.5rem);
+  }
+  .aim-hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  .aim-hero-scroll-hint {
+    display: none;
+  }
 }

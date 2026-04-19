@@ -31,9 +31,11 @@ const bodyFont = DM_Sans({
 export const metadata = {
   metadataBase: new URL(site.baseUrl),
   icons: {
-    icon: [{ url: "/logo/logo.webp", type: "image/webp" }],
-    shortcut: "/logo/logo.webp",
-    apple: "/logo/logo.webp",
+    icon: [
+      { url: "/logo/bg-transparent.png", type: "image/png" },
+    ],
+    shortcut: "/logo/bg-transparent.png",
+    apple: "/logo/bg-transparent.png",
   },
   title: {
     default: seoDefaults.defaultTitle,
@@ -43,18 +45,44 @@ export const metadata = {
   keywords: [
     "commercial kitchen design",
     "BIM modeling",
+    "BIM coordination",
     "floor planning",
     "architectural design",
+    "food service design",
+    "kitchen layout design",
+    "Revit BIM services",
+    "construction documentation",
+    "space planning",
+    "hospitality design",
   ],
+  authors: [{ name: site.companyName, url: site.baseUrl }],
+  creator: site.companyName,
+  publisher: site.companyName,
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: true,
+  },
   openGraph: {
     type: "website",
     locale: seoDefaults.locale,
     siteName: site.companyName,
+    url: site.baseUrl,
   },
   twitter: {
     card: "summary_large_image",
     site: seoDefaults.twitterSite,
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: seoDefaults.themeColorLight },
+    { media: "(prefers-color-scheme: dark)", color: seoDefaults.themeColorDark },
+  ],
 };
 
 export default function RootLayout({ children }) {

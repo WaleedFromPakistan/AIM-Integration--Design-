@@ -2,15 +2,27 @@
   "pageId": "home",
   "route": "/",
   "seo": {
-    "title": "AIM Integrated Designs — Commercial Kitchen, BIM & Architecture",
-    "description": "Professional commercial kitchen design, BIM modeling, floor planning, and architectural design. Explore our work and services.",
+    "title": "AIM Integrated Designs — Commercial Kitchen Design, BIM Modeling & Architecture",
+    "description": "AIM Integrated Designs delivers precision commercial kitchen design, BIM modeling and coordination, floor planning, and architectural documentation. 15+ years of experience, 120+ projects delivered across hospitality, restaurant, residential, and commercial sectors.",
     "keywords": [
       "commercial kitchen design",
       "BIM modeling",
+      "BIM coordination",
       "floor planning",
       "architectural design",
       "food service design",
-      "integrated design"
+      "integrated design",
+      "kitchen layout design",
+      "restaurant kitchen design",
+      "Revit BIM services",
+      "clash detection",
+      "MEP coordination",
+      "construction documentation",
+      "space planning",
+      "hospitality design",
+      "architectural documentation",
+      "commercial kitchen consultant",
+      "building information modeling"
     ],
     "canonicalPath": "/",
     "robots": "index,follow",
@@ -18,19 +30,133 @@
       "type": "website",
       "imageMediaKey": "hero-poster"
     },
-    "jsonLd": {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "AIM Integrated Designs",
-      "description": "Commercial kitchen design, BIM modeling, floor planning, and architectural design services.",
-      "areaServed": "Worldwide",
-      "serviceType": [
-        "Commercial kitchen design",
-        "BIM modeling",
-        "Floor planning",
-        "Architectural design"
-      ]
-    }
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AIM Integrated Designs",
+        "legalName": "AIM Integrated Designs",
+        "url": "https://www.aimintegrateddesign.com",
+        "logo": "https://www.aimintegrateddesign.com/logo/logo.webp",
+        "description": "Precision commercial kitchen design, BIM modeling, floor planning, and architectural documentation delivered through a coordinated, model-based process.",
+        "email": "hello@aimintegrateddesign.com",
+        "sameAs": [
+          "https://www.linkedin.com/company/aim-integrated-design",
+          "https://www.instagram.com/aimintegrateddesign"
+        ],
+        "areaServed": {
+          "@type": "GeoShape",
+          "name": "Worldwide"
+        },
+        "knowsAbout": [
+          "Commercial kitchen design",
+          "BIM modeling",
+          "BIM coordination",
+          "Floor planning",
+          "Architectural design",
+          "MEP coordination",
+          "Construction documentation"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AIM Integrated Designs",
+        "url": "https://www.aimintegrateddesign.com",
+        "description": "Commercial kitchen design, BIM modeling, floor planning, and architectural design studio.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "AIM Integrated Designs"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "AIM Integrated Designs",
+        "url": "https://www.aimintegrateddesign.com",
+        "image": "https://www.aimintegrateddesign.com/logo/logo.webp",
+        "description": "Integrated design studio specializing in commercial kitchen design, BIM modeling, floor planning, and architectural documentation for hospitality, restaurant, residential, and commercial projects.",
+        "email": "hello@aimintegrateddesign.com",
+        "areaServed": "Worldwide",
+        "priceRange": "$$",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Design Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Commercial Kitchen Design",
+                "description": "End-to-end kitchen systems including workflow-driven layouts, equipment matrices, MEP coordination, and health code compliance packages for restaurants, hotels, and food service operations."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "BIM Modeling & Coordination",
+                "description": "Parametric Revit models at LOD 200–400, clash detection, COBie and IFC exports, coordination dashboards, and 3D equipment modeling for construction teams."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Floor Planning & Spatial Programming",
+                "description": "Data-informed space planning including programming, benchmarking, test-fit studies, ADA compliance, circulation analysis, and adjacency diagrams."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Architectural Design & Documentation",
+                "description": "Concept through construction documents including site plans, elevations, wall sections, finish schedules, consultant coordination, and permit-ready packages."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What commercial kitchen design services does AIM Integrated Designs offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We design commercial kitchens that perform under daily service pressure — from high-volume hotel banquet operations to fast-casual restaurant lines. Our deliverables include equipment floor plans, elevation drawings, MEP rough-in coordination, exhaust and make-up air calculations, health department compliance packages, and equipment specification schedules."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What BIM modeling services are available?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We build parametric Revit models at LOD 200–400 so every stakeholder works from one source of truth. Our BIM workflow includes clash detection routines, issue tracking dashboards, and structured data exports (COBie, IFC) that integrate with construction management platforms."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the floor planning process work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our process starts with programming interviews and benchmarking — understanding seat counts, throughput targets, storage needs, and ADA requirements. Test-fit studies let clients evaluate multiple layout options with real square-footage data and cost implications before committing to a direction."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is AIM Integrated Designs' project process?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our process follows six disciplined phases: Discovery & Brief, Programming & Analysis, Concept Design, Design Development, Documentation & Coordination, and Construction Support. Each phase keeps scope, schedule, and budget aligned from first conversation to final handoff."
+            }
+          }
+        ]
+      }
+    ]
   },
   "navbar": {
     "logoMediaKey": "logo-primary",
@@ -95,6 +221,7 @@
         {
           "id": "hero-slide-1",
           "imageSrc": "/images/carosel-images/image-1.png",
+          "mobileImageMediaKey": "hero-mobile-1",
           "imageAlt": "Commercial kitchen and food service layout",
           "eyebrow": "Hospitality & F&B",
           "title": "Kitchen systems built for real service pressure.",
@@ -103,6 +230,7 @@
         {
           "id": "hero-slide-2",
           "imageSrc": "/images/carosel-images/image-2.png",
+          "mobileImageMediaKey": "hero-mobile-2",
           "imageAlt": "Design documentation and technical coordination",
           "eyebrow": "BIM & documentation",
           "title": "Model-led coordination that survives the job site.",
@@ -111,6 +239,7 @@
         {
           "id": "hero-slide-3",
           "imageSrc": "/images/carosel-images/image-3.jpeg",
+          "mobileImageMediaKey": "hero-mobile-3",
           "imageAlt": "Residential architecture and natural light",
           "eyebrow": "Residential & lifestyle",
           "title": "Architecture tuned to light, flow, and long-term value.",
@@ -119,6 +248,7 @@
         {
           "id": "hero-slide-4",
           "imageSrc": "/images/carosel-images/image-4.jpeg",
+          "mobileImageMediaKey": "hero-mobile-4",
           "imageAlt": "Commercial facade and urban context",
           "eyebrow": "Commercial & workplace",
           "title": "Facades and cores that read sharp at speed.",
@@ -127,6 +257,7 @@
         {
           "id": "hero-slide-5",
           "imageSrc": "/images/carosel-images/image-5.jpeg",
+          "mobileImageMediaKey": "hero-mobile-5",
           "imageAlt": "Interior spatial planning and materials",
           "eyebrow": "Interiors & planning",
           "title": "Spaces that balance operation, comfort, and brand.",
@@ -135,6 +266,7 @@
         {
           "id": "hero-slide-6",
           "imageSrc": "/images/carosel-images/image-6.jpeg",
+          "mobileImageMediaKey": "hero-mobile-6",
           "imageAlt": "Built environment and project visualization",
           "eyebrow": "Delivery & visualization",
           "title": "From concept imagery to buildable clarity.",
@@ -332,6 +464,192 @@
       }
     ],
     "submitLabel": "Send message"
+  },
+  "servicesAccordion": {
+    "id": "services-detail",
+    "eyebrow": "What we deliver",
+    "title": "A closer look at each discipline.",
+    "subtitle": "Every service is structured around buildable outcomes — not abstract design theory.",
+    "items": [
+      {
+        "id": "acc-kitchen",
+        "title": "Commercial Kitchen Design",
+        "icon": "kitchen",
+        "imageMediaKey": "project-1",
+        "summary": "End-to-end kitchen systems engineered for real-world service pressure.",
+        "details": [
+          "We design commercial kitchens that perform under the intensity of daily service — from high-volume hotel banquet operations to fast-casual restaurant lines. Every layout begins with workflow analysis: how food moves from receiving through prep, cook line, plating, and service.",
+          "Our deliverables include equipment floor plans, elevation drawings, MEP rough-in coordination, exhaust and make-up air calculations, health department compliance packages, and equipment specification schedules. We coordinate directly with mechanical engineers to ensure hood systems, grease traps, and utility connections are resolved before construction begins.",
+          "Whether you are opening a single restaurant or rolling out a multi-unit franchise prototype, our kitchen packages are built so general contractors can price, permit, and build without ambiguity."
+        ],
+        "highlights": ["Workflow-driven layouts", "Equipment matrices & specs", "MEP coordination", "Health code compliance", "Franchise prototype packages"]
+      },
+      {
+        "id": "acc-bim",
+        "title": "BIM Modeling & Coordination",
+        "icon": "bim",
+        "imageMediaKey": "service-bim",
+        "summary": "Authoritative 3D models that keep every discipline aligned from design through construction.",
+        "details": [
+          "Building Information Modeling is the backbone of our coordination process. We build parametric Revit models at the appropriate Level of Development (LOD 200–400) so every stakeholder — architects, structural engineers, MEP consultants, and trades — works from one source of truth.",
+          "Our BIM workflow includes clash detection routines, issue tracking dashboards, and structured data exports (COBie, IFC) that integrate with construction management platforms. We run coordination meetings with marked-up 3D views so conflicts are resolved in the model, not on the job site.",
+          "For kitchen and food service projects, we model equipment in 3D with connection points, clearance zones, and utility stubs so the mechanical, electrical, and plumbing trades can coordinate duct routing, drain lines, and power drops before rough-in begins."
+        ],
+        "highlights": ["Revit LOD 200–400 models", "Clash detection & resolution", "COBie & IFC exports", "Coordination dashboards", "3D equipment modeling"]
+      },
+      {
+        "id": "acc-floor",
+        "title": "Floor Planning & Spatial Programming",
+        "icon": "floor",
+        "imageMediaKey": "project-4",
+        "summary": "Data-informed space planning that maximizes efficiency without sacrificing user experience.",
+        "details": [
+          "Good floor planning is invisible — occupants move through a space intuitively because adjacencies, circulation paths, and functional zones were carefully resolved. We approach every floor plan as an operational diagram first: who moves where, how often, and what do they need at each point.",
+          "Our process starts with programming interviews and benchmarking — understanding seat counts, throughput targets, storage needs, and ADA requirements before a single line is drawn. Test-fit studies let clients evaluate multiple layout options with real square-footage data and cost implications.",
+          "From open-plan offices with hoteling zones to restaurant dining rooms with kitchen adjacency constraints, we deliver dimensioned plans, furniture layouts, and circulation diagrams that give interior designers and architects a solid operational foundation."
+        ],
+        "highlights": ["Programming & benchmarking", "Test-fit studies", "ADA compliance planning", "Circulation analysis", "Zoning & adjacency diagrams"]
+      },
+      {
+        "id": "acc-arch",
+        "title": "Architectural Design & Documentation",
+        "icon": "architecture",
+        "imageMediaKey": "project-3",
+        "summary": "Design intent carried from concept sketches through construction-ready documentation.",
+        "details": [
+          "Architecture is where vision meets buildability. We carry projects from early massing studies and concept imagery through schematic design, design development, and construction documents — ensuring the quiet details that define a building's character survive value engineering and contractor interpretation.",
+          "Our documentation packages include site plans, floor plans, building sections, exterior elevations, wall sections, enlarged plans, door and window schedules, finish schedules, and specification references. We coordinate with structural, MEP, and civil consultants to produce a coordinated set that minimizes RFIs during construction.",
+          "Whether the project is a boutique hospitality interior, a ground-up mixed-use building, or a residential renovation, we maintain a cohesive architectural language — balancing material honesty, proportion, and environmental performance with the practical demands of permitting, budget, and schedule."
+        ],
+        "highlights": ["Concept through CD phases", "Coordinated drawing sets", "Material & finish schedules", "Consultant coordination", "Permit-ready packages"]
+      }
+    ]
+  },
+  "featuredProjects": {
+    "id": "featured-projects",
+    "eyebrow": "Featured work",
+    "title": "Projects that define our practice.",
+    "subtitle": "Each project represents a unique challenge solved through integrated design thinking.",
+    "categories": ["All", "Kitchen Design", "BIM Modeling", "Floor Planning", "Architecture"],
+    "items": [
+      {
+        "id": "fp1",
+        "title": "The Grand Meridian — Flagship Hotel Kitchen",
+        "category": "Kitchen Design",
+        "description": "A 12,000 sq ft production kitchen serving three restaurant concepts, a banquet hall, and 24-hour room service. We designed the workflow for 800+ covers per service with separate prep, cook, pastry, and garde manger stations.",
+        "imageMediaKey": "project-1",
+        "year": "2025",
+        "location": "Dubai, UAE",
+        "scope": "Full kitchen design & MEP coordination"
+      },
+      {
+        "id": "fp2",
+        "title": "Coastal Breeze — Restaurant Prototype",
+        "category": "Kitchen Design",
+        "description": "A scalable fast-casual restaurant prototype designed for franchise rollout. The kitchen footprint was optimized to 1,800 sq ft with a throughput target of 200 covers per hour during peak service.",
+        "imageMediaKey": "project-2",
+        "year": "2024",
+        "location": "Miami, FL",
+        "scope": "Prototype kitchen & dining layout"
+      },
+      {
+        "id": "fp3",
+        "title": "Hillcrest Residence — Courtyard Wing",
+        "category": "Architecture",
+        "description": "A 4,200 sq ft courtyard addition to an existing mid-century residence. The design centered on framing garden views from every room while maintaining thermal performance through high-performance glazing systems.",
+        "imageMediaKey": "project-3",
+        "year": "2024",
+        "location": "Austin, TX",
+        "scope": "Architectural design through CDs"
+      },
+      {
+        "id": "fp4",
+        "title": "Nexus Tower — Corporate Amenity Level",
+        "category": "Floor Planning",
+        "description": "Programming and space planning for a 22,000 sq ft amenity floor featuring a café, fitness center, lounge, and conferencing suite. Test-fit studies explored four layout options before the client selected the final configuration.",
+        "imageMediaKey": "project-4",
+        "year": "2023",
+        "location": "Chicago, IL",
+        "scope": "Spatial programming & test-fits"
+      },
+      {
+        "id": "fp5",
+        "title": "Harbor House — Boutique Hotel F&B Core",
+        "category": "BIM Modeling",
+        "description": "Full BIM coordination for a boutique hotel's food and beverage core — including a rooftop bar, ground-floor brasserie, and basement prep kitchen. LOD 350 models enabled clash-free MEP routing in a tight floor-to-floor envelope.",
+        "imageMediaKey": "project-5",
+        "year": "2023",
+        "location": "Charleston, SC",
+        "scope": "BIM modeling & clash coordination"
+      },
+      {
+        "id": "fp6",
+        "title": "Union Yards — Mixed-Use Podium",
+        "category": "Architecture",
+        "description": "A five-story mixed-use podium with ground-floor retail, two levels of structured parking, and two floors of co-working space. The architectural language bridges industrial context with contemporary materiality.",
+        "imageMediaKey": "project-6",
+        "year": "2022",
+        "location": "Portland, OR",
+        "scope": "Architecture & documentation"
+      }
+    ]
+  },
+  "process": {
+    "id": "process",
+    "eyebrow": "Our process",
+    "title": "A proven path to project success.",
+    "subtitle": "Six disciplined phases that keep scope, schedule, and budget aligned from first conversation to final handoff.",
+    "steps": [
+      {
+        "id": "step-1",
+        "number": "01",
+        "title": "Discovery & Brief",
+        "description": "We listen before we draw. Initial conversations establish project goals, operational requirements, budget parameters, and schedule constraints. The output is a clear project brief that every team member can reference.",
+        "icon": "discover"
+      },
+      {
+        "id": "step-2",
+        "number": "02",
+        "title": "Programming & Analysis",
+        "description": "Space needs are quantified through benchmarking, adjacency diagrams, and code analysis. For kitchen projects, this includes menu-driven equipment lists and throughput calculations.",
+        "icon": "analyze"
+      },
+      {
+        "id": "step-3",
+        "number": "03",
+        "title": "Concept Design",
+        "description": "Multiple design directions are explored with floor plans, 3D massing studies, and material palettes. Clients review options with enough visual clarity to make confident decisions.",
+        "icon": "design"
+      },
+      {
+        "id": "step-4",
+        "number": "04",
+        "title": "Design Development",
+        "description": "The selected concept is refined with detailed drawings, equipment specifications, and BIM models. Coordination with consultants begins, and the design is tested against budget and code.",
+        "icon": "develop"
+      },
+      {
+        "id": "step-5",
+        "number": "05",
+        "title": "Documentation & Coordination",
+        "description": "Construction documents are produced with full consultant coordination, clash detection, and specification writing. The package is assembled for permitting and contractor pricing.",
+        "icon": "document"
+      },
+      {
+        "id": "step-6",
+        "number": "06",
+        "title": "Construction Support",
+        "description": "We stay engaged through construction — responding to RFIs, reviewing submittals, conducting site visits, and verifying that design intent is maintained through the final punch list.",
+        "icon": "support"
+      }
+    ]
+  },
+  "ctaBanner": {
+    "eyebrow": "Ready to build?",
+    "title": "Let's turn your vision into buildable reality.",
+    "description": "Whether you are launching a new restaurant, coordinating a complex BIM model, or designing a building from the ground up — we bring the same discipline to every project.",
+    "primaryCta": { "label": "Start a conversation", "href": "#contact" },
+    "secondaryCta": { "label": "View our work", "href": "#featured-projects" }
   },
   "footer": {
     "tagline": "Integrated design for demanding environments.",

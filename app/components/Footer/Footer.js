@@ -32,12 +32,12 @@ export default function Footer({ data, site }) {
         <span>{copyright}</span>
         <div className="flex gap-4">
           {site?.social?.linkedin ? (
-            <a href={site.social.linkedin} rel="noreferrer" target="_blank">
+            <a href={site.social.linkedin} rel="noopener noreferrer" target="_blank" aria-label="AIM Integrated Designs on LinkedIn">
               LinkedIn
             </a>
           ) : null}
           {site?.social?.instagram ? (
-            <a href={site.social.instagram} rel="noreferrer" target="_blank">
+            <a href={site.social.instagram} rel="noopener noreferrer" target="_blank" aria-label="AIM Integrated Designs on Instagram">
               Instagram
             </a>
           ) : null}

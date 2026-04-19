@@ -2,11 +2,46 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Carosel from "../carosel/carosel";
 
 export default function Hero({ data }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    // Stagger the entrance — small delay lets the carousel image render first
+    const id = setTimeout(() => setLoaded(true), 120);
+    return () => clearTimeout(id);
+  }, []);
+
+  // Parallax-style scroll — shift media slightly on scroll
+  useEffect(() => {
+    const hero = heroRef.current;
+    if (!hero) return;
+    const media = hero.querySelector(".aim-hero-media");
+    if (!media) return;
+
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        const heroH = hero.offsetHeight;
+        if (scrollY < heroH) {
+          const ratio = scrollY / heroH;
+          media.style.transform = `translateY(${ratio * 60}px) scale(${1 + ratio * 0.05})`;
+          media.style.opacity = `${1 - ratio * 0.3}`;
+        }
+        ticking = false;
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   if (!data) return null;
 
@@ -36,18 +71,20 @@ export default function Hero({ data }) {
   const subtitle = activeSlide?.description ?? fallbackSubtitle;
 
   return (
-    <section className="aim-hero" aria-label="Introduction">
+    <section
+      className={`aim-hero ${loaded ? "is-loaded" : ""}`}
+      aria-label="Introduction"
+      ref={heroRef}
+    >
+      {/* Background media */}
       <div className="aim-hero-media" aria-hidden>
         {hasCarousel ? (
-          <>
-            <Carosel
-              slides={slides}
-              autoplayMs={carousel.autoplayMs}
-              transitionMs={carousel.transitionMs}
-              onActiveIndexChange={setActiveIndex}
-            />
-            <div className="aim-hero-carousel-scrim" />
-          </>
+          <Carosel
+            slides={slides}
+            autoplayMs={carousel.autoplayMs}
+            transitionMs={carousel.transitionMs}
+            onActiveIndexChange={setActiveIndex}
+          />
         ) : videoUrl ? (
           <video
             autoPlay
@@ -69,9 +106,13 @@ export default function Hero({ data }) {
             priority
           />
         ) : null}
-        {!hasCarousel ? <div className="aim-hero-overlay" /> : null}
       </div>
 
+      {/* Multi-layer overlay */}
+      <div className="aim-hero-overlay" aria-hidden />
+      <div className="aim-hero-grain" aria-hidden />
+
+      {/* Content */}
       <div className="aim-hero-content aim-container">
         <div
           className="aim-hero-copy"
@@ -98,6 +139,11 @@ export default function Hero({ data }) {
             </Link>
           ) : null}
         </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="aim-hero-scroll-hint" aria-hidden>
+        <span className="aim-hero-scroll-line" />
       </div>
     </section>
   );

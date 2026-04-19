@@ -41,13 +41,25 @@ export default function Carosel({
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id} className="aim-carousel-slide">
+            {/* Desktop image — landscape, hidden on mobile */}
             {slide.image ? (
               <Image
                 src={slide.image}
                 alt={slide.imageAlt || ""}
                 fill
-                className="object-cover aim-carousel-slide-img"
-                sizes="100vw"
+                className="object-cover aim-carousel-slide-img aim-carousel-img-desktop"
+                sizes="(max-width: 768px) 1px, 100vw"
+                priority={slide.id === slides[0]?.id}
+              />
+            ) : null}
+            {/* Mobile image — portrait, hidden on desktop */}
+            {slide.mobileImage ? (
+              <Image
+                src={slide.mobileImage}
+                alt={slide.mobileImageAlt || slide.imageAlt || ""}
+                fill
+                className="object-cover aim-carousel-slide-img aim-carousel-img-mobile"
+                sizes="(max-width: 768px) 100vw, 1px"
                 priority={slide.id === slides[0]?.id}
               />
             ) : null}

@@ -37,22 +37,22 @@
   );
 }
 
-/* Dark mode: #2E3852 family (slate brand bar as page theme) */
+/* Dark mode — base #0B101C */
 [data-theme="dark"] {
-  --color-bg: #2e3852;
-  --color-bg-elevated: #353e54;
-  --color-surface: #3d4660;
+  --color-bg: #0b101c;
+  --color-bg-elevated: #121a2a;
+  --color-surface: #1a2438;
   --color-text: #f2f0eb;
   --color-text-muted: rgba(242, 240, 235, 0.74);
   --color-border: rgba(242, 240, 235, 0.12);
-  --color-navy: #2e3852;
+  --color-navy: #0b101c;
   --color-gold: #d4ae88;
   --color-gold-dim: rgba(212, 174, 136, 0.3);
   --hero-overlay: linear-gradient(
     120deg,
-    rgba(20, 26, 42, 0.9) 0%,
-    rgba(46, 56, 82, 0.55) 48%,
-    rgba(20, 26, 42, 0.88) 100%
+    rgba(11, 16, 28, 0.92) 0%,
+    rgba(18, 26, 42, 0.55) 48%,
+    rgba(11, 16, 28, 0.9) 100%
   );
 }
 

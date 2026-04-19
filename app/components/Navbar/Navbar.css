@@ -10,6 +10,10 @@
   color: #fff;
 }
 
+[data-theme="dark"] .aim-nav {
+  background: #0b101c;
+}
+
 /* Home: fixed bar — transparent at top of page, solid after scroll */
 .aim-nav--home {
   position: fixed;
@@ -37,6 +41,10 @@
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+[data-theme="dark"] .aim-nav--home.aim-nav--home-solid {
+  background: #0b101c;
 }
 
 .aim-nav--home.aim-nav--transparent .aim-nav-cta.aim-btn-primary {

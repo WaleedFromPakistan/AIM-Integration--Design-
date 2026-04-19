@@ -1,10 +1,14 @@
-/* Footer — brand bar #2E3852 */
+/* Footer — brand bar (light: slate; dark: #0B101C) */
 
 .aim-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 3rem 0 2rem;
   background: #2e3852;
   color: rgba(255, 255, 255, 0.88);
+}
+
+[data-theme="dark"] .aim-footer {
+  background: #0b101c;
 }
 
 .aim-footer-company {
