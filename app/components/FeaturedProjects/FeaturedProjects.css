@@ -48,9 +48,9 @@
 }
 
 .aim-fp-filter-btn.is-active {
-  background: var(--color-gold);
-  border-color: var(--color-gold);
-  color: var(--color-navy);
+  background: #CCA07C;
+  border-color: #CCA07C;
+  color: #fff;
 }
 
 /* Project grid */

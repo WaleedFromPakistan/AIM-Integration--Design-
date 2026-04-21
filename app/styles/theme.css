@@ -14,8 +14,8 @@
   --shadow-card: 0 12px 40px rgba(15, 23, 42, 0.08);
   --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Layout: optimize for ~390px–1540px viewports */
-  --aim-container-max: min(100%, 96rem);
+  /* Layout: optimized for 390px–1440px viewports */
+  --aim-container-max: min(100%, 90rem); /* 1440px */
   --breakpoint-nav-desktop: 1280px;
 }
 

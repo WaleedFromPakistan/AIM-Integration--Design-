@@ -75,15 +75,22 @@
   text-decoration: none;
 }
 
-.aim-cta-banner-btn-ghost {
+/* Force white text + outline regardless of theme (banner bg is always navy) */
+.aim-cta-banner .aim-cta-banner-btn-ghost,
+[data-theme="light"] .aim-cta-banner .aim-cta-banner-btn-ghost,
+[data-theme="dark"] .aim-cta-banner .aim-cta-banner-btn-ghost {
   text-decoration: none;
-  border-color: rgba(242, 240, 235, 0.3);
-  color: #f2f0eb;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
-.aim-cta-banner-btn-ghost:hover {
-  border-color: var(--color-gold);
-  color: var(--color-gold);
+.aim-cta-banner .aim-cta-banner-btn-ghost:hover,
+[data-theme="light"] .aim-cta-banner .aim-cta-banner-btn-ghost:hover,
+[data-theme="dark"] .aim-cta-banner .aim-cta-banner-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+  color: #fff;
 }
 
 @media (prefers-reduced-motion: reduce) {

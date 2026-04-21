@@ -16,12 +16,15 @@ export default function Hero({ data }) {
     return () => clearTimeout(id);
   }, []);
 
-  // Parallax-style scroll — shift media slightly on scroll
+  // Parallax-style scroll — desktop only, since mobile uses a stacked card layout
   useEffect(() => {
     const hero = heroRef.current;
     if (!hero) return;
     const media = hero.querySelector(".aim-hero-media");
     if (!media) return;
+
+    const desktopMq = window.matchMedia("(min-width: 769px)");
+    if (!desktopMq.matches) return;
 
     let ticking = false;
     const onScroll = () => {
@@ -40,7 +43,11 @@ export default function Hero({ data }) {
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      media.style.transform = "";
+      media.style.opacity = "";
+    };
   }, []);
 
   if (!data) return null;
@@ -111,6 +118,20 @@ export default function Hero({ data }) {
       {/* Multi-layer overlay */}
       <div className="aim-hero-overlay" aria-hidden />
       <div className="aim-hero-grain" aria-hidden />
+
+      {/* Mobile-only foreground card — clean view of the active slide */}
+      {activeSlide?.image ? (
+        <div className="aim-hero-card-mobile" aria-hidden>
+          <Image
+            key={activeSlide.id}
+            src={activeSlide.image}
+            alt={activeSlide.imageAlt || ""}
+            fill
+            className="object-cover aim-hero-card-mobile-img"
+            sizes="(max-width: 768px) 90vw, 1px"
+          />
+        </div>
+      ) : null}
 
       {/* Content */}
       <div className="aim-hero-content aim-container">

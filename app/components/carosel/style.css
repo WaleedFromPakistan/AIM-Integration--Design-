@@ -25,23 +25,3 @@
   height: 100%;
   object-fit: cover;
 }
-
-/* Mobile: show portrait image, hide desktop landscape */
-.aim-carousel-img-desktop {
-  display: none !important;
-}
-
-.aim-carousel-img-mobile {
-  display: block !important;
-}
-
-/* Desktop (769px+): show landscape, hide mobile portrait */
-@media (min-width: 769px) {
-  .aim-carousel-img-desktop {
-    display: block !important;
-  }
-
-  .aim-carousel-img-mobile {
-    display: none !important;
-  }
-}

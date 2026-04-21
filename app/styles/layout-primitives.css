@@ -5,21 +5,14 @@
   max-width: var(--aim-container-max, 96rem);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
   box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
-  .aim-container {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
 .aim-section {
-  padding-top: clamp(3.5rem, 8vw, 6rem);
-  padding-bottom: clamp(3.5rem, 8vw, 6rem);
+  padding-top: clamp(3rem, 7vw, 6rem);
+  padding-bottom: clamp(3rem, 7vw, 6rem);
 }
 
 .aim-section-alt {
@@ -63,9 +56,9 @@
 }
 
 .aim-btn-primary {
-  background: var(--color-gold);
-  color: var(--color-navy);
-  box-shadow: 0 10px 30px var(--color-gold-dim);
+  background: #CCA07C;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(204, 160, 124, 0.35);
 }
 
 .aim-btn-primary:hover {

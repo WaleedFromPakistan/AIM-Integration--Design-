@@ -221,7 +221,6 @@
         {
           "id": "hero-slide-1",
           "imageSrc": "/images/carosel-images/image-1.png",
-          "mobileImageMediaKey": "hero-mobile-1",
           "imageAlt": "Commercial kitchen and food service layout",
           "eyebrow": "Hospitality & F&B",
           "title": "Kitchen systems built for real service pressure.",
@@ -230,7 +229,6 @@
         {
           "id": "hero-slide-2",
           "imageSrc": "/images/carosel-images/image-2.png",
-          "mobileImageMediaKey": "hero-mobile-2",
           "imageAlt": "Design documentation and technical coordination",
           "eyebrow": "BIM & documentation",
           "title": "Model-led coordination that survives the job site.",
@@ -239,7 +237,6 @@
         {
           "id": "hero-slide-3",
           "imageSrc": "/images/carosel-images/image-3.jpeg",
-          "mobileImageMediaKey": "hero-mobile-3",
           "imageAlt": "Residential architecture and natural light",
           "eyebrow": "Residential & lifestyle",
           "title": "Architecture tuned to light, flow, and long-term value.",
@@ -248,7 +245,6 @@
         {
           "id": "hero-slide-4",
           "imageSrc": "/images/carosel-images/image-4.jpeg",
-          "mobileImageMediaKey": "hero-mobile-4",
           "imageAlt": "Commercial facade and urban context",
           "eyebrow": "Commercial & workplace",
           "title": "Facades and cores that read sharp at speed.",
@@ -257,7 +253,6 @@
         {
           "id": "hero-slide-5",
           "imageSrc": "/images/carosel-images/image-5.jpeg",
-          "mobileImageMediaKey": "hero-mobile-5",
           "imageAlt": "Interior spatial planning and materials",
           "eyebrow": "Interiors & planning",
           "title": "Spaces that balance operation, comfort, and brand.",
@@ -266,7 +261,6 @@
         {
           "id": "hero-slide-6",
           "imageSrc": "/images/carosel-images/image-6.jpeg",
-          "mobileImageMediaKey": "hero-mobile-6",
           "imageAlt": "Built environment and project visualization",
           "eyebrow": "Delivery & visualization",
           "title": "From concept imagery to buildable clarity.",
@@ -535,7 +529,7 @@
       {
         "id": "fp1",
         "title": "The Grand Meridian — Flagship Hotel Kitchen",
-        "category": "Kitchen Design",
+        "category": "Floor Planning",
         "description": "A 12,000 sq ft production kitchen serving three restaurant concepts, a banquet hall, and 24-hour room service. We designed the workflow for 800+ covers per service with separate prep, cook, pastry, and garde manger stations.",
         "imageMediaKey": "project-1",
         "year": "2025",
@@ -545,7 +539,7 @@
       {
         "id": "fp2",
         "title": "Coastal Breeze — Restaurant Prototype",
-        "category": "Kitchen Design",
+        "category": "Architecture",
         "description": "A scalable fast-casual restaurant prototype designed for franchise rollout. The kitchen footprint was optimized to 1,800 sq ft with a throughput target of 200 covers per hour during peak service.",
         "imageMediaKey": "project-2",
         "year": "2024",
@@ -665,10 +659,10 @@
       {
         "title": "Services",
         "links": [
-          { "label": "Commercial kitchen design", "href": "#services" },
-          { "label": "BIM modeling", "href": "#services" },
-          { "label": "Floor planning", "href": "#services" },
-          { "label": "Architectural design", "href": "#services" }
+          { "label": "Commercial Kitchen Design", "href": "#services" },
+          { "label": "BIM Modeling", "href": "#services" },
+          { "label": "Floor Planning", "href": "#services" },
+          { "label": "Architectural Design", "href": "#services" }
         ]
       }
     ],
