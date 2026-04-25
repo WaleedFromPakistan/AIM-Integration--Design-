@@ -25,7 +25,7 @@ const headingFont = Cormorant_Garamond({
 const bodyFont = DM_Sans({
   subsets: ["latin"],
   variable: "--font-body-family",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata = {

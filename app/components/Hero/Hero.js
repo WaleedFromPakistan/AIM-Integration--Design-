@@ -23,7 +23,7 @@ export default function Hero({ data }) {
     const media = hero.querySelector(".aim-hero-media");
     if (!media) return;
 
-    const desktopMq = window.matchMedia("(min-width: 769px)");
+    const desktopMq = window.matchMedia("(min-width: 768px)");
     if (!desktopMq.matches) return;
 
     let ticking = false;

@@ -1,7 +1,6 @@
 /* ============================================================
    ServicesSection
-   Mobile (<1024px): horizontal swipe rail, 30px left padding,
-                     last card peeks off the right edge
+   Mobile (<1024px): single-column vertical stack
    Desktop (≥1024px): 2×2 grid; cards lift on hover and slide
                       description in from the bottom
    ============================================================ */
@@ -83,11 +82,11 @@
   transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* === Description: hidden by default, slides in on hover/focus (desktop) === */
+/* === Description: always visible on mobile; slides in on hover on desktop === */
 .aim-service-card-desc-wrap {
-  max-height: 0;
-  opacity: 0;
-  transform: translateY(14px);
+  max-height: 8rem;
+  opacity: 1;
+  transform: translateY(0);
   transition:
     max-height 0.55s cubic-bezier(0.22, 1, 0.36, 1),
     opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.05s,
@@ -104,90 +103,40 @@
 }
 
 /* ============================================================
-   MOBILE (<1024px) — horizontal swipe rail
-   - 30px (1.875rem) left padding so first card is inset
-   - last card extends past the right edge to suggest swipe
-   - description always visible since hover doesn't apply on touch
+   Grid — single column by default, 2×2 on desktop
    ============================================================ */
-.aim-services-rail {
-  display: flex;
-  flex-direction: row;
-  gap: 0.85rem;
-  padding: clamp(1.25rem, 3vw, 2rem) 1.25rem clamp(1.5rem, 3.5vw, 2.25rem)
-    1.875rem; /* left = 30px */
-  margin: 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-padding-left: 1.875rem;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
-}
-
-.aim-services-rail::-webkit-scrollbar {
-  display: none;
-}
-
-.aim-services-rail-item {
-  flex: 0 0 78%;
-  max-width: 22rem;
-  min-width: 16rem;
-  scroll-snap-align: start;
-  height: clamp(20rem, 62vw, 26rem);
-}
-
-@media (min-width: 480px) {
-  .aim-services-rail-item {
-    flex-basis: 64%;
-  }
-}
-
-@media (min-width: 640px) {
-  .aim-services-rail-item {
-    flex-basis: 48%;
-  }
-}
-
-@media (min-width: 768px) {
-  .aim-services-rail-item {
-    flex-basis: 40%;
-  }
-}
-
-/* On mobile, description always visible (no hover) */
-@media (max-width: 1023px) {
-  .aim-service-card-desc-wrap {
-    max-height: 8rem;
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Hide desktop grid on mobile */
 .aim-services-grid {
-  display: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 3vw, 1.5rem);
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+/* Mobile: portrait-style tall cards so visuals still look rich in a stack */
+.aim-services-grid-cell {
+  height: clamp(18rem, 60vw, 22rem);
 }
 
 /* ============================================================
    DESKTOP (≥1024px) — 2×2 grid with hover lift + slide-in copy
    ============================================================ */
 @media (min-width: 1024px) {
-  .aim-services-rail {
-    display: none;
-  }
-
   .aim-services-grid {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: clamp(1.25rem, 2vw, 1.75rem);
-    margin-top: clamp(1.5rem, 3vw, 2.25rem);
   }
 
   .aim-services-grid-cell {
     height: clamp(20rem, 32vw, 28rem);
   }
 
-  /* Hover: card lifts, image gently zooms, scrim deepens, description rises */
+  /* On desktop, description is hidden by default and slides in on hover */
+  .aim-service-card-desc-wrap {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
   .aim-service-card:hover,
   .aim-service-card:focus-visible {
     transform: translateY(-10px);

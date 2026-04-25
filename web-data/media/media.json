@@ -4,7 +4,7 @@
   "assets": {
     "logo-primary": {
       "type": "image",
-      "url": "/logo/logo.webp",
+      "url": "blob:logo/logo.webp",
       "alt": "AIM Integrated Designs logo"
     },
     "hero-video": {
@@ -19,17 +19,17 @@
     },
     "service-commercial-kitchen": {
       "type": "image",
-      "url": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=900&q=80",
+      "url": "blob:images/service-cards/Commercial-Kitchen.png",
       "alt": "Commercial kitchen design"
     },
     "service-bim": {
       "type": "image",
-      "url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&q=80",
+      "url": "blob:images/service-cards/BIM-modeling.png",
       "alt": "BIM modeling and digital design"
     },
     "service-floor-plan": {
       "type": "image",
-      "url": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&q=80",
+      "url": "blob:images/service-cards/Floor-Planning.png",
       "alt": "Floor planning and space layout"
     },
     "service-architecture": {
@@ -39,8 +39,23 @@
     },
     "about-studio": {
       "type": "image",
-      "url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
-      "alt": "Design studio environment"
+      "url": "blob:images/about-us/about-us-feature-image.jpg",
+      "alt": "AIM Integrated Design"
+    },
+    "accordion-kitchen": {
+      "type": "image",
+      "url": "blob:images/home-accordian/Commercial-Kitchen.jpg",
+      "alt": "Commercial kitchen design showcase"
+    },
+    "accordion-bim": {
+      "type": "image",
+      "url": "blob:images/home-accordian/BIM-Model.png",
+      "alt": "BIM modeling showcase"
+    },
+    "accordion-floor": {
+      "type": "image",
+      "url": "blob:images/home-accordian/Floor Planning.png",
+      "alt": "Floor planning showcase"
     },
     "project-1": {
       "type": "image",

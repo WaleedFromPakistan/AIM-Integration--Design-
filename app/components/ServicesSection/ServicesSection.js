@@ -41,16 +41,7 @@ export default function ServicesSection({ data }) {
         <SectionHeader data={header} />
       </div>
 
-      {/* Mobile: horizontal swipe rail with hidden right edge */}
-      <div className="aim-services-rail" role="list">
-        {items.map((item, index) => (
-          <div key={item.id} role="listitem" className="aim-services-rail-item">
-            <ServiceCard item={item} index={index} />
-          </div>
-        ))}
-      </div>
-
-      {/* Desktop: 2x2 grid with hover lift + slide-in description */}
+      {/* Mobile: single column · Desktop (≥1024px): 2×2 grid */}
       <div className="aim-container">
         <div className="aim-services-grid" role="list">
           {items.map((item, index) => (

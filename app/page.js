@@ -5,6 +5,7 @@ import { buildHomeViewModel } from "@/lib/buildHomeViewModel";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutSection from "./components/AboutSection";
+import MissionSection from "./components/MissionSection";
 import ServicesSection from "./components/ServicesSection";
 import ServicesAccordion from "./components/ServicesAccordion";
 import FeaturedProjects from "./components/FeaturedProjects";
@@ -96,6 +97,7 @@ export default function Home() {
         <div id="top" />
         <Hero data={viewModel.hero} />
         <AboutSection data={viewModel.about} />
+        <MissionSection data={viewModel.mission} />
         <ServicesSection data={viewModel.services} />
         <ServicesAccordion data={viewModel.servicesAccordion} />
         <FeaturedProjects data={viewModel.featuredProjects} />

@@ -1,0 +1,305 @@
+/* ============================================================
+   MissionSection — professional 4-card grid
+   Breakpoints: 390 / 768 / 1024 / 1440
+   - 390px:  single column, comfortable padding
+   - 768px:  2 columns, snug
+   - 1024px: 2 columns, more breathing room, larger numbers
+   - 1440px: 2 columns, max-out spacing & typography
+   ============================================================ */
+
+.aim-mission-section {
+  position: relative;
+}
+
+/* Subtle linear separator at the top so the section feels intentional */
+.aim-mission-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: clamp(48px, 8vw, 96px);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  transform: translateX(-50%);
+  opacity: 0.55;
+}
+
+/* === Grid layout, fully responsive === */
+.aim-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+/* 768+ → 2×2 */
+@media (min-width: 768px) {
+  .aim-mission-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+/* 1024+ → larger gap */
+@media (min-width: 1024px) {
+  .aim-mission-grid {
+    gap: 1.75rem;
+  }
+}
+
+/* 1440+ → max breathing room */
+@media (min-width: 1440px) {
+  .aim-mission-grid {
+    gap: 2.25rem;
+  }
+}
+
+/* ============================================================
+   Card — premium feel with watermark number
+   ============================================================ */
+.aim-mission-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.5rem 1.5rem 1.75rem;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(
+      155deg,
+      color-mix(in srgb, var(--color-surface) 100%, transparent) 0%,
+      color-mix(in srgb, var(--color-surface) 92%, var(--color-bg)) 100%
+    );
+  border: 1px solid var(--color-border);
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.06);
+  height: 100%;
+  overflow: hidden;
+  isolation: isolate;
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.aim-mission-section.is-inview .aim-mission-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Decorative top-right corner — large watermark of the gold accent */
+.aim-mission-card::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -25%;
+  width: 70%;
+  height: 130%;
+  background: radial-gradient(
+    ellipse at top right,
+    color-mix(in srgb, var(--color-gold) 10%, transparent) 0%,
+    transparent 55%
+  );
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Left rail accent — solid gold gradient */
+.aim-mission-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    var(--color-gold) 0%,
+    color-mix(in srgb, var(--color-gold) 50%, transparent) 65%,
+    transparent 100%
+  );
+  z-index: 1;
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Hover */
+.aim-mission-card:hover {
+  border-color: color-mix(in srgb, var(--color-gold) 45%, var(--color-border));
+  box-shadow: 0 26px 56px rgba(15, 23, 42, 0.16);
+}
+
+.aim-mission-card:hover::before {
+  width: 5px;
+}
+
+.aim-mission-card:hover::after {
+  opacity: 1;
+}
+
+/* Tablet+: more padding */
+@media (min-width: 768px) {
+  .aim-mission-card {
+    padding: 1.75rem 1.75rem 2rem;
+    gap: 1.4rem;
+  }
+}
+
+/* Desktop 1024+: even more padding, more dramatic shadow */
+@media (min-width: 1024px) {
+  .aim-mission-card {
+    padding: 2rem 2rem 2.25rem;
+    gap: 1.6rem;
+  }
+}
+
+/* Wide 1440+ */
+@media (min-width: 1440px) {
+  .aim-mission-card {
+    padding: 2.5rem 2.5rem 2.75rem;
+    gap: 2rem;
+  }
+}
+
+/* ============================================================
+   Number — column 1, premium serif
+   ============================================================ */
+.aim-mission-card-num {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 0.95;
+  color: var(--color-gold);
+  letter-spacing: -0.02em;
+  /* Tabular-nums so 01..04 align beautifully across cards */
+  font-variant-numeric: tabular-nums;
+  min-width: 2.2ch;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Subtle rule under the number — micro-detail */
+.aim-mission-card-num::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  margin-top: 0.6rem;
+  background: linear-gradient(
+    90deg,
+    var(--color-gold) 0%,
+    color-mix(in srgb, var(--color-gold) 30%, transparent) 100%
+  );
+  border-radius: 2px;
+  transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.aim-mission-card:hover .aim-mission-card-num {
+  transform: translateY(-2px);
+}
+
+.aim-mission-card:hover .aim-mission-card-num::after {
+  width: 44px;
+}
+
+@media (min-width: 768px) {
+  .aim-mission-card-num {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aim-mission-card-num {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .aim-mission-card-num {
+    font-size: 3.4rem;
+  }
+}
+
+/* ============================================================
+   Body — column 2, title + description
+   ============================================================ */
+.aim-mission-card-body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  min-width: 0;
+}
+
+.aim-mission-card-title {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text);
+  margin: 0;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.aim-mission-card-desc {
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin: 0;
+  max-width: 36rem;
+  text-wrap: pretty;
+}
+
+@media (min-width: 768px) {
+  .aim-mission-card-title {
+    font-size: 0.82rem;
+    letter-spacing: 0.18em;
+  }
+  .aim-mission-card-desc {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aim-mission-card-title {
+    font-size: 0.875rem;
+    letter-spacing: 0.2em;
+  }
+  .aim-mission-card-desc {
+    font-size: 1rem;
+    line-height: 1.72;
+  }
+}
+
+@media (min-width: 1440px) {
+  .aim-mission-card-title {
+    font-size: 0.9375rem;
+  }
+  .aim-mission-card-desc {
+    font-size: 1.0625rem;
+    line-height: 1.74;
+  }
+}
+
+/* ============================================================
+   Reduced motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .aim-mission-card,
+  .aim-mission-card-num,
+  .aim-mission-card-num::after,
+  .aim-mission-card::before,
+  .aim-mission-card::after {
+    opacity: 1 !important;
+    transform: none !important;
+    transition-delay: 0s !important;
+    transition: none !important;
+  }
+}

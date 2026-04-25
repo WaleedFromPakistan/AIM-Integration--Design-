@@ -2,11 +2,12 @@
 @import "./styles/theme.css";
 @import "./styles/layout-primitives.css";
 
-/* Component styles (imported here — Next.js requires global CSS entry from root) */
+/* Component styles (imported here — Next.js requires global CSS entry from root) -- */
 @import "./components/Navbar/Navbar.css";
 @import "./components/Hero/Hero.css";
 @import "./components/SectionHeader/SectionHeader.css";
 @import "./components/AboutSection/AboutSection.css";
+@import "./components/MissionSection/MissionSection.css";
 @import "./components/ServicesSection/ServicesSection.css";
 @import "./components/ProjectsSection/ProjectsSection.css";
 @import "./components/ReviewsSection/ReviewsSection.css";

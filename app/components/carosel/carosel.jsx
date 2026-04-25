@@ -35,11 +35,13 @@ export default function Carosel({
           pauseOnMouseEnter: true,
         }}
         slidesPerView={1}
+        spaceBetween={0}
         allowTouchMove
+        watchSlidesProgress
         onSlideChange={handleSlideChange}
         onSwiper={(swiper) => onActiveIndexChange?.(swiper.realIndex)}
       >
-        {slides.map((slide) => (
+        {slides.map((slide, index) => (
           <SwiperSlide key={slide.id} className="aim-carousel-slide">
             {slide.image ? (
               <Image
@@ -48,7 +50,8 @@ export default function Carosel({
                 fill
                 className="object-cover aim-carousel-slide-img"
                 sizes="100vw"
-                priority={slide.id === slides[0]?.id}
+                loading="eager"
+                priority={index < 2}
               />
             ) : null}
           </SwiperSlide>

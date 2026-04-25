@@ -160,10 +160,10 @@
   },
   "navbar": {
     "logoMediaKey": "logo-primary",
-    "brandName": "AIM Integrated Designs",
+    "brandName": "AIM Integrated Design",
     "brandWordmark": {
       "bold": "AIM",
-      "condensed": "INTEGRATED DESIGNS"
+      "condensed": "INTEGRATED DESIGN"
     },
     "links": [
       { "id": "home", "label": "Home", "href": "#top" },
@@ -220,51 +220,35 @@
       "slides": [
         {
           "id": "hero-slide-1",
-          "imageSrc": "/images/carosel-images/image-1.png",
+          "imageSrc": "blob:images/carosel-images/image-1.png",
           "imageAlt": "Commercial kitchen and food service layout",
-          "eyebrow": "Hospitality & F&B",
+          "eyebrow": "COMMERCIAL KITCHEN DESIGN",
           "title": "Kitchen systems built for real service pressure.",
           "description": "Line design, exhaust and make-up air, and equipment schedules aligned so operators open on time—with drawings GCs can build."
         },
         {
           "id": "hero-slide-2",
-          "imageSrc": "/images/carosel-images/image-2.png",
+          "imageSrc": "blob:images/carosel-images/image-2.png",
           "imageAlt": "Design documentation and technical coordination",
-          "eyebrow": "BIM & documentation",
+          "eyebrow": "FLOOR PLANNING",
           "title": "Model-led coordination that survives the job site.",
           "description": "Structured LOD, clash-ready views, and issue logs that keep architects, MEP, and trades on one accountable thread."
         },
         {
           "id": "hero-slide-3",
-          "imageSrc": "/images/carosel-images/image-3.jpeg",
+          "imageSrc": "blob:images/carosel-images/BIM Model.jpg",
           "imageAlt": "Residential architecture and natural light",
-          "eyebrow": "Residential & lifestyle",
+          "eyebrow": "BIM MODELING",
           "title": "Architecture tuned to light, flow, and long-term value.",
           "description": "From massing studies to interior thresholds, we document intent so builders preserve the quiet details that sell the experience."
         },
         {
           "id": "hero-slide-4",
-          "imageSrc": "/images/carosel-images/image-4.jpeg",
+          "imageSrc": "blob:images/carosel-images/Architecture.jpg",
           "imageAlt": "Commercial facade and urban context",
-          "eyebrow": "Commercial & workplace",
+          "eyebrow": "ARCHITECTURAL & INTERIOR DESIGN",
           "title": "Facades and cores that read sharp at speed.",
           "description": "Test fits, amenity strategy, and envelope logic packaged for permitting and procurement—without losing design discipline."
-        },
-        {
-          "id": "hero-slide-5",
-          "imageSrc": "/images/carosel-images/image-5.jpeg",
-          "imageAlt": "Interior spatial planning and materials",
-          "eyebrow": "Interiors & planning",
-          "title": "Spaces that balance operation, comfort, and brand.",
-          "description": "Circulation, adjacencies, and finish intent captured in schedules and details so site teams execute without guesswork."
-        },
-        {
-          "id": "hero-slide-6",
-          "imageSrc": "/images/carosel-images/image-6.jpeg",
-          "imageAlt": "Built environment and project visualization",
-          "eyebrow": "Delivery & visualization",
-          "title": "From concept imagery to buildable clarity.",
-          "description": "Visual narratives for stakeholders, paired with documentation discipline so design intent survives value engineering and construction."
         }
       ]
     }
@@ -272,17 +256,51 @@
   "about": {
     "id": "about",
     "eyebrow": "About us",
-    "title": "A studio built for coordination—not surprises.",
+    "title": "Architects of synchronization—integration without limits.",
     "body": [
-      "Aim Integrated Design partners with operators, architects, and builders who need clarity from the first sketch to construction documents.",
-      "Our process favors tight communication, model-based coordination, and documentation that trades can execute with confidence."
+      "AIM Integrated Design is a multidisciplinary vanguard bridging visionary conceptualization and operational reality. We engineer data-rich, build-ready solutions, synthesizing \"integration without limits\" into high-performance environments for global hospitality and healthcare.",
+      "Our practice asserts that unity catalyzes efficiency. By fusing Operational Intelligence with Technical Rigor, we leverage advanced BIM to neutralize risk and ensure ergonomic precision. This synthesis ensures Future-Ready Scalability, delivering adaptable architectural ecosystems engineered to evolve alongside emerging technologies.",
+      "As Architects of Synchronization, we provide a unified nexus where architecture, engineering, and technology converge. Forged in precision and global adaptability, AIM is the definitive partner for stakeholders demanding innovative, high-velocity, and hyper-efficient built environments."
     ],
     "stats": [
       { "value": "15+", "label": "Years combined experience" },
       { "value": "120+", "label": "Delivered projects" },
-      { "value": "4", "label": "Core disciplines in-house" }
+      { "value": "4", "label": "Core disciplines in-house" },
+      { "value": "98%", "label": "Client satisfaction" }
     ],
     "imageMediaKey": "about-studio"
+  },
+  "mission": {
+    "id": "mission",
+    "eyebrow": "Our mission",
+    "title": "What drives every project we deliver.",
+    "subtitle": "Four pillars define how we operate, where we're headed, and the standards we hold ourselves to.",
+    "items": [
+      {
+        "id": "mission-1",
+        "number": "01",
+        "title": "Objective",
+        "description": "To pioneer an \"integration without limits\" philosophy by synchronizing architecture, engineering, and technology into a unified, high-performance design ecosystem."
+      },
+      {
+        "id": "mission-2",
+        "number": "02",
+        "title": "Direction",
+        "description": "To evolve into a singular collaborative platform that redefines industry standards through intelligent, data-driven BIM workflows and seamless multidisciplinary execution."
+      },
+      {
+        "id": "mission-3",
+        "number": "03",
+        "title": "Guiding Principles",
+        "description": "We anchor our practice in technical precision, operational ergonomics, and uncompromising international compliance to ensure every project achieves peak efficiency."
+      },
+      {
+        "id": "mission-4",
+        "number": "04",
+        "title": "Global Experience",
+        "description": "Our portfolio spans diverse international sectors, navigating complex regulatory landscapes to deliver world-class design solutions across hospitality, commercial, and industrial markets."
+      }
+    ]
   },
   "services": {
     "id": "services",
@@ -469,7 +487,7 @@
         "id": "acc-kitchen",
         "title": "Commercial Kitchen Design",
         "icon": "kitchen",
-        "imageMediaKey": "project-1",
+        "imageMediaKey": "accordion-kitchen",
         "summary": "End-to-end kitchen systems engineered for real-world service pressure.",
         "details": [
           "We design commercial kitchens that perform under the intensity of daily service — from high-volume hotel banquet operations to fast-casual restaurant lines. Every layout begins with workflow analysis: how food moves from receiving through prep, cook line, plating, and service.",
@@ -482,7 +500,7 @@
         "id": "acc-bim",
         "title": "BIM Modeling & Coordination",
         "icon": "bim",
-        "imageMediaKey": "service-bim",
+        "imageMediaKey": "accordion-bim",
         "summary": "Authoritative 3D models that keep every discipline aligned from design through construction.",
         "details": [
           "Building Information Modeling is the backbone of our coordination process. We build parametric Revit models at the appropriate Level of Development (LOD 200–400) so every stakeholder — architects, structural engineers, MEP consultants, and trades — works from one source of truth.",
@@ -495,7 +513,7 @@
         "id": "acc-floor",
         "title": "Floor Planning & Spatial Programming",
         "icon": "floor",
-        "imageMediaKey": "project-4",
+        "imageMediaKey": "accordion-floor",
         "summary": "Data-informed space planning that maximizes efficiency without sacrificing user experience.",
         "details": [
           "Good floor planning is invisible — occupants move through a space intuitively because adjacencies, circulation paths, and functional zones were carefully resolved. We approach every floor plan as an operational diagram first: who moves where, how often, and what do they need at each point.",

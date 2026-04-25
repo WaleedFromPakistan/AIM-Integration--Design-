@@ -168,7 +168,7 @@ export default function Navbar({ data, variant }) {
     .join(" ");
   const navLogoSrc =
     transparentTop || resolvedTheme === "dark"
-      ? "/logo/bg-transparent.png"
+      ? "/api/media/logo/bg-transparent.png"
       : logoUrl;
 
   return (
