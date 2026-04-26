@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer({ data, site }) {
@@ -9,7 +10,16 @@ export default function Footer({ data, site }) {
   return (
     <footer className="aim-footer">
       <div className="aim-container aim-footer-grid">
-        <div>
+        <div className="aim-footer-brand">
+          <Link href="/" className="aim-footer-logo" aria-label="AIM Integrated Designs home">
+            <Image
+              src="/api/media/logo/bg-transparent.png"
+              alt="AIM Integrated Designs"
+              width={120}
+              height={120}
+              className="aim-footer-logo-img"
+            />
+          </Link>
           <p className="aim-heading aim-footer-company text-lg font-semibold">
             {site?.companyName ?? "AIM Integrated Designs"}
           </p>

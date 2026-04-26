@@ -114,10 +114,17 @@ export default function Navbar({ data, variant }) {
       hero.dataset.navSection = "home";
       targets.push(hero);
     }
-    for (const id of ["about", "services", "projects", "contact"]) {
-      const el = document.getElementById(id);
+    // Map section element id -> nav link id (so active highlight matches the link, not the DOM id)
+    const sectionToNavId = {
+      about: "about",
+      services: "services",
+      "featured-projects": "projects",
+      contact: "contact",
+    };
+    for (const [sectionId, navId] of Object.entries(sectionToNavId)) {
+      const el = document.getElementById(sectionId);
       if (el) {
-        el.dataset.navSection = id;
+        el.dataset.navSection = navId;
         targets.push(el);
       }
     }

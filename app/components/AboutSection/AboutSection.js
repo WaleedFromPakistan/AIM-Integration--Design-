@@ -74,6 +74,18 @@ export default function AboutSection({ data }) {
           <div className="aim-about-line" aria-hidden>
             <span />
           </div>
+          {imageUrl ? (
+            <div className="aim-about-image">
+              <Image
+                src={imageUrl}
+                alt={imageAlt || ""}
+                width={900}
+                height={700}
+                className="aim-about-image-el"
+                sizes="(max-width: 1023px) 100vw, 42vw"
+              />
+            </div>
+          ) : null}
           {body?.map((paragraph, index) => (
             <p key={`about-body-${index}`} className="aim-about-body">
               {paragraph}
@@ -92,18 +104,6 @@ export default function AboutSection({ data }) {
             </div>
           ) : null}
         </div>
-        {imageUrl ? (
-          <div className="aim-about-image">
-            <Image
-              src={imageUrl}
-              alt={imageAlt || ""}
-              width={900}
-              height={700}
-              className="aim-about-image-el"
-              sizes="(max-width: 960px) 100vw, 45vw"
-            />
-          </div>
-        ) : null}
       </div>
     </section>
   );

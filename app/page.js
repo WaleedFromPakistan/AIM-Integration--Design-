@@ -16,6 +16,19 @@ import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import FloatingThemeToggle from "./components/FloatingThemeToggle";
 
+/* ============================================================
+   Rendering strategy: SSG + ISR
+   - dynamic = "force-static": Generates the page at build time as
+     static HTML. No per-request server work, fastest TTFB.
+   - revalidate = 3600: After 1 hour, the next incoming request
+     triggers a background regeneration; users keep getting cached
+     HTML in the meantime (stale-while-revalidate). Manual rebuilds
+     (e.g. after editing web-data/*.json) trump this and refresh
+     immediately on the next deploy.
+   ============================================================ */
+export const dynamic = "force-static";
+export const revalidate = 3600;
+
 const viewModel = buildHomeViewModel({
   page: homePage,
   media,

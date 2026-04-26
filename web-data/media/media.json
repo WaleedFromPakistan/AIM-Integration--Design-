@@ -57,6 +57,26 @@
       "url": "blob:images/home-accordian/Floor Planning.png",
       "alt": "Floor planning showcase"
     },
+    "project-ck-office": {
+      "type": "image",
+      "url": "blob:images/projects/Commercial-Kitchen/Project-1/CKD-office.png",
+      "alt": "CAD layout of an office commercial kitchen with main kitchen, washing area, outdoor area, and office"
+    },
+    "project-ck-hospital": {
+      "type": "image",
+      "url": "blob:images/projects/Commercial-Kitchen/Project-2/CKD-hospital.png",
+      "alt": "CAD layout of a hospital production kitchen with cook line, prep, dish, and storage zones"
+    },
+    "project-fp-office": {
+      "type": "image",
+      "url": "blob:images/projects/Floor-Planning/Project-1/floor-office.png",
+      "alt": "3D rendered office floor plan with open workstations, conference room, executive offices, and creative zone"
+    },
+    "project-fp-apartment": {
+      "type": "image",
+      "url": "blob:images/projects/Floor-Planning/Project-2/floor-apartment.png",
+      "alt": "3D rendered apartment floor plan with master suite, second bedroom, home office, and balconies"
+    },
     "project-1": {
       "type": "image",
       "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80",

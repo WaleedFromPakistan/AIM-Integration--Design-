@@ -14,6 +14,20 @@
  *   BLOB_BASE_URL=https://xxxxxxxxxxxx.public.blob.vercel-storage.com
  */
 
+/* ============================================================
+   Caching strategy — treat each blob path as immutable
+   - dynamic = "force-static": each unique pathname is cached in the
+     Full Route Cache (and at Vercel's edge) on first hit, then served
+     instantly forever after — no upstream fetch on subsequent requests.
+   - revalidate = false: never time-revalidate; blob URLs only change
+     when an asset is re-uploaded with a different filename. Use a new
+     filename when you want clients to pick up new bytes.
+   - The Cache-Control header below also tells the browser + edge CDN
+     to cache for one year (max-age=31536000, immutable).
+   ============================================================ */
+export const dynamic = "force-static";
+export const revalidate = false;
+
 const BLOB_BASE_URL = process.env.BLOB_BASE_URL;
 
 export async function GET(_request, { params }) {

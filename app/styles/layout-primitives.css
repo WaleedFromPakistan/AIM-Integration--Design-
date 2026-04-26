@@ -56,12 +56,13 @@
 }
 
 .aim-btn-primary {
-  background: #CCA07C;
+  background: #CB9F79;
   color: #fff;
-  box-shadow: 0 10px 30px rgba(204, 160, 124, 0.35);
+  box-shadow: 0 10px 30px rgba(203, 159, 121, 0.35);
 }
 
 .aim-btn-primary:hover {
+  background: color-mix(in srgb, #CB9F79 88%, #000);
   transform: translateY(-2px);
 }
 

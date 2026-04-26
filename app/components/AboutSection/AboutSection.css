@@ -1,4 +1,10 @@
-/* AboutSection */
+/* ============================================================
+   AboutSection
+   Mobile (<768px):  image flows full-width between heading and body
+   768–1023px:       image floats right at ~46% width, text wraps + flows under
+   1024px+ (target): image floats right at ~38% width with magazine-style wrap
+   1440px+:          image caps at 480px so very wide screens stay balanced
+   ============================================================ */
 
 .aim-about-section {
   opacity: 0;
@@ -16,16 +22,17 @@
   filter: blur(0);
 }
 
+/* === Container is now single-column flow; image is floated inside content === */
 .aim-about-grid {
-  display: grid;
-  gap: clamp(1.35rem, 3vw, 3rem);
-  align-items: center;
+  display: block;
 }
 
 .aim-about-content {
-  max-width: 52rem;
+  /* No max-width constraint — magazine wrap needs the full container width */
+  max-width: none;
 }
 
+/* === Eyebrow / title / accent === */
 .aim-about-eyebrow {
   margin-bottom: 0.5rem;
 }
@@ -70,17 +77,30 @@
 }
 
 @keyframes aim-about-line-shift {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(36px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(36px); }
+  100% { transform: translateX(0); }
 }
 
+/* === Image — default (mobile): full width, normal flow === */
+.aim-about-image {
+  position: relative;
+  width: 100%;
+  margin: 0 0 1.25rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.aim-about-image-el {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* === Body paragraphs === */
 .aim-about-body {
   margin: 0.95rem 0 0;
   font-size: clamp(1rem, 1.9vw, 1.22rem);
@@ -88,11 +108,13 @@
   color: var(--color-text-muted);
 }
 
+/* === Stats grid — clears float so it always starts on a fresh line === */
 .aim-stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.85rem;
   margin-top: clamp(1.25rem, 3.5vw, 2.1rem);
+  clear: both;
 }
 
 .aim-stat {
@@ -124,24 +146,16 @@
   color: var(--color-text-muted);
 }
 
-.aim-about-image {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-card);
-}
-
-.aim-about-image-el {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-@media (min-width: 900px) {
-  .aim-about-grid {
-    grid-template-columns: 1.05fr 0.95fr;
+/* ============================================================
+   768px+ — image floats right, text wraps + flows under
+   ============================================================ */
+@media (min-width: 768px) {
+  .aim-about-image {
+    float: right;
+    width: 46%;
+    margin: 0.4rem 0 1rem 1.75rem;
+    /* Slight rounded shape so text doesn't hug the corners awkwardly */
+    shape-margin: 1rem;
   }
 
   .aim-stats {
@@ -150,6 +164,53 @@
   }
 }
 
+/* ============================================================
+   1024px+ — magazine wrap (the layout you marked)
+   image starts at the right of the first body line,
+   text fills under it (no empty space)
+   ============================================================ */
+@media (min-width: 1024px) {
+  .aim-about-image {
+    float: right;
+    width: clamp(340px, 38%, 460px);
+    margin: 0.5rem 0 1.25rem 2rem;
+    shape-margin: 1.25rem;
+  }
+
+  .aim-about-body {
+    /* Increase line-height a hair — more breathable around the floated image */
+    line-height: 1.74;
+  }
+
+  .aim-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+/* ============================================================
+   1280px+ — slight padding bump so text doesn't get too long
+   ============================================================ */
+@media (min-width: 1280px) {
+  .aim-about-image {
+    width: clamp(380px, 36%, 480px);
+    margin-left: 2.25rem;
+  }
+}
+
+/* ============================================================
+   1440px+ — cap image so very wide screens look proportional
+   ============================================================ */
+@media (min-width: 1440px) {
+  .aim-about-image {
+    width: 480px;
+    margin-left: 2.5rem;
+  }
+}
+
+/* ============================================================
+   Tight mobile (≤560)
+   ============================================================ */
 @media (max-width: 560px) {
   .aim-about-title {
     font-size: clamp(1.85rem, 10vw, 2.25rem);

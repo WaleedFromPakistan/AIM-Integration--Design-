@@ -25,6 +25,10 @@ Reference shape in `media.json`: `"url": "blob:<path>"` — resolved by [`lib/me
 | `images/home-accordian/Commercial-Kitchen.jpg` | media.json → `accordion-kitchen` | Services Accordion · Kitchen panel showcase |
 | `images/home-accordian/BIM-Model.png` | media.json → `accordion-bim` | Services Accordion · BIM panel showcase |
 | `images/home-accordian/Floor Planning.png` | media.json → `accordion-floor` | Services Accordion · Floor Planning panel showcase (filename has space) |
+| `images/projects/Commercial-Kitchen/Project-1/CKD-office.png` | media.json → `project-ck-office` | Featured Projects · `fp1` Atlas Tower corporate kitchen |
+| `images/projects/Commercial-Kitchen/Project-2/CKD-hospital.png` | media.json → `project-ck-hospital` | Featured Projects · `fp2` Mediplex hospital kitchen |
+| `images/projects/Floor-Planning/Project-1/floor-office.png` | media.json → `project-fp-office` | Featured Projects · `fp3` Vertex Studios office |
+| `images/projects/Floor-Planning/Project-2/floor-apartment.png` | media.json → `project-fp-apartment` | Featured Projects · `fp4` Harbor View apartment |
 
 ## Uploaded but not yet used
 

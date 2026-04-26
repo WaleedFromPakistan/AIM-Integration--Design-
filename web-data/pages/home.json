@@ -168,7 +168,7 @@
     "links": [
       { "id": "home", "label": "Home", "href": "#top" },
       { "id": "about", "label": "About", "href": "#about" },
-      { "id": "projects", "label": "Projects", "href": "#projects" },
+      { "id": "projects", "label": "Projects", "href": "#featured-projects" },
       { "id": "contact", "label": "Contact", "href": "#contact" }
     ],
     "servicesMenu": {
@@ -546,43 +546,43 @@
     "items": [
       {
         "id": "fp1",
-        "title": "The Grand Meridian — Flagship Hotel Kitchen",
-        "category": "Floor Planning",
-        "description": "A 12,000 sq ft production kitchen serving three restaurant concepts, a banquet hall, and 24-hour room service. We designed the workflow for 800+ covers per service with separate prep, cook, pastry, and garde manger stations.",
-        "imageMediaKey": "project-1",
+        "title": "Atlas Tower — Corporate Office Kitchen",
+        "category": "Kitchen Design",
+        "description": "A full equipment layout for a corporate office kitchen, organized into a central main kitchen line, a dedicated dishwashing zone, an outdoor servery, and an integrated back-office. Workflow is mapped from receiving through cook line to staff service so peak lunch traffic clears without bottlenecks.",
+        "imageMediaKey": "project-ck-office",
         "year": "2025",
         "location": "Dubai, UAE",
-        "scope": "Full kitchen design & MEP coordination"
+        "scope": "Equipment plan & MEP coordination"
       },
       {
         "id": "fp2",
-        "title": "Coastal Breeze — Restaurant Prototype",
-        "category": "Architecture",
-        "description": "A scalable fast-casual restaurant prototype designed for franchise rollout. The kitchen footprint was optimized to 1,800 sq ft with a throughput target of 200 covers per hour during peak service.",
-        "imageMediaKey": "project-2",
+        "title": "Mediplex General — Hospital Production Kitchen",
+        "category": "Kitchen Design",
+        "description": "A long-format institutional production kitchen serving a hospital's 24/7 food service operation. The plan separates receiving, cold and dry storage, prep, hot line, plating, and warewashing into discrete circulation paths so meal carts move out cleanly while crockery returns flow back without crossing.",
+        "imageMediaKey": "project-ck-hospital",
         "year": "2024",
-        "location": "Miami, FL",
-        "scope": "Prototype kitchen & dining layout"
+        "location": "Lahore, Pakistan",
+        "scope": "Hospital kitchen design & equipment specs"
       },
       {
         "id": "fp3",
-        "title": "Hillcrest Residence — Courtyard Wing",
-        "category": "Architecture",
-        "description": "A 4,200 sq ft courtyard addition to an existing mid-century residence. The design centered on framing garden views from every room while maintaining thermal performance through high-performance glazing systems.",
-        "imageMediaKey": "project-3",
+        "title": "Vertex Studios — Creative Agency Office",
+        "category": "Floor Planning",
+        "description": "A 6,500 sq ft creative-agency floor plan blending an open workstation cluster, a glass-walled conference room, executive cabins, a dedicated marketing & creative zone, and a hospitality-grade staff kitchen. Adjacencies were resolved through three test-fit rounds with the leadership team.",
+        "imageMediaKey": "project-fp-office",
         "year": "2024",
-        "location": "Austin, TX",
-        "scope": "Architectural design through CDs"
+        "location": "Islamabad, Pakistan",
+        "scope": "Office space programming & test-fits"
       },
       {
         "id": "fp4",
-        "title": "Nexus Tower — Corporate Amenity Level",
+        "title": "Harbor View — Three-Bedroom Residence",
         "category": "Floor Planning",
-        "description": "Programming and space planning for a 22,000 sq ft amenity floor featuring a café, fitness center, lounge, and conferencing suite. Test-fit studies explored four layout options before the client selected the final configuration.",
-        "imageMediaKey": "project-4",
-        "year": "2023",
-        "location": "Chicago, IL",
-        "scope": "Spatial programming & test-fits"
+        "description": "A spatial plan for a luxury three-bedroom apartment featuring a master suite with walk-in closet and en-suite bathroom, a second bedroom, a private home office, a study nook, a kitchenette opening to the living and breakfast area, and twin outdoor balconies framing the view.",
+        "imageMediaKey": "project-fp-apartment",
+        "year": "2024",
+        "location": "Dubai, UAE",
+        "scope": "Residential floor planning & adjacencies"
       },
       {
         "id": "fp5",
