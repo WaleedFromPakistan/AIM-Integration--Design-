@@ -179,25 +179,25 @@
           "id": "commercial-kitchen",
           "title": "Commercial Kitchen Design",
           "summary": "Workflow-driven layouts, equipment coordination, and code-aware kitchen systems.",
-          "href": "#services"
+          "href": "/services/commercial-kitchen"
         },
         {
           "id": "bim",
           "title": "BIM Modeling",
           "summary": "Authoritative 3D models, clash detection, and structured data for construction teams.",
-          "href": "#services"
+          "href": "/services/bim-modeling"
         },
         {
           "id": "floor-planning",
           "title": "Floor Planning",
           "summary": "Spatial programming, circulation, and efficient zoning for operational clarity.",
-          "href": "#services"
+          "href": "/services/floor-planning"
         },
         {
           "id": "architecture",
           "title": "Architectural Design",
           "summary": "Concept through documentation with a refined, buildable architectural language.",
-          "href": "#services"
+          "href": "/services/architecture-interior"
         }
       ]
     },

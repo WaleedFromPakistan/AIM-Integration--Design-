@@ -77,6 +77,251 @@
       "url": "blob:images/projects/Floor-Planning/Project-2/floor-apartment.png",
       "alt": "3D rendered apartment floor plan with master suite, second bedroom, home office, and balconies"
     },
+
+    "service-card-commercial-kitchen": {
+      "type": "image",
+      "url": "blob:images/service-cards/Commercial-Kitchen.png",
+      "alt": "Commercial kitchen design service card"
+    },
+    "service-card-bim": {
+      "type": "image",
+      "url": "blob:images/service-cards/BIM-modeling.png",
+      "alt": "BIM modeling service card"
+    },
+    "service-card-floor-planning": {
+      "type": "image",
+      "url": "blob:images/service-cards/Floor-Planning.png",
+      "alt": "Floor planning service card"
+    },
+    "service-card-architecture": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
+      "alt": "Architectural design service card"
+    },
+
+    "service-ck-hero-1": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1600&q=80",
+      "alt": "Commercial restaurant kitchen cook line with stainless steel equipment"
+    },
+    "service-ck-hero-2": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1565895405229-71bfe2bd4012?w=1600&q=80",
+      "alt": "Hospital production kitchen line"
+    },
+    "service-ck-hero-3": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1581349437172-5be0a85b9398?w=1600&q=80",
+      "alt": "Hotel banquet kitchen with prep stations"
+    },
+    "service-ck-hero-4": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1593604340846-4fbe9763a8f3?w=1600&q=80",
+      "alt": "Modern fast-casual restaurant kitchen layout"
+    },
+    "service-ck-about": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400&q=80",
+      "alt": "Chefs working a busy commercial kitchen line"
+    },
+    "service-ck-gallery-1": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200&q=80",
+      "alt": "Cook line under continuous stainless exhaust hood"
+    },
+    "service-ck-gallery-2": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80",
+      "alt": "Cold prep counters with refrigerated drawers"
+    },
+    "service-ck-gallery-3": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1581349437172-5be0a85b9398?w=1200&q=80",
+      "alt": "Pass-through warewash with conveyor dish machine"
+    },
+    "service-ck-gallery-4": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1565895405229-71bfe2bd4012?w=1200&q=80",
+      "alt": "Plating pass between kitchen and dining service"
+    },
+    "service-ck-gallery-5": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1565895405127-481853366cf8?w=1200&q=80",
+      "alt": "Walk-in refrigeration block at the back of the kitchen"
+    },
+    "service-ck-gallery-6": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=1200&q=80",
+      "alt": "Pastry production area with deck oven"
+    },
+
+    "service-fp-hero-1": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80",
+      "alt": "Open-plan office workstations and collaboration zones"
+    },
+    "service-fp-hero-2": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1600&q=80",
+      "alt": "Residential interior showing open living and bedroom adjacency"
+    },
+    "service-fp-hero-3": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600&q=80",
+      "alt": "Restaurant dining room with bar and kitchen access"
+    },
+    "service-fp-hero-4": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1604754742629-3e5728249d73?w=1600&q=80",
+      "alt": "Retail store interior with merchandise zoning"
+    },
+    "service-fp-about": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1574359411659-15573a27fd0c?w=1400&q=80",
+      "alt": "Architectural floor plan drawings on a designer's desk"
+    },
+    "service-fp-gallery-1": {
+      "type": "image",
+      "url": "blob:images/projects/Floor-Planning/Project-1/floor-office.png",
+      "alt": "Top-down 3D rendering of an open-plan creative agency office"
+    },
+    "service-fp-gallery-2": {
+      "type": "image",
+      "url": "blob:images/projects/Floor-Planning/Project-2/floor-apartment.png",
+      "alt": "Top-down 3D rendering of a three-bedroom apartment"
+    },
+    "service-fp-gallery-3": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80",
+      "alt": "Architectural CAD floor plan with dimensions"
+    },
+    "service-fp-gallery-4": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200&q=80",
+      "alt": "Restaurant dining room floor plan"
+    },
+    "service-fp-gallery-5": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80",
+      "alt": "Coworking space floor layout with lounge and conference rooms"
+    },
+    "service-fp-gallery-6": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1604754742629-3e5728249d73?w=1200&q=80",
+      "alt": "Retail floor plan with merchandise zones"
+    },
+
+    "service-bim-hero-1": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80",
+      "alt": "BIM model of a multi-story building"
+    },
+    "service-bim-hero-2": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&q=80",
+      "alt": "Clash detection visualization in coordination software"
+    },
+    "service-bim-hero-3": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&q=80",
+      "alt": "BIM coordination meeting with design team"
+    },
+    "service-bim-hero-4": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1600&q=80",
+      "alt": "Structured BIM data export for facility management"
+    },
+    "service-bim-about": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1400&q=80",
+      "alt": "BIM 3D model on a workstation screen"
+    },
+    "service-bim-gallery-1": {
+      "type": "image",
+      "url": "blob:images/home-accordian/BIM-Model.png",
+      "alt": "Federated 3D BIM model"
+    },
+    "service-bim-gallery-2": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80",
+      "alt": "MEP coordination view in Revit"
+    },
+    "service-bim-gallery-3": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&q=80",
+      "alt": "Navisworks clash detection session"
+    },
+    "service-bim-gallery-4": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80",
+      "alt": "Structural BIM model"
+    },
+    "service-bim-gallery-5": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1200&q=80",
+      "alt": "Custom Revit equipment families at LOD 350"
+    },
+    "service-bim-gallery-6": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+      "alt": "Coordination issue log dashboard"
+    },
+
+    "service-arch-hero-1": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80",
+      "alt": "Modern residential architecture with clean lines"
+    },
+    "service-arch-hero-2": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&q=80",
+      "alt": "Hotel lobby interior with warm materials"
+    },
+    "service-arch-hero-3": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80",
+      "alt": "Commercial building facade and curtain wall"
+    },
+    "service-arch-hero-4": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600&q=80",
+      "alt": "Restaurant interior with custom millwork and lighting"
+    },
+    "service-arch-about": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1400&q=80",
+      "alt": "Architect reviewing drawings in a design studio"
+    },
+    "service-arch-gallery-1": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80",
+      "alt": "Residential courtyard wing"
+    },
+    "service-arch-gallery-2": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80",
+      "alt": "Boutique hotel lobby with custom millwork"
+    },
+    "service-arch-gallery-3": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200&q=80",
+      "alt": "Restaurant interior with banquette seating"
+    },
+    "service-arch-gallery-4": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80",
+      "alt": "Mixed-use building facade with composite cladding"
+    },
+    "service-arch-gallery-5": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80",
+      "alt": "Architectural concept rendering of a contemporary building"
+    },
+    "service-arch-gallery-6": {
+      "type": "image",
+      "url": "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=1200&q=80",
+      "alt": "Interior architectural detail with material transitions"
+    },
     "project-1": {
       "type": "image",
       "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80",

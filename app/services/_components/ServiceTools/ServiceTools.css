@@ -1,0 +1,133 @@
+/* ============================================================
+   ServiceTools — full-bleed right-to-left marquee
+   Each tile is a vendor "logo" badge (color swatch + name + vendor).
+   Pauses on hover so users can read.
+   ============================================================ */
+
+.aim-svc-tools {
+  overflow: hidden;
+}
+
+/* Marquee shell — extends edge-to-edge regardless of section padding */
+.aim-svc-tools-marquee {
+  width: 100vw;
+  max-width: 100%;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+  overflow: hidden;
+  padding: 0.85rem 0 0.5rem;
+  /* Soft fade on the left + right edges so tiles enter/exit cleanly */
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+/* The track holds 2× the items so we can translate -50% for a perfect loop */
+.aim-svc-tools-marquee-track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  width: max-content;
+  animation: aim-svc-tools-marquee 32s linear infinite;
+  will-change: transform;
+}
+
+.aim-svc-tools-marquee:hover .aim-svc-tools-marquee-track,
+.aim-svc-tools-marquee:focus-within .aim-svc-tools-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes aim-svc-tools-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* === Individual tool badge === */
+.aim-svc-tool {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s,
+    box-shadow 0.35s;
+  cursor: default;
+}
+
+.aim-svc-tool:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, #CB9F79 38%, var(--color-border));
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.1);
+}
+
+.aim-svc-tool-swatch {
+  flex: 0 0 auto;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 999px;
+  display: inline-block;
+  box-shadow: 0 0 0 3px color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.aim-svc-tool-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  min-width: 0;
+}
+
+.aim-svc-tool-brand {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.aim-svc-tool-vendor {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-top: 0.2rem;
+  white-space: nowrap;
+}
+
+/* Tighter on small viewports */
+@media (max-width: 480px) {
+  .aim-svc-tool {
+    padding: 0.7rem 1rem;
+    gap: 0.65rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aim-svc-tools-marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 0 1.25rem;
+  }
+}

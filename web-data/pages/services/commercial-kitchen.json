@@ -1,0 +1,131 @@
+{
+  "pageId": "service-commercial-kitchen",
+  "slug": "commercial-kitchen",
+  "route": "/services/commercial-kitchen",
+  "category": "Kitchen Design",
+  "seo": {
+    "title": "Commercial Kitchen Design Services — AIM Integrated Designs",
+    "description": "End-to-end commercial kitchen design: workflow-driven layouts, equipment matrices, MEP coordination, exhaust calculations, and health-code compliance packages for restaurants, hotels, hospitals, and corporate food service.",
+    "keywords": [
+      "commercial kitchen design",
+      "restaurant kitchen design",
+      "hotel kitchen design",
+      "hospital kitchen design",
+      "food service design",
+      "commercial kitchen consultant",
+      "kitchen equipment layout",
+      "kitchen MEP coordination",
+      "kitchen exhaust design",
+      "health department kitchen plans",
+      "commercial kitchen drawings"
+    ],
+    "canonicalPath": "/services/commercial-kitchen",
+    "robots": "index,follow",
+    "openGraph": {
+      "type": "website",
+      "imageMediaKey": "service-card-commercial-kitchen"
+    },
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Commercial Kitchen Design",
+      "provider": {
+        "@type": "Organization",
+        "name": "AIM Integrated Designs",
+        "url": "https://www.aimintegrateddesign.com"
+      },
+      "areaServed": "Worldwide",
+      "description": "End-to-end commercial kitchen design including workflow-driven layouts, equipment matrices, MEP coordination, exhaust calculations, and health-code compliance for restaurants, hotels, hospitals, and corporate food service operations."
+    }
+  },
+  "hero": {
+    "eyebrow": "Commercial Kitchen Design",
+    "title": "Kitchens engineered for the pressure of real service.",
+    "subtitle": "We design commercial kitchens that perform under daily volume — from fine-dining restaurants to high-throughput hospital production lines.",
+    "primaryCta": { "label": "Start a project", "href": "/#contact" },
+    "secondaryCta": { "label": "View kitchen projects", "href": "#service-projects" },
+    "imageMediaKey": "service-ck-hero-1",
+    "imageAlt": "Commercial kitchen cook line with stainless steel equipment"
+  },
+  "catalogueFolder": "cataloge/Commercial Kitchen",
+  "about": {
+    "eyebrow": "About Commercial Kitchen Design",
+    "title": "Workflow first—then equipment, MEP, and code.",
+    "body": [
+      "Every commercial kitchen we design starts with the operator's menu, throughput targets, and labor model. Equipment and zone adjacencies follow from that — never the other way around.",
+      "Our deliverables include equipment floor plans, equipment elevations, mechanical/electrical/plumbing rough-in coordination, exhaust hood and make-up air calculations, equipment specification schedules, and complete health-department submission packages.",
+      "We sit between the operator, the architect, the GC, and the MEP engineers — translating menu strategy into a buildable kitchen package that opens on schedule and passes inspection on the first walk."
+    ],
+    "highlights": [
+      "Workflow-driven equipment layouts",
+      "Equipment specifications & schedules",
+      "MEP rough-in coordination",
+      "Exhaust hood + make-up air calculations",
+      "Health department compliance packages",
+      "Franchise prototype documentation"
+    ],
+    "imageMediaKey": "service-ck-about"
+  },
+  "gallery": {
+    "eyebrow": "Selected work",
+    "title": "Inside the kitchens we've designed.",
+    "subtitle": "A look at the equipment, line layouts, and finished spaces from recent commercial kitchen projects.",
+    "items": [
+      {
+        "id": "ck-g1",
+        "imageMediaKey": "service-ck-gallery-1",
+        "title": "Full cook line with custom hood",
+        "alt": "Commercial kitchen cook line under a continuous stainless exhaust hood"
+      },
+      {
+        "id": "ck-g2",
+        "imageMediaKey": "service-ck-gallery-2",
+        "title": "Cold prep & garde manger station",
+        "alt": "Stainless cold prep counters with refrigerated drawers and overhead lighting"
+      },
+      {
+        "id": "ck-g3",
+        "imageMediaKey": "service-ck-gallery-3",
+        "title": "Pass-through warewash",
+        "alt": "Three-compartment warewash with conveyor dish machine and clean landing"
+      },
+      {
+        "id": "ck-g4",
+        "imageMediaKey": "service-ck-gallery-4",
+        "title": "Open expo & plating line",
+        "alt": "Plating pass-through between kitchen and dining service area"
+      },
+      {
+        "id": "ck-g5",
+        "imageMediaKey": "service-ck-gallery-5",
+        "title": "Walk-in cold storage block",
+        "alt": "Walk-in refrigerator and freezer block at the back of the kitchen"
+      },
+      {
+        "id": "ck-g6",
+        "imageMediaKey": "service-ck-gallery-6",
+        "title": "Bakery & pastry production",
+        "alt": "Pastry production area with marble bench, deck oven, and proofing cabinet"
+      }
+    ]
+  },
+  "tools": {
+    "eyebrow": "Our toolkit",
+    "title": "The software and standards we work in.",
+    "subtitle": "Industry-standard tools paired with deep code and equipment knowledge.",
+    "items": [
+      { "id": "tool-1", "name": "AutoCAD", "description": "2D equipment plans, elevations, and code submission drawings" },
+      { "id": "tool-2", "name": "Revit MEP", "description": "3D coordination with mechanical, electrical, and plumbing trades" },
+      { "id": "tool-3", "name": "AutoQuotes (AQ)", "description": "Equipment specification, scheduling, and budget pricing" },
+      { "id": "tool-4", "name": "Hood load calculations", "description": "Exhaust CFM and make-up air sizing per IMC and local code" },
+      { "id": "tool-5", "name": "NSF + UL standards", "description": "Equipment compliance for health and safety inspections" },
+      { "id": "tool-6", "name": "FCSI knowledge base", "description": "Foodservice Consultants Society International best practices" }
+    ]
+  },
+  "recentProjects": {
+    "eyebrow": "Recent commercial kitchen work",
+    "title": "Projects in this discipline.",
+    "subtitle": "A look at recent commercial kitchen design engagements.",
+    "filterCategory": "Kitchen Design"
+  }
+}

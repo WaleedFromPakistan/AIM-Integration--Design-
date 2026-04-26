@@ -20,6 +20,15 @@
 @import "./components/ThemeProvider/ThemeProvider.css";
 @import "./components/FloatingThemeToggle/FloatingThemeToggle.css";
 
+/* Service detail page components (kept under app/services/_components/
+   so they're co-located with the [slug] route but excluded from routing
+   by the leading-underscore convention; path has no brackets so the
+   CSS @import resolves correctly via Turbopack) */
+@import "./services/_components/ServiceHero/ServiceHero.css";
+@import "./services/_components/ServiceAbout/ServiceAbout.css";
+@import "./services/_components/ServiceGallery/ServiceGallery.css";
+@import "./services/_components/ServiceTools/ServiceTools.css";
+
 @theme inline {
   --color-background: var(--color-bg);
   --color-foreground: var(--color-text);

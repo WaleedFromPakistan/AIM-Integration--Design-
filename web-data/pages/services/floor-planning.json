@@ -1,0 +1,131 @@
+{
+  "pageId": "service-floor-planning",
+  "slug": "floor-planning",
+  "route": "/services/floor-planning",
+  "category": "Floor Planning",
+  "seo": {
+    "title": "Floor Planning & Spatial Programming Services — AIM Integrated Designs",
+    "description": "Data-informed floor planning and spatial programming: test-fit studies, adjacency analysis, ADA-compliant circulation, and capacity planning for offices, residences, restaurants, and retail.",
+    "keywords": [
+      "floor planning",
+      "spatial programming",
+      "test fit studies",
+      "office space planning",
+      "residential floor plans",
+      "restaurant floor plans",
+      "ADA compliance planning",
+      "circulation analysis",
+      "adjacency diagrams",
+      "capacity planning",
+      "interior space planning"
+    ],
+    "canonicalPath": "/services/floor-planning",
+    "robots": "index,follow",
+    "openGraph": {
+      "type": "website",
+      "imageMediaKey": "service-card-floor-planning"
+    },
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Floor Planning & Spatial Programming",
+      "provider": {
+        "@type": "Organization",
+        "name": "AIM Integrated Designs",
+        "url": "https://www.aimintegrateddesign.com"
+      },
+      "areaServed": "Worldwide",
+      "description": "Data-informed floor planning and spatial programming including test-fit studies, adjacency analysis, ADA-compliant circulation, and capacity planning for commercial and residential interiors."
+    }
+  },
+  "hero": {
+    "eyebrow": "Floor Planning",
+    "title": "Spaces planned around the way people actually use them.",
+    "subtitle": "We turn programming requirements into floor plans where every square foot earns its keep — through benchmarking, test-fits, and disciplined adjacency analysis.",
+    "primaryCta": { "label": "Start a project", "href": "/#contact" },
+    "secondaryCta": { "label": "View floor plan projects", "href": "#service-projects" },
+    "imageMediaKey": "service-fp-hero-1",
+    "imageAlt": "Open-plan office workstations and collaboration zones"
+  },
+  "catalogueFolder": "cataloge/Floor Planning",
+  "about": {
+    "eyebrow": "About Floor Planning",
+    "title": "Programming first—then plans, adjacencies, and code.",
+    "body": [
+      "Good floor planning is invisible — occupants move through a space intuitively because adjacencies, circulation paths, and zones were resolved before the architect ever drew a wall.",
+      "Our process begins with programming interviews and benchmarking: who uses the space, how often, and what they need at each touchpoint. Test-fit studies let clients evaluate multiple layout options against real square-footage data and cost implications.",
+      "Deliverables include dimensioned floor plans, furniture layouts, circulation diagrams, ADA compliance reviews, and adjacency matrices. We hand off a clean operational foundation that interior designers and architects can build on with confidence."
+    ],
+    "highlights": [
+      "Programming interviews & benchmarking",
+      "Test-fit studies (multiple options)",
+      "Dimensioned floor plans",
+      "Adjacency & circulation analysis",
+      "ADA compliance review",
+      "Furniture & FF&E layout planning"
+    ],
+    "imageMediaKey": "service-fp-about"
+  },
+  "gallery": {
+    "eyebrow": "Selected work",
+    "title": "Floor plans across sectors.",
+    "subtitle": "A snapshot of office, residential, hospitality, and retail floor plans from recent engagements.",
+    "items": [
+      {
+        "id": "fp-g1",
+        "imageMediaKey": "service-fp-gallery-1",
+        "title": "Open-plan creative agency",
+        "alt": "Top-down 3D rendering of an open-plan creative agency office"
+      },
+      {
+        "id": "fp-g2",
+        "imageMediaKey": "service-fp-gallery-2",
+        "title": "Three-bedroom residence",
+        "alt": "Top-down 3D rendering of a three-bedroom apartment with master suite"
+      },
+      {
+        "id": "fp-g3",
+        "imageMediaKey": "service-fp-gallery-3",
+        "title": "CAD plan with dimensioning",
+        "alt": "Architectural CAD floor plan with dimensions and notations"
+      },
+      {
+        "id": "fp-g4",
+        "imageMediaKey": "service-fp-gallery-4",
+        "title": "Restaurant front-of-house",
+        "alt": "Floor plan of a restaurant dining room with bar and kitchen access"
+      },
+      {
+        "id": "fp-g5",
+        "imageMediaKey": "service-fp-gallery-5",
+        "title": "Coworking lounge fit-out",
+        "alt": "Floor plan of a coworking space with lounge, phone booths, and conference rooms"
+      },
+      {
+        "id": "fp-g6",
+        "imageMediaKey": "service-fp-gallery-6",
+        "title": "Retail merchandise zoning",
+        "alt": "Retail store floor plan with merchandise zones and circulation paths"
+      }
+    ]
+  },
+  "tools": {
+    "eyebrow": "Our toolkit",
+    "title": "Software and methodologies we apply.",
+    "subtitle": "Tools that make planning data-driven rather than guesswork.",
+    "items": [
+      { "id": "tool-1", "name": "AutoCAD", "description": "Dimensioned 2D plans, furniture layouts, and code drawings" },
+      { "id": "tool-2", "name": "Revit", "description": "Parametric models for plan, section, and elevation in one source" },
+      { "id": "tool-3", "name": "SketchUp", "description": "Quick 3D massing for concept and stakeholder reviews" },
+      { "id": "tool-4", "name": "Test-fit studies", "description": "Multiple layout options evaluated against program and budget" },
+      { "id": "tool-5", "name": "ADA + IBC code analysis", "description": "Accessibility and life-safety verified before documentation" },
+      { "id": "tool-6", "name": "Adjacency matrices", "description": "Quantified relationships between functional zones" }
+    ]
+  },
+  "recentProjects": {
+    "eyebrow": "Recent floor planning work",
+    "title": "Projects in this discipline.",
+    "subtitle": "Floor planning engagements across office, residential, and commercial sectors.",
+    "filterCategory": "Floor Planning"
+  }
+}

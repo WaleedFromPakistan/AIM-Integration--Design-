@@ -1,0 +1,154 @@
+/* ============================================================
+   ServiceHero — full-bleed single image with overlaid copy
+   Responsive 390 / 768 / 1024 / 1440.
+   ============================================================ */
+
+.aim-svc-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 70vh;
+  min-height: 70svh;
+  min-height: 70dvh;
+  overflow: hidden;
+  background: #0b101c;
+}
+
+@media (min-width: 768px) {
+  .aim-svc-hero {
+    min-height: 88vh;
+    min-height: 88dvh;
+  }
+}
+
+/* Background single image */
+.aim-svc-hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.aim-svc-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* slow cinematic zoom */
+  animation: aim-svc-hero-pan 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes aim-svc-hero-pan {
+  from { transform: scale(1); }
+  to   { transform: scale(1.06); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aim-svc-hero-img {
+    animation: none;
+  }
+}
+
+/* Overlay — cinematic gradient */
+.aim-svc-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(11, 16, 28, 0.58) 0%,
+      rgba(11, 16, 28, 0.28) 35%,
+      rgba(11, 16, 28, 0.22) 55%,
+      rgba(11, 16, 28, 0.65) 85%,
+      rgba(11, 16, 28, 0.88) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(11, 16, 28, 0.6) 0%,
+      transparent 55%,
+      rgba(11, 16, 28, 0.2) 100%
+    );
+}
+
+/* Content layer */
+.aim-svc-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: max(6rem, calc(env(safe-area-inset-top, 0px) + 5rem));
+  padding-bottom: clamp(2.5rem, 6vh, 4.5rem);
+  box-sizing: border-box;
+}
+
+.aim-svc-hero-copy {
+  animation: aim-svc-hero-fade 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  max-width: 56rem;
+}
+
+@keyframes aim-svc-hero-fade {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.aim-svc-hero-eyebrow {
+  color: #ffffff;
+  margin: 0 0 0.85rem;
+  font-size: clamp(0.78rem, 1.7vw, 0.95rem);
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.aim-svc-hero-title {
+  color: #ffffff;
+  font-size: clamp(2rem, 5.5vw, 3.85rem);
+  line-height: 1.1;
+  font-weight: 600;
+  margin: 0 0 1.1rem;
+  max-width: 22ch;
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.4);
+}
+
+.aim-svc-hero-subtitle {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(1rem, 2.1vw, 1.3rem);
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0 0 1.85rem;
+  max-width: 42rem;
+  text-shadow: 0 1px 20px rgba(0, 0, 0, 0.4);
+}
+
+.aim-svc-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Force ghost CTA white-on-image regardless of theme */
+.aim-svc-hero .aim-svc-hero-cta-secondary.aim-btn-ghost,
+[data-theme="light"] .aim-svc-hero .aim-svc-hero-cta-secondary.aim-btn-ghost,
+[data-theme="dark"] .aim-svc-hero .aim-svc-hero-cta-secondary.aim-btn-ghost {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  color: #fff;
+}
+
+.aim-svc-hero .aim-svc-hero-cta-secondary.aim-btn-ghost:hover,
+[data-theme="light"] .aim-svc-hero .aim-svc-hero-cta-secondary.aim-btn-ghost:hover,
+[data-theme="dark"] .aim-svc-hero .aim-svc-hero-cta-secondary.aim-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aim-svc-hero-copy {
+    animation: none;
+  }
+}

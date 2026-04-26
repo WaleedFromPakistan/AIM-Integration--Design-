@@ -11,11 +11,12 @@
   background: #0b101c;
 }
 
-/* Brand block — logo + name + tagline */
+/* Brand block — logo + name + tagline (mobile = centered) */
 .aim-footer-brand {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: 0.85rem;
 }
 
@@ -27,10 +28,20 @@
 }
 
 .aim-footer-logo-img {
-  width: clamp(56px, 8vw, 88px);
+  width: clamp(72px, 14vw, 96px);
   height: auto;
   object-fit: contain;
   display: block;
+}
+
+@media (min-width: 768px) {
+  .aim-footer-brand {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .aim-footer-logo-img {
+    width: clamp(120px, 11vw, 160px);
+  }
 }
 
 .aim-footer-company {
@@ -73,6 +84,8 @@
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 0.75rem;
   justify-content: space-between;
   font-size: 0.9rem;
@@ -83,6 +96,7 @@
   .aim-footer-bar {
     flex-direction: row;
     align-items: center;
+    text-align: left;
   }
 }
 
@@ -99,10 +113,22 @@
 .aim-footer-grid {
   display: grid;
   gap: 2rem;
+  text-align: center;
+}
+
+/* Center the link columns on mobile */
+.aim-footer-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
   .aim-footer-grid {
     grid-template-columns: 1.2fr repeat(2, 1fr);
+    text-align: left;
+  }
+  .aim-footer-grid > div {
+    align-items: flex-start;
   }
 }

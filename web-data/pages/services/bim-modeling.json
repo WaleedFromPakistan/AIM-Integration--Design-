@@ -1,0 +1,132 @@
+{
+  "pageId": "service-bim-modeling",
+  "slug": "bim-modeling",
+  "route": "/services/bim-modeling",
+  "category": "BIM Modeling",
+  "seo": {
+    "title": "BIM Modeling & Coordination Services — AIM Integrated Designs",
+    "description": "Authoritative Revit BIM models at LOD 200–400, clash detection, COBie/IFC exports, coordination dashboards, and 3D equipment modeling for AEC teams worldwide.",
+    "keywords": [
+      "BIM modeling",
+      "BIM coordination",
+      "Revit modeling services",
+      "LOD 200 300 400",
+      "clash detection",
+      "Navisworks coordination",
+      "COBie export",
+      "IFC export",
+      "3D equipment modeling",
+      "MEP coordination",
+      "construction BIM",
+      "BIM 360"
+    ],
+    "canonicalPath": "/services/bim-modeling",
+    "robots": "index,follow",
+    "openGraph": {
+      "type": "website",
+      "imageMediaKey": "service-card-bim"
+    },
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "BIM Modeling & Coordination",
+      "provider": {
+        "@type": "Organization",
+        "name": "AIM Integrated Designs",
+        "url": "https://www.aimintegrateddesign.com"
+      },
+      "areaServed": "Worldwide",
+      "description": "Authoritative Revit BIM models at LOD 200–400, clash detection, COBie/IFC exports, and coordination dashboards that keep architects, engineers, and trades on one accountable thread."
+    }
+  },
+  "hero": {
+    "eyebrow": "BIM Modeling & Coordination",
+    "title": "Model-led delivery that survives the job site.",
+    "subtitle": "Authoritative Revit models, clash-ready views, and structured data that keep architects, MEP, and trades aligned from concept through closeout.",
+    "primaryCta": { "label": "Start a project", "href": "/#contact" },
+    "secondaryCta": { "label": "View BIM projects", "href": "#service-projects" },
+    "imageMediaKey": "service-bim-hero-1",
+    "imageAlt": "BIM Revit model of a multi-story building structure"
+  },
+  "catalogueFolder": "cataloge/BIM Modeling",
+  "about": {
+    "eyebrow": "About BIM Modeling",
+    "title": "Models that drive coordination, not the other way around.",
+    "body": [
+      "Building Information Modeling is the spine of our delivery. We build parametric Revit models at the LOD appropriate to each phase — LOD 200 for design development, LOD 300–350 for documentation, LOD 400 for prefabrication coordination.",
+      "Our coordination workflow runs through Navisworks for clash detection, with prioritized issue logs and a shared 3D viewer so MEP, structural, and architectural teams resolve conflicts in the model before drawings are issued.",
+      "Beyond the geometry, we deliver structured data exports — COBie spreadsheets, IFC files, and parameter mappings — that feed into the owner's facility management platform on day one of operations."
+    ],
+    "highlights": [
+      "Revit models LOD 200–400",
+      "Navisworks clash detection",
+      "Coordination dashboards",
+      "Issue logs with priority + assignment",
+      "COBie + IFC exports for FM handover",
+      "3D equipment & MEP modeling"
+    ],
+    "imageMediaKey": "service-bim-about"
+  },
+  "gallery": {
+    "eyebrow": "Selected work",
+    "title": "BIM in action.",
+    "subtitle": "Screenshots from active projects — models, clash sessions, and structured data deliverables.",
+    "items": [
+      {
+        "id": "bim-g1",
+        "imageMediaKey": "service-bim-gallery-1",
+        "title": "Federated architectural model",
+        "alt": "Federated 3D BIM model showing architectural elements"
+      },
+      {
+        "id": "bim-g2",
+        "imageMediaKey": "service-bim-gallery-2",
+        "title": "MEP coordination view",
+        "alt": "Mechanical, electrical, and plumbing coordination view in Revit"
+      },
+      {
+        "id": "bim-g3",
+        "imageMediaKey": "service-bim-gallery-3",
+        "title": "Clash detection session",
+        "alt": "Navisworks clash detection session with highlighted conflicts"
+      },
+      {
+        "id": "bim-g4",
+        "imageMediaKey": "service-bim-gallery-4",
+        "title": "Structural framing model",
+        "alt": "3D BIM model showing structural framing of a multi-story building"
+      },
+      {
+        "id": "bim-g5",
+        "imageMediaKey": "service-bim-gallery-5",
+        "title": "Equipment 3D libraries",
+        "alt": "Custom Revit equipment families modeled to LOD 350"
+      },
+      {
+        "id": "bim-g6",
+        "imageMediaKey": "service-bim-gallery-6",
+        "title": "Issue log dashboard",
+        "alt": "Coordination issue log dashboard with priorities and assignments"
+      }
+    ]
+  },
+  "tools": {
+    "eyebrow": "Our toolkit",
+    "title": "The BIM stack we work in.",
+    "subtitle": "Industry-standard tools across modeling, coordination, and data exchange.",
+    "items": [
+      { "id": "tool-1", "name": "Autodesk Revit", "description": "Architectural, structural, and MEP modeling at LOD 200–400" },
+      { "id": "tool-2", "name": "Autodesk Navisworks", "description": "Federated model review and automated clash detection" },
+      { "id": "tool-3", "name": "BIM 360 / ACC", "description": "Cloud-based collaboration and document control" },
+      { "id": "tool-4", "name": "Dynamo", "description": "Visual programming for parametric workflows and automation" },
+      { "id": "tool-5", "name": "COBie + IFC", "description": "Open exchange formats for FM handover and interoperability" },
+      { "id": "tool-6", "name": "Solibri", "description": "Model checking, code validation, and quality control" }
+    ]
+  },
+  "recentProjects": {
+    "eyebrow": "Recent BIM work",
+    "title": "Projects in this discipline.",
+    "subtitle": "BIM coordination engagements across hospitality, commercial, and healthcare.",
+    "filterCategory": "BIM Modeling"
+  }
+}

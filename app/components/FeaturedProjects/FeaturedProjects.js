@@ -45,8 +45,17 @@ function ProjectCard({ item, index, inView }) {
   );
 }
 
-export default function FeaturedProjects({ data }) {
-  const [activeCategory, setActiveCategory] = useState("All");
+/**
+ * Props:
+ *   - data:           the section data (eyebrow, title, items, categories…)
+ *   - defaultFilter:  initial category to filter by (e.g. "Kitchen Design")
+ *                     If set, items are pre-filtered on first render.
+ *   - hideFilter:     if true, the category tab UI is hidden entirely
+ *                     (used by service detail pages where the page itself
+ *                     scopes the category).
+ */
+export default function FeaturedProjects({ data, defaultFilter = "All", hideFilter = false }) {
+  const [activeCategory, setActiveCategory] = useState(defaultFilter);
   const [inView, setInView] = useState(false);
   const sectionRef = useRef(null);
 
@@ -83,7 +92,7 @@ export default function FeaturedProjects({ data }) {
       <div className="aim-container">
         <SectionHeader data={{ eyebrow, title, subtitle }} />
 
-        {categories?.length ? (
+        {categories?.length && !hideFilter ? (
           <div className="aim-fp-filters" role="tablist" aria-label="Filter projects by category">
             {categories.map((cat) => (
               <button

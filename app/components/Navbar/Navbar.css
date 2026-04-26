@@ -215,6 +215,9 @@
 
 .aim-services-panel {
   position: absolute;
+  /* Anchor the dropdown to the centre of the trigger but bias it leftward
+     so the right edge doesn't fall off the viewport (the Services link is
+     near the right of the navbar). */
   left: 50%;
   top: calc(100% + 0.6rem);
   width: min(640px, 92vw);
@@ -226,13 +229,23 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--transition-base), transform var(--transition-base);
-  transform: translate(-50%, 6px);
+  transform: translate(calc(-50% - 5rem), 6px);
 }
 
 .aim-services-panel.is-open {
   opacity: 1;
   pointer-events: auto;
-  transform: translate(-50%, 0);
+  transform: translate(calc(-50% - 5rem), 0);
+}
+
+/* On wide screens the trigger is closer to centre, so a smaller shift looks better */
+@media (min-width: 1440px) {
+  .aim-services-panel {
+    transform: translate(calc(-50% - 2rem), 6px);
+  }
+  .aim-services-panel.is-open {
+    transform: translate(calc(-50% - 2rem), 0);
+  }
 }
 
 .aim-services-intro {

@@ -1,0 +1,133 @@
+{
+  "pageId": "service-architecture-interior",
+  "slug": "architecture-interior",
+  "route": "/services/architecture-interior",
+  "category": "Architecture",
+  "seo": {
+    "title": "Architectural & Interior Design Services — AIM Integrated Designs",
+    "description": "Architectural design and interior architecture from concept through construction documents — site plans, elevations, wall sections, finish schedules, consultant coordination, and permit-ready packages.",
+    "keywords": [
+      "architectural design",
+      "interior design",
+      "interior architecture",
+      "construction documents",
+      "schematic design",
+      "design development",
+      "permit drawings",
+      "wall sections",
+      "finish schedules",
+      "consultant coordination",
+      "residential architecture",
+      "commercial architecture",
+      "hospitality architecture"
+    ],
+    "canonicalPath": "/services/architecture-interior",
+    "robots": "index,follow",
+    "openGraph": {
+      "type": "website",
+      "imageMediaKey": "service-card-architecture"
+    },
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Architectural & Interior Design",
+      "provider": {
+        "@type": "Organization",
+        "name": "AIM Integrated Designs",
+        "url": "https://www.aimintegrateddesign.com"
+      },
+      "areaServed": "Worldwide",
+      "description": "Architectural design and interior architecture from concept through construction documents, including consultant coordination, permit-ready packages, and finish-level interior design."
+    }
+  },
+  "hero": {
+    "eyebrow": "Architectural & Interior Design",
+    "title": "From concept sketches to construction-ready documents.",
+    "subtitle": "Architecture and interior design carried through every phase — schematic, design development, construction documents, and construction administration.",
+    "primaryCta": { "label": "Start a project", "href": "/#contact" },
+    "secondaryCta": { "label": "View architectural projects", "href": "#service-projects" },
+    "imageMediaKey": "service-arch-hero-1",
+    "imageAlt": "Modern residential architecture with clean lines"
+  },
+  "catalogueFolder": "cataloge/Architecture",
+  "about": {
+    "eyebrow": "About Architecture & Interior Design",
+    "title": "Vision through buildability—across every phase.",
+    "body": [
+      "Architecture is where vision meets buildability. We carry projects from early massing studies and concept imagery through schematic design, design development, and construction documents — ensuring the quiet details that define a building's character survive value engineering and contractor interpretation.",
+      "Interior architecture and finish-level design are integrated into the same workflow. Materiality, lighting, and millwork are resolved in the same model as the building shell, so coordination is built in rather than bolted on.",
+      "Documentation packages include site plans, floor plans, building sections, exterior elevations, wall sections, enlarged plans, door and window schedules, finish schedules, and full specification references. We coordinate with structural, MEP, and civil consultants to minimize RFIs during construction."
+    ],
+    "highlights": [
+      "Concept through construction documents",
+      "Schematic design + design development",
+      "Wall sections + enlarged plans",
+      "Door, window, and finish schedules",
+      "Material + lighting + millwork integration",
+      "Consultant coordination across disciplines"
+    ],
+    "imageMediaKey": "service-arch-about"
+  },
+  "gallery": {
+    "eyebrow": "Selected work",
+    "title": "Architectural and interior projects.",
+    "subtitle": "A look at residential, hospitality, and commercial work — from concept renderings to finished interiors.",
+    "items": [
+      {
+        "id": "arch-g1",
+        "imageMediaKey": "service-arch-gallery-1",
+        "title": "Residential courtyard wing",
+        "alt": "Modern residence with private courtyard wing"
+      },
+      {
+        "id": "arch-g2",
+        "imageMediaKey": "service-arch-gallery-2",
+        "title": "Boutique hotel lobby",
+        "alt": "Warm boutique hotel lobby with custom millwork"
+      },
+      {
+        "id": "arch-g3",
+        "imageMediaKey": "service-arch-gallery-3",
+        "title": "Restaurant interior detail",
+        "alt": "Restaurant interior with banquette seating and pendant lighting"
+      },
+      {
+        "id": "arch-g4",
+        "imageMediaKey": "service-arch-gallery-4",
+        "title": "Mixed-use podium facade",
+        "alt": "Mixed-use building podium with composite cladding and storefront"
+      },
+      {
+        "id": "arch-g5",
+        "imageMediaKey": "service-arch-gallery-5",
+        "title": "Concept rendering",
+        "alt": "Architectural concept rendering of a contemporary building"
+      },
+      {
+        "id": "arch-g6",
+        "imageMediaKey": "service-arch-gallery-6",
+        "title": "Interior finish detail",
+        "alt": "Interior architectural detail showing material transitions and lighting"
+      }
+    ]
+  },
+  "tools": {
+    "eyebrow": "Our toolkit",
+    "title": "Software and methods we work in.",
+    "subtitle": "Tools across the design, documentation, and visualization workflow.",
+    "items": [
+      { "id": "tool-1", "name": "Autodesk Revit", "description": "Parametric architectural modeling and documentation" },
+      { "id": "tool-2", "name": "AutoCAD", "description": "2D drafting, detailing, and consultant exchange" },
+      { "id": "tool-3", "name": "SketchUp", "description": "Rapid 3D massing and concept exploration" },
+      { "id": "tool-4", "name": "Lumion / Enscape", "description": "Real-time architectural visualization and walkthroughs" },
+      { "id": "tool-5", "name": "Adobe Creative Suite", "description": "Concept boards, presentation graphics, and material studies" },
+      { "id": "tool-6", "name": "IBC + local code review", "description": "Code analysis baked into design from day one" }
+    ]
+  },
+  "recentProjects": {
+    "eyebrow": "Recent architectural work",
+    "title": "Projects in this discipline.",
+    "subtitle": "Architectural and interior design across residential, hospitality, and commercial sectors.",
+    "filterCategory": "Architecture"
+  }
+}
