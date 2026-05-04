@@ -1,0 +1,123 @@
+{
+  "pageId": "project-premium-residential-kitchen-uae",
+  "slug": "premium-residential-kitchen-uae",
+  "categorySlug": "commercial-kitchen",
+  "category": "Commercial Kitchen",
+  "route": "/commercial-kitchen/premium-residential-kitchen-uae",
+  "layout": "simple",
+  "blobAssetPrefix": "images/projects/Commercial-Kitchen/Project-3",
+  "card": {
+    "title": "Premium Residential Kitchen Engineering — UAE",
+    "category": "Commercial Kitchen",
+    "location": "United Arab Emirates",
+    "year": "2025",
+    "description": "High-end residential sections and laundry integration for UAE luxury homes: sectional elevations, turnkey fit-out documentation, and installation-ready coordination for Dubai and Abu Dhabi.",
+    "imageMediaKey": "project-ck-uae-residential-main",
+    "ctaLabel": "Learn More"
+  },
+  "seo": {
+    "title": "Premium Residential Kitchen & Laundry Design | UAE",
+    "description": "UAE luxury residential kitchen: sectional design, laundry integration, 7'0\" storage datum, range hood ducting in sections, and installation-ready drawings for contractors and developers.",
+    "keywords": [
+      "residential kitchen design UAE",
+      "Dubai kitchen fit-out drawings",
+      "kitchen laundry integration UAE",
+      "sectional kitchen elevations",
+      "turnkey residential kitchen",
+      "premium kitchen engineering UAE"
+    ],
+    "canonicalPath": "/commercial-kitchen/premium-residential-kitchen-uae",
+    "robots": "index,follow",
+    "openGraph": {
+      "type": "article",
+      "imageMediaKey": "project-ck-uae-residential-main"
+    },
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Premium Residential Kitchen Engineering — UAE",
+      "creator": {
+        "@type": "Organization",
+        "name": "AIM Integrated Designs",
+        "url": "https://www.aimintegrateddesign.com"
+      },
+      "locationCreated": { "@type": "Place", "name": "United Arab Emirates" },
+      "about": "Residential kitchen and laundry integration with sectional documentation and installation-ready coordination for UAE luxury properties.",
+      "keywords": "residential kitchen, UAE, laundry integration, sectional drawings, fit-out"
+    }
+  },
+  "hero": {
+    "eyebrow": "Commercial Kitchen",
+    "title": "Premium Residential Kitchen Engineering",
+    "subtitle": "Sectional design for UAE luxury homes — main cooking, laundry synergy, and storage to a 7'0\" datum, with installation-ready documentation for busy homeowners and developers.",
+    "category": "Commercial Kitchen",
+    "location": "United Arab Emirates",
+    "year": "2025",
+    "stats": [
+      { "label": "Work height", "value": "2'9\" FFL" },
+      { "label": "Storage datum", "value": "7'0\"" },
+      { "label": "Deliverable", "value": "Turnkey fit-out" }
+    ],
+    "imageMediaKey": "project-ck-uae-residential-main",
+    "imageAlt": "Premium residential kitchen documentation — United Arab Emirates"
+  },
+  "about": {
+    "eyebrow": "Project profile",
+    "title": "Sectional design & laundry integration",
+    "lede": "This project focuses on sophisticated sectional design for residential kitchens across UAE luxury properties. The goal is to maximize storage and workflow in compact yet premium spaces, with a seamless transition between the main cooking area, laundry zones, and auxiliary services.",
+    "blocks": [
+      {
+        "id": "overview",
+        "tag": "01 / Overview",
+        "title": "Luxury utility in compact footprints",
+        "body": "Layouts use sectional analysis (Sections A–A through D–D) so every inch of wall is used. Built-in appliances include 4–5 burner hobs, integrated ovens, and overhead extraction — coordinated for open-plan living that still tolerates heavy daily use."
+      },
+      {
+        "id": "zones",
+        "tag": "02 / Layout",
+        "title": "Integrated zones",
+        "body": "Main cooking areas are optimized for built-in appliances and hood routes. Laundry is often adjacent to or within the kitchen footprint for utility consolidation — planned so the cooking environment stays visually clean while plumbing and electrical stay traceable in section."
+      },
+      {
+        "id": "storage",
+        "tag": "03 / Storage",
+        "title": "Vertical storage strategy",
+        "body": "High-level cabinetry extends to a 7'0\" datum to maximize long-term storage without sacrificing prep zones. Fixed side panels and fillers ensure drawers and doors clear adjacent walls and appliances."
+      },
+      {
+        "id": "technical",
+        "tag": "04 / Technical",
+        "title": "Dimensional rigor for site teams",
+        "body": "Countertops sit at a consistent 2'9\" from the floor for ergonomic prep. Section A–A shows overhead ducting paths for range hoods before false ceilings lock in. Dedicated zones for fridge, freezer, and washing machine use controlled widths (for example 3'3\") with tolerances suited to high-end appliance lines."
+      },
+      {
+        "id": "utility",
+        "tag": "05 / Strategy",
+        "title": "Compact utility & kitchen triangle",
+        "body": "Where kitchen and laundry combine, segregated sectional planning keeps laundry in a niche or behind a dedicated door so the cooking zone stays protected from utility noise and vibration. In linear or L-shaped plans, sink, range, and fridge distances stay tight for an efficient work triangle."
+      },
+      {
+        "id": "documentation",
+        "tag": "06 / Documentation",
+        "title": "UAE standards & sectional precision",
+        "body": "Section A highlights luxury utility for open-plan UAE homes. Sections B (4.2 and 4.3) show why wall elevations matter: electrical and plumbing points land exactly where installers need them — not only floor plans, but four-way coordination for joinery and MEP."
+      },
+      {
+        "id": "takeaways",
+        "tag": "07 / Takeaways",
+        "title": "Installation-ready detail",
+        "body": "Range hood ducting is integrated into wall sections to avoid exposed pipe runs. Laundry alcoves receive independent drainage and electrical where possible to limit interference with kitchen circuits. Appliance gaps include about 1–2 inch tolerance for ventilation and long equipment life."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Visual documentation",
+    "subtitle": "Drawings and visuals load from Vercel Blob under Project-3. Use main/main.webp or main/main.jpg for hero and listing cards; add section images for the gallery row."
+  },
+  "callout": {
+    "title": "Turnkey residential fit-out",
+    "body": "These packages are installation-ready: detailed enough that contractors can execute with minimal daily supervision — a strong fit for developers and homeowners across Dubai and Abu Dhabi.",
+    "primaryCta": { "label": "Start a project", "href": "/#contact" },
+    "secondaryCta": { "label": "More work", "href": "/#featured-projects" }
+  }
+}

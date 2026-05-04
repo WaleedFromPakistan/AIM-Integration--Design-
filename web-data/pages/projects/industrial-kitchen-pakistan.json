@@ -1,0 +1,107 @@
+{
+  "pageId": "project-industrial-kitchen-pakistan",
+  "slug": "industrial-kitchen-pakistan",
+  "categorySlug": "commercial-kitchen",
+  "category": "Commercial Kitchen",
+  "route": "/commercial-kitchen/industrial-kitchen-pakistan",
+  "layout": "simple",
+  "blobAssetPrefix": "images/projects/Commercial-Kitchen/Project-1",
+  "card": {
+    "title": "Industrial Commercial Kitchen — Systemic Convergence",
+    "category": "Commercial Kitchen",
+    "location": "Pakistan",
+    "year": "2025",
+    "description": "High-density industrial kitchen where thermal efficiency meets spatial precision. Build-ready documentation with 2190 mm grid ceiling, 1200 mm electrical spine, and modular MEP routing.",
+    "imageMediaKey": "project-ck-industrial-pk-main",
+    "ctaLabel": "Learn More"
+  },
+  "seo": {
+    "title": "Industrial Commercial Kitchen Engineering | Pakistan",
+    "description": "Commercial kitchen in Pakistan: systemic convergence layout, walk-in cold rooms, 1200 mm isolator datum, motion-sensitive cold storage, and Rational / Salva / Foster equipment integration.",
+    "keywords": [
+      "commercial kitchen Pakistan",
+      "industrial kitchen design",
+      "MEP commercial kitchen",
+      "2190mm grid ceiling kitchen",
+      "1200mm electrical datum",
+      "Rational combi oven kitchen",
+      "modular kitchen MEP",
+      "build-ready kitchen drawings"
+    ],
+    "canonicalPath": "/commercial-kitchen/industrial-kitchen-pakistan",
+    "robots": "index,follow",
+    "openGraph": {
+      "type": "article",
+      "imageMediaKey": "project-ck-industrial-pk-main"
+    },
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Industrial Commercial Kitchen — Pakistan",
+      "creator": {
+        "@type": "Organization",
+        "name": "AIM Integrated Designs",
+        "url": "https://www.aimintegrateddesign.com"
+      },
+      "locationCreated": { "@type": "Place", "name": "Pakistan" },
+      "about": "Industrial commercial kitchen with systemic convergence layout, modular synchronicity for utilities, and build-ready coordination.",
+      "keywords": "commercial kitchen, Pakistan, MEP, industrial kitchen, BIM"
+    }
+  },
+  "hero": {
+    "eyebrow": "Commercial Kitchen",
+    "title": "Industrial Commercial Kitchen Engineering",
+    "subtitle": "Systemic convergence and modular synchronicity for high-volume production, international safety standards, and a build-ready site package.",
+    "category": "Commercial Kitchen",
+    "location": "Pakistan",
+    "year": "2025",
+    "stats": [
+      { "label": "Ceiling grid", "value": "2190 mm" },
+      { "label": "Electrical spine", "value": "1200 mm" },
+      { "label": "Focus", "value": "Build-ready" }
+    ],
+    "imageMediaKey": "project-ck-industrial-pk-main",
+    "imageAlt": "Industrial commercial kitchen — Pakistan, primary project view"
+  },
+  "about": {
+    "eyebrow": "Project profile",
+    "title": "Thermal efficiency and spatial precision",
+    "lede": "This project showcases a high-density industrial kitchen where thermal efficiency meets spatial precision. The layout supports high-volume food production with strict safety and workflow standards, moving from traditional setups to a data-rich, build-ready environment optimized for industrial durability.",
+    "blocks": [
+      {
+        "id": "spatial",
+        "tag": "01 / Spatial engineering",
+        "title": "Systemic convergence layout",
+        "body": "The plan integrates massive walk-in cold rooms and freezer complexes. Industrial resin flooring gives a non-slip, hygienic surface for chemical cleaning and heavy trolleys. A 2190 mm grid ceiling is tuned for MEP serviceability so ventilation and wiring stay accessible without disrupting operations."
+      },
+      {
+        "id": "mep",
+        "tag": "02 / MEP integration",
+        "title": "Electrical spine and automation",
+        "body": "The electrical backbone places isolators on a 1200 mm datum for rapid access and safety. Motion-sensitive lighting reduces energy use in storage and cold zones. Grease traps and drainage pumps sit near fryers and hobs so the line stays code-compliant."
+      },
+      {
+        "id": "workflow",
+        "tag": "03 / Operations",
+        "title": "Hotline and hygiene",
+        "body": "The hotline clusters high-output equipment next to hot-hold stations to shorten the path to the service window. Under-spine utility routing keeps the floor clear while MEP stays organized and reachable — the modular synchronicity response to cluttered lines and poor maintenance access."
+      },
+      {
+        "id": "equipment",
+        "tag": "04 / Featured equipment",
+        "title": "Key line items",
+        "body": "Thermal: Rational combi oven (20-1/1 GN electric). Bakery: Salva modular deck oven (electric, 2-tray). Prep: Sirman spiral dough mixers (32 L floor). Refrigeration: Foster blast chiller (BCT15-7 under-counter). Processing: Elro bratt pan (DBGN23 high-capacity)."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Visual documentation",
+    "subtitle": "Images are loaded from Vercel Blob for this prefix. Captions use each file name; add a main/main.webp (or .jpg) for the hero and card."
+  },
+  "callout": {
+    "title": "Need a build-ready industrial kitchen package?",
+    "body": "We coordinate MEP, equipment schedules, and construction sequencing so your drawings work the first day on site.",
+    "primaryCta": { "label": "Start a project", "href": "/#contact" },
+    "secondaryCta": { "label": "More work", "href": "/#featured-projects" }
+  }
+}

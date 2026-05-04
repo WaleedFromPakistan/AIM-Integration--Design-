@@ -1,0 +1,117 @@
+{
+  "pageId": "project-international-kitchen-hospitality-australia-qatar",
+  "slug": "international-kitchen-hospitality-australia-qatar",
+  "categorySlug": "commercial-kitchen",
+  "category": "Commercial Kitchen",
+  "route": "/commercial-kitchen/international-kitchen-hospitality-australia-qatar",
+  "layout": "simple",
+  "blobAssetPrefix": "images/projects/Commercial-Kitchen/Project-4",
+  "card": {
+    "title": "International Kitchen & Hospitality Engineering",
+    "category": "Commercial Kitchen",
+    "location": "Australia & Qatar",
+    "year": "2025",
+    "description": "Hotel kitchens in Australia and luxury residences in Qatar: data-rich layouts, ergonomic fluidity, precision sanitation, and build-ready documentation aligned to local codes and high-end fit-out.",
+    "imageMediaKey": "project-ck-intl-hospitality-main",
+    "ctaLabel": "Learn More"
+  },
+  "seo": {
+    "title": "International Hotel & Residential Kitchen Design | Australia & Qatar",
+    "description": "Global commercial kitchen portfolio: Australian hotel hub with cool-room spine and warewash wings; Qatar residential U-shaped kitchens with 3500 mm precision footprints, G35 grease management, and 1:1 appliance coordination.",
+    "keywords": [
+      "hotel kitchen design Australia",
+      "luxury residential kitchen Qatar",
+      "commercial kitchen international",
+      "kitchen grease guardian design",
+      "U-shaped kitchen engineering",
+      "hospitality kitchen workflow"
+    ],
+    "canonicalPath": "/commercial-kitchen/international-kitchen-hospitality-australia-qatar",
+    "robots": "index,follow",
+    "openGraph": {
+      "type": "article",
+      "imageMediaKey": "project-ck-intl-hospitality-main"
+    },
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "International Kitchen & Hospitality Engineering — Australia & Qatar",
+      "creator": {
+        "@type": "Organization",
+        "name": "AIM Integrated Designs",
+        "url": "https://www.aimintegrateddesign.com"
+      },
+      "locationCreated": { "@type": "Place", "name": "Australia and Qatar" },
+      "about": "Hotel and residential kitchen engineering with ergonomic fluidity, precision sanitation, and maintenance-first MEP coordination.",
+      "keywords": "commercial kitchen, hotel kitchen, residential kitchen, Australia, Qatar, hospitality"
+    }
+  },
+  "hero": {
+    "eyebrow": "Commercial Kitchen",
+    "title": "International Kitchen & Hospitality Engineering",
+    "subtitle": "Ergonomic fluidity and precision sanitation across Australia and Qatar — data-rich layouts that cut chef travel, maximize storage, and keep hygiene and grease management buildable on site.",
+    "category": "Commercial Kitchen",
+    "location": "Australia & Qatar",
+    "year": "2025",
+    "stats": [
+      { "label": "Segments", "value": "Hotel + residential" },
+      { "label": "Residential footprint", "value": "3500 mm" },
+      { "label": "Focus", "value": "Data-rich CD" }
+    ],
+    "imageMediaKey": "project-ck-intl-hospitality-main",
+    "imageAlt": "International kitchen and hospitality engineering — Australia and Qatar"
+  },
+  "about": {
+    "eyebrow": "Project profile",
+    "title": "Global reach, local rigor",
+    "lede": "This portfolio segment spans a hotel kitchen in Australia and luxury residences in Qatar. Every dimension is calculated for storage density, shorter travel paths for staff and homeowners, and hygiene flows that read clearly on the drawing — not only on the plan.",
+    "blocks": [
+      {
+        "id": "overview",
+        "tag": "01 / Overview",
+        "title": "Data-rich layouts",
+        "body": "Layouts are treated as operational datasets: clearances, appliance zones, and service adjacencies are coordinated so contractors receive buildable sets that reduce rework during peak fit-out windows."
+      },
+      {
+        "id": "australia-hotel",
+        "tag": "02 / Australia — hotel",
+        "title": "Hotel hub & circular workflow",
+        "body": "The hotel concept anchors on a substantial cool room and freezer hub, linking specialized prep to high-volume cooking. Central plating islands shorten walking loops during peak demand. Triple-sink stations and dedicated hand-wash basins sit next to bulk cold paths so decontamination stays linear and visible in plan and section."
+      },
+      {
+        "id": "residential",
+        "tag": "03 / Residential — AU & QA",
+        "title": "Ergonomic fluidity",
+        "body": "U-shaped residential plans target a disciplined 3500 mm footprint while maximizing utility. Magic corners, tall-unit clip baskets, and pull-out crockery racks reclaim dead corners. Top Corian surfaces add non-porous, antimicrobial worktops where luxury spec demands it."
+      },
+      {
+        "id": "grease",
+        "tag": "04 / Grease & waste",
+        "title": "G35 and vertical grease strategy",
+        "body": "Combi ovens generate grease loads that can choke drains and steal floor space. Where slide doors and tight aisles conflict with traditional traps, a vertical grease guardian (G35 class) can be engineered behind equipment so maintenance stays reachable without sacrificing the cook line envelope."
+      },
+      {
+        "id": "engineering",
+        "tag": "05 / Engineering advantage",
+        "title": "Peak demand vs bespoke interiors",
+        "body": "Australia hotel documentation emphasizes peak-demand logistics: waste and warewashing organized into service wings so the main cooking floor stays clean under 200+ guest surges. Qatar residential sheets stress build-ready precision — 1:1 appliance slots from microwave niches to five-burner hobs so fit-out teams order and install without guesswork."
+      },
+      {
+        "id": "standards",
+        "tag": "06 / Standards & maintenance",
+        "title": "Compliance and access",
+        "body": "Sets align with Australian health expectations for hospitality and Qatar luxury residential expectations for finish and services. Electrical and plumbing take-offs are placed for operational access — grease, water, and power can be serviced without unnecessary wall surgery. Industrial sink benches use standardized isometric depths and upstands matched to Australian bench standards where applicable."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Visual documentation",
+    "subtitle": "Images load from Vercel Blob under Project-4. Place main/main.webp or main/main.jpg for hero and cards; add drawings for the gallery grid."
+  },
+  "callout": {
+    "title": "Peak demand logistics & bespoke culinary interiors",
+    "body": "Hotel clients get workflow narratives that survive rush service. Residential clients get appliance-accurate interiors that photograph well and install cleanly — one team, two hemispheres, one documentation standard.",
+    "primaryCta": { "label": "Start a project", "href": "/#contact" },
+    "secondaryCta": { "label": "More work", "href": "/#featured-projects" }
+  }
+}

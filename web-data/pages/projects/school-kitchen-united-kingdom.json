@@ -1,0 +1,111 @@
+{
+  "pageId": "project-school-kitchen-united-kingdom",
+  "slug": "school-kitchen-united-kingdom",
+  "categorySlug": "commercial-kitchen",
+  "category": "Commercial Kitchen",
+  "route": "/commercial-kitchen/school-kitchen-united-kingdom",
+  "layout": "simple",
+  "blobAssetPrefix": "images/projects/Commercial-Kitchen/Project-2",
+  "card": {
+    "title": "Urban Gastronomy Nexus — School Kitchen",
+    "category": "Commercial Kitchen",
+    "location": "United Kingdom",
+    "year": "2025",
+    "description": "HACCP-led school kitchen with fluid boundary optimization, segregated washing, Stainless Steel 304 fabrication, and shop-level documentation for UK compliance.",
+    "imageMediaKey": "project-ck-school-uk-main",
+    "ctaLabel": "Learn More"
+  },
+  "seo": {
+    "title": "School Commercial Kitchen Design | United Kingdom",
+    "description": "UK educational kitchen: Urban Gastronomy Nexus concept, segregated washing for sanitation, Stainless Steel 304 custom fabrication, and precision shop drawings for contractors.",
+    "keywords": [
+      "school kitchen design UK",
+      "HACCP commercial kitchen",
+      "stainless steel 304 kitchen",
+      "commercial kitchen shop drawings",
+      "segregated wash area kitchen",
+      "UK food safety kitchen design"
+    ],
+    "canonicalPath": "/commercial-kitchen/school-kitchen-united-kingdom",
+    "robots": "index,follow",
+    "openGraph": {
+      "type": "article",
+      "imageMediaKey": "project-ck-school-uk-main"
+    },
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Urban Gastronomy Nexus — School Kitchen, UK",
+      "creator": {
+        "@type": "Organization",
+        "name": "AIM Integrated Designs",
+        "url": "https://www.aimintegrateddesign.com"
+      },
+      "locationCreated": { "@type": "Place", "name": "United Kingdom" },
+      "about": "Educational commercial kitchen with fluid boundary layout, SS304 fabrication standards, and HACCP-aligned segregation.",
+      "keywords": "commercial kitchen, UK, school kitchen, HACCP, stainless steel fabrication"
+    }
+  },
+  "hero": {
+    "eyebrow": "Commercial Kitchen",
+    "title": "Urban Gastronomy Nexus",
+    "subtitle": "School and educational kitchen in the United Kingdom — fluid boundary optimization, custom shop drawings, and food-grade fabrication.",
+    "category": "Commercial Kitchen",
+    "location": "United Kingdom",
+    "year": "2025",
+    "stats": [
+      { "label": "Material", "value": "SS 304" },
+      { "label": "Compliance", "value": "HACCP-led" },
+      { "label": "Docs", "value": "Shop drawings" }
+    ],
+    "imageMediaKey": "project-ck-school-uk-main",
+    "imageAlt": "School commercial kitchen — United Kingdom, primary project view"
+  },
+  "about": {
+    "eyebrow": "Design philosophy",
+    "title": "Fluid boundary optimization",
+    "lede": "The Urban Gastronomy Nexus concept anchors a high-efficiency production core in a master-planned setting. The design links indoor culinary precision with outdoor guest service, giving training and production a single coordinated landscape.",
+    "blocks": [
+      {
+        "id": "layout",
+        "tag": "01 / Layout",
+        "title": "Integrated zones and flow",
+        "body": "The layout combines a main kitchen with a dual-prep island and a high-capacity hot line, a segregated washing area, management office, and a secondary outdoor area. The ground floor is tuned for the transition from preparation to service with consistent technical rigor."
+      },
+      {
+        "id": "fabrication",
+        "tag": "02 / Fabrication",
+        "title": "Stainless Steel 304 — food grade",
+        "body": "Custom units use Stainless Steel 304 (non-magnetic, food grade) for UK health and safety and long-term durability. Highlights include a three-burner Chinese range with 225 mm burners, a heated gantry with hot case, trash-hole table with integrated gantry, double and single sink tables with 2 mm tops (14 swg) and 450×450×300 mm bowls, and an exhaust hood with grease filters, ducting, and blower."
+      },
+      {
+        "id": "sanitation",
+        "tag": "03 / Sanitation",
+        "title": "Segregated washing",
+        "body": "The fluid boundary layout uses a physical separation so washing stays apart from raw prep and dirty dish paths never cross clean routes — the core of a HACCP-aligned story for UK audits."
+      },
+      {
+        "id": "structure",
+        "tag": "04 / Structure",
+        "title": "Legwork and extraction",
+        "body": "Legs use 38×38 mm square pipe (16 swg) with underneath bracing to eliminate wobble under heavy machines. Extraction bodies at 1.5 mm integrate grease filtration and blower for stable air quality."
+      },
+      {
+        "id": "specs",
+        "tag": "05 / Specs at a glance",
+        "title": "Contractor reference",
+        "body": "Worktops: 2 mm (14 swg), SS 304 non-magnetic. Legs and bracing: 1.5 mm (16 swg), 38×38 mm square pipe. Extraction: 1.5 mm body with integrated grease filter and blower."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Drawings and visuals",
+    "subtitle": "Images are listed from Vercel Blob under this project folder. Use main/main.webp (or .jpg) for the hero and card."
+  },
+  "callout": {
+    "title": "Planning a UK education or hospitality kitchen?",
+    "body": "We pair HACCP-aware zoning with fabrication-grade documentation so installers and inspectors see the same story.",
+    "primaryCta": { "label": "Start a project", "href": "/#contact" },
+    "secondaryCta": { "label": "More work", "href": "/#featured-projects" }
+  }
+}

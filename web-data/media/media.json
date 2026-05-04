@@ -78,6 +78,70 @@
       "alt": "3D rendered apartment floor plan with master suite, second bedroom, home office, and balconies"
     },
 
+    "project-ck-industrial-pk-main": {
+      "type": "image",
+      "url": "blob:images/projects/Commercial-Kitchen/Project-1/main/main.webp",
+      "alt": "Industrial commercial kitchen — Pakistan, primary project view"
+    },
+    "project-ck-industrial-pk-plan": {
+      "type": "image",
+      "url": "blob:images/projects/Commercial-Kitchen/Project-1/integrated-floor-management.webp",
+      "alt": "Plan view — integrated floor management for high-density industrial kitchen"
+    },
+    "project-ck-industrial-pk-equipment": {
+      "type": "image",
+      "url": "blob:images/projects/Commercial-Kitchen/Project-1/equipment-schedule-2-2.webp",
+      "alt": "Equipment schedule — technical procurement list"
+    },
+    "project-ck-industrial-pk-hotline": {
+      "type": "image",
+      "url": "blob:images/projects/Commercial-Kitchen/Project-1/hotline-production-zone.webp",
+      "alt": "Hotline layout — high-output production zone"
+    },
+    "project-ck-industrial-pk-mep": {
+      "type": "image",
+      "url": "blob:images/projects/Commercial-Kitchen/Project-1/mep-electrical-coordination.webp",
+      "alt": "Service elevation — MEP and electrical coordination profile"
+    },
+
+    "project-ck-school-uk-main": {
+      "type": "image",
+      "url": "blob:images/projects/Commercial-Kitchen/Project-2/main/main.webp",
+      "alt": "School commercial kitchen — United Kingdom, primary project view"
+    },
+    "project-ck-school-uk-section-a-1": {
+      "type": "image",
+      "url": "blob:images/projects/Commercial-Kitchen/Project-2/section-a-master-plan-01.webp",
+      "alt": "Master plan — main kitchen and outdoor integration"
+    },
+    "project-ck-school-uk-section-a-2": {
+      "type": "image",
+      "url": "blob:images/projects/Commercial-Kitchen/Project-2/section-a-master-plan-02.webp",
+      "alt": "Master plan — office and operational flow"
+    },
+    "project-ck-school-uk-section-b-1": {
+      "type": "image",
+      "url": "blob:images/projects/Commercial-Kitchen/Project-2/section-b-shop-drawing-01.webp",
+      "alt": "Custom shop drawing — stainless fabrication detail"
+    },
+    "project-ck-school-uk-section-b-2": {
+      "type": "image",
+      "url": "blob:images/projects/Commercial-Kitchen/Project-2/section-b-shop-drawing-02.webp",
+      "alt": "Custom shop drawing — hood and sink table specification"
+    },
+
+    "project-ck-uae-residential-main": {
+      "type": "image",
+      "url": "blob:images/projects/Commercial-Kitchen/Project-3/main/main.webp",
+      "alt": "Premium residential kitchen and laundry — UAE, primary project view"
+    },
+
+    "project-ck-intl-hospitality-main": {
+      "type": "image",
+      "url": "blob:images/projects/Commercial-Kitchen/Project-4/main/main.webp",
+      "alt": "International kitchen and hospitality engineering — Australia and Qatar"
+    },
+
     "service-card-commercial-kitchen": {
       "type": "image",
       "url": "blob:images/service-cards/Commercial-Kitchen.png",

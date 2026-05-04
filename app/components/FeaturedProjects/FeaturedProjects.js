@@ -1,19 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import SectionHeader from "../SectionHeader";
 
 function ProjectCard({ item, index, inView }) {
   const delay = Math.min(index * 0.1, 0.4);
 
-  return (
-    <article
-      className="aim-fp-card"
-      style={{
-        transitionDelay: inView ? `${delay}s` : "0s",
-      }}
-    >
+  const inner = (
+    <>
       <div className="aim-fp-card-image-wrap">
         {item.image ? (
           <Image
@@ -41,6 +37,27 @@ function ProjectCard({ item, index, inView }) {
           <strong>Scope:</strong> {item.scope}
         </p>
       </div>
+    </>
+  );
+
+  return (
+    <article
+      className={`aim-fp-card${item.href ? " aim-fp-card--linked" : ""}`}
+      style={{
+        transitionDelay: inView ? `${delay}s` : "0s",
+      }}
+    >
+      {item.href ? (
+        <Link
+          href={item.href}
+          className="aim-fp-card-link"
+          aria-label={`${item.scope || "View project"} — ${item.title}`}
+        >
+          {inner}
+        </Link>
+      ) : (
+        inner
+      )}
     </article>
   );
 }

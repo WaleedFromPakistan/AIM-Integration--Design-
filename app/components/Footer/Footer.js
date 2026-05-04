@@ -21,7 +21,7 @@ export default function Footer({ data, site }) {
             />
           </Link>
           <p className="aim-heading aim-footer-company text-lg font-semibold">
-            {site?.companyName ?? "AIM Integrated Designs"}
+            {site?.companyName ?? "AIM Integrated Design"}
           </p>
           {data.tagline ? (
             <p className="aim-footer-tagline">{data.tagline}</p>

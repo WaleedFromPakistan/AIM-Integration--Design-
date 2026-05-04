@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { SERVICE_SLUGS, getServiceBySlug } from "@/lib/services";
 import { buildServicePageViewModel } from "@/lib/buildServicePageViewModel";
-import { buildHomeViewModel } from "@/lib/buildHomeViewModel";
+import { buildHomeViewModelWithBlobCards } from "@/lib/buildHomeViewModel";
 import media from "@/web-data/media/media.json";
 import site from "@/web-data/site.json";
 import homePage from "@/web-data/pages/home.json";
@@ -31,10 +31,6 @@ export const dynamicParams = false; // 404 unknown slugs at the edge
 export function generateStaticParams() {
   return SERVICE_SLUGS.map((slug) => ({ slug }));
 }
-
-// Pre-build the home viewModel once at module scope — gives us the
-// universal navbar + footer data for the service pages.
-const homeViewModel = buildHomeViewModel({ page: homePage, media, site });
 
 /**
  * Convert in-page hash links (e.g. "#about") to root-anchored hash links
@@ -126,8 +122,14 @@ export default async function ServicePage({ params }) {
 
   const viewModel = buildServicePageViewModel({ page: service, media, site });
 
-  // Use the home page's Featured Projects items + categories,
-  // but pre-scope by this service's filter category.
+  const homeViewModel = await buildHomeViewModelWithBlobCards({
+    page: homePage,
+    media,
+    site,
+  });
+
+  // Use the same registry-backed project cards as the home page,
+  // scoped by this service's filter category when set.
   const recentProjectsData = homeViewModel.featuredProjects
     ? {
         ...homeViewModel.featuredProjects,

@@ -1,7 +1,7 @@
 import homePage from "@/web-data/pages/home.json";
 import media from "@/web-data/media/media.json";
 import site from "@/web-data/site.json";
-import { buildHomeViewModel } from "@/lib/buildHomeViewModel";
+import { buildHomeViewModelWithBlobCards } from "@/lib/buildHomeViewModel";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutSection from "./components/AboutSection";
@@ -29,13 +29,12 @@ import FloatingThemeToggle from "./components/FloatingThemeToggle";
 export const dynamic = "force-static";
 export const revalidate = 3600;
 
-const viewModel = buildHomeViewModel({
-  page: homePage,
-  media,
-  site,
-});
+async function homeViewModel() {
+  return buildHomeViewModelWithBlobCards({ page: homePage, media, site });
+}
 
-export function generateMetadata() {
+export async function generateMetadata() {
+  const viewModel = await homeViewModel();
   const { seo } = viewModel;
   const base = site.baseUrl.replace(/\/$/, "");
   const ogUrl = seo.openGraphImage?.startsWith("http")
@@ -85,7 +84,8 @@ export function generateMetadata() {
   };
 }
 
-export default function Home() {
+export default async function Home() {
+  const viewModel = await homeViewModel();
   const jsonLdData = viewModel.seo.jsonLd;
   const jsonLdItems = Array.isArray(jsonLdData)
     ? jsonLdData

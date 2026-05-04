@@ -72,6 +72,31 @@
   }
 }
 
+/* Linked registry cards — full card hit target, matches detail-page CTA tone */
+.aim-fp-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.aim-fp-card--linked {
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.aim-fp-card--linked:hover {
+  border-color: rgba(203, 159, 121, 0.45);
+}
+
+.aim-fp-card--linked:focus-within {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
 /* Card */
 .aim-fp-card {
   border-radius: var(--radius-lg);

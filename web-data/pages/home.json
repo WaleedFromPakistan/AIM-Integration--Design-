@@ -541,70 +541,7 @@
     "id": "featured-projects",
     "eyebrow": "Featured work",
     "title": "Projects that define our practice.",
-    "subtitle": "Each project represents a unique challenge solved through integrated design thinking.",
-    "categories": ["All", "Kitchen Design", "BIM Modeling", "Floor Planning", "Architecture"],
-    "items": [
-      {
-        "id": "fp1",
-        "title": "Atlas Tower — Corporate Office Kitchen",
-        "category": "Kitchen Design",
-        "description": "A full equipment layout for a corporate office kitchen, organized into a central main kitchen line, a dedicated dishwashing zone, an outdoor servery, and an integrated back-office. Workflow is mapped from receiving through cook line to staff service so peak lunch traffic clears without bottlenecks.",
-        "imageMediaKey": "project-ck-office",
-        "year": "2025",
-        "location": "Dubai, UAE",
-        "scope": "Equipment plan & MEP coordination"
-      },
-      {
-        "id": "fp2",
-        "title": "Mediplex General — Hospital Production Kitchen",
-        "category": "Kitchen Design",
-        "description": "A long-format institutional production kitchen serving a hospital's 24/7 food service operation. The plan separates receiving, cold and dry storage, prep, hot line, plating, and warewashing into discrete circulation paths so meal carts move out cleanly while crockery returns flow back without crossing.",
-        "imageMediaKey": "project-ck-hospital",
-        "year": "2024",
-        "location": "Lahore, Pakistan",
-        "scope": "Hospital kitchen design & equipment specs"
-      },
-      {
-        "id": "fp3",
-        "title": "Vertex Studios — Creative Agency Office",
-        "category": "Floor Planning",
-        "description": "A 6,500 sq ft creative-agency floor plan blending an open workstation cluster, a glass-walled conference room, executive cabins, a dedicated marketing & creative zone, and a hospitality-grade staff kitchen. Adjacencies were resolved through three test-fit rounds with the leadership team.",
-        "imageMediaKey": "project-fp-office",
-        "year": "2024",
-        "location": "Islamabad, Pakistan",
-        "scope": "Office space programming & test-fits"
-      },
-      {
-        "id": "fp4",
-        "title": "Harbor View — Three-Bedroom Residence",
-        "category": "Floor Planning",
-        "description": "A spatial plan for a luxury three-bedroom apartment featuring a master suite with walk-in closet and en-suite bathroom, a second bedroom, a private home office, a study nook, a kitchenette opening to the living and breakfast area, and twin outdoor balconies framing the view.",
-        "imageMediaKey": "project-fp-apartment",
-        "year": "2024",
-        "location": "Dubai, UAE",
-        "scope": "Residential floor planning & adjacencies"
-      },
-      {
-        "id": "fp5",
-        "title": "Harbor House — Boutique Hotel F&B Core",
-        "category": "BIM Modeling",
-        "description": "Full BIM coordination for a boutique hotel's food and beverage core — including a rooftop bar, ground-floor brasserie, and basement prep kitchen. LOD 350 models enabled clash-free MEP routing in a tight floor-to-floor envelope.",
-        "imageMediaKey": "project-5",
-        "year": "2023",
-        "location": "Charleston, SC",
-        "scope": "BIM modeling & clash coordination"
-      },
-      {
-        "id": "fp6",
-        "title": "Union Yards — Mixed-Use Podium",
-        "category": "Architecture",
-        "description": "A five-story mixed-use podium with ground-floor retail, two levels of structured parking, and two floors of co-working space. The architectural language bridges industrial context with contemporary materiality.",
-        "imageMediaKey": "project-6",
-        "year": "2022",
-        "location": "Portland, OR",
-        "scope": "Architecture & documentation"
-      }
-    ]
+    "subtitle": "Case studies with full project pages — build-ready commercial kitchens and technical documentation."
   },
   "process": {
     "id": "process",
@@ -680,7 +617,7 @@
           { "label": "Commercial Kitchen Design", "href": "#services" },
           { "label": "BIM Modeling", "href": "#services" },
           { "label": "Floor Planning", "href": "#services" },
-          { "label": "Architectural Design", "href": "#services" }
+          { "label": "Architecture & Interior Design", "href": "#services" }
         ]
       }
     ],
